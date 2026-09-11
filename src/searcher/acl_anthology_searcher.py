@@ -12,7 +12,6 @@ from src.models.paper import Paper
 from src.searcher.base_searcher import BaseSearcher
 from src.utils.logger import setup_logger
 
-
 logger = setup_logger(__name__)
 
 
@@ -36,9 +35,7 @@ class ACLAnthologySearcher(BaseSearcher):
             config: Configuration dictionary with ACL settings
         """
         super().__init__(config)
-        self.rate_limit = config.get("sources", {}).get("acl_anthology", {}).get(
-            "rate_limit", 1
-        )
+        self.rate_limit = config.get("sources", {}).get("acl_anthology", {}).get("rate_limit", 1)
         self.session = requests.Session()
 
     def get_source_name(self) -> str:
@@ -76,14 +73,10 @@ class ACLAnthologySearcher(BaseSearcher):
                 search_url = f"{base_url}search"
                 params = {"q": keyword}
 
-                headers = {
-                    "User-Agent": "Geez-NLP-Survey (teklehaymanot@l3s.uni-hannover.de)"
-                }
+                headers = {"User-Agent": "Geez-NLP-Survey (teklehaymanot@l3s.uni-hannover.de)"}
 
                 # Fetch search results page
-                response = self.session.get(
-                    search_url, params=params, headers=headers, timeout=10
-                )
+                response = self.session.get(search_url, params=params, headers=headers, timeout=10)
                 response.raise_for_status()
 
                 # Parse HTML
@@ -122,9 +115,7 @@ class ACLAnthologySearcher(BaseSearcher):
 
         return unique_papers
 
-    def _parse_paper_element(
-        self, element: BeautifulSoup, base_url: str
-    ) -> Optional[Paper]:
+    def _parse_paper_element(self, element: BeautifulSoup, base_url: str) -> Optional[Paper]:
         """Parse a paper from an HTML element.
 
         Extracts title, authors, venue, URL from ACL Anthology HTML structure.

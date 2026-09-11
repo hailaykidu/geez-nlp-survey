@@ -8,6 +8,7 @@ from enum import Enum
 
 class ScreeningDecisionCode(str, Enum):
     """Exclusion codes for papers that don't meet inclusion criteria."""
+
     TECHNICAL_REPORT = "technical_report"
     BLOG = "blog"
     THESIS = "thesis"
@@ -26,6 +27,7 @@ class ScreeningDecisionCode(str, Enum):
 @dataclass
 class ScreeningDecision:
     """Result of screening decision for a paper."""
+
     paper_id: str
     included: bool
     decision_code: Optional[ScreeningDecisionCode] = None
@@ -132,6 +134,7 @@ class Paper:
 @dataclass
 class Coding:
     """Structured coding for a paper across 5 dimensions."""
+
     paper_id: str
     languages: List[str]
     primary_pillar: str

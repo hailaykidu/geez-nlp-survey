@@ -11,7 +11,6 @@ from dataclasses import dataclass
 from src.models.paper import Paper, ScreeningDecision, ScreeningDecisionCode
 from src.utils.logger import setup_logger
 
-
 logger = setup_logger(__name__)
 
 
@@ -125,8 +124,7 @@ class PRISMAScreener:
 
         # Log summary
         logger.info(
-            f"Screening complete: {len(self.included)} included, "
-            f"{len(self.excluded)} excluded"
+            f"Screening complete: {len(self.included)} included, " f"{len(self.excluded)} excluded"
         )
 
         # Save results
@@ -243,14 +241,10 @@ class PRISMAScreener:
         searchable_text = (paper.title + " " + paper.abstract).lower()
 
         # Check if any keyword is mentioned
-        found_keywords = [
-            kw for kw in keywords if kw.lower() in searchable_text
-        ]
+        found_keywords = [kw for kw in keywords if kw.lower() in searchable_text]
 
         if not found_keywords:
-            logger.debug(
-                f"  No target language keywords found. Searched for: {keywords[:3]}..."
-            )
+            logger.debug(f"  No target language keywords found. Searched for: {keywords[:3]}...")
             return False
 
         logger.debug(f"  Found target language: {found_keywords}")
@@ -352,9 +346,7 @@ class PRISMAScreener:
         has_development = any(kw in searchable_text for kw in development_keywords)
 
         # Check for application-only focus
-        has_application_only = any(
-            kw in searchable_text for kw in application_only_keywords
-        )
+        has_application_only = any(kw in searchable_text for kw in application_only_keywords)
 
         # Include if has development OR doesn't explicitly mention application-only
         if has_development or not has_application_only:
@@ -426,9 +418,7 @@ class PRISMAScreener:
             Dictionary with screening results summary
         """
         total = len(self.included) + len(self.excluded)
-        inclusion_rate = (
-            len(self.included) / total if total > 0 else 0
-        )
+        inclusion_rate = len(self.included) / total if total > 0 else 0
 
         return {
             "total_papers_screened": total,

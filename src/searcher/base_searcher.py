@@ -64,7 +64,7 @@ class BaseSearcher(ABC):
         Returns:
             True if paper is valid, False otherwise
         """
-        required_fields = ['title', 'authors', 'year', 'venue']
+        required_fields = ["title", "authors", "year", "venue"]
         for field in required_fields:
             if not getattr(paper, field, None):
                 return False

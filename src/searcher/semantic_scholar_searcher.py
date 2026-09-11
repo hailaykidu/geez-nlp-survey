@@ -11,7 +11,6 @@ from src.models.paper import Paper
 from src.searcher.base_searcher import BaseSearcher
 from src.utils.logger import setup_logger
 
-
 logger = setup_logger(__name__)
 
 
@@ -36,9 +35,7 @@ class SemanticScholarSearcher(BaseSearcher):
             config: Configuration dictionary with Semantic Scholar settings
         """
         super().__init__(config)
-        self.rate_limit = config.get("sources", {}).get(
-            "semantic_scholar", {}
-        ).get("rate_limit", 1)
+        self.rate_limit = config.get("sources", {}).get("semantic_scholar", {}).get("rate_limit", 1)
 
     def get_source_name(self) -> str:
         """Get the source identifier.
@@ -64,8 +61,10 @@ class SemanticScholarSearcher(BaseSearcher):
             Respects rate limiting between API calls to avoid throttling.
         """
         papers = []
-        base_url = self.config.get("sources", {}).get("semantic_scholar", {}).get(
-            "base_url", "https://api.semanticscholar.org/graph/v1/paper/search"
+        base_url = (
+            self.config.get("sources", {})
+            .get("semantic_scholar", {})
+            .get("base_url", "https://api.semanticscholar.org/graph/v1/paper/search")
         )
 
         logger.info(f"Starting Semantic Scholar search with {len(keywords)} keywords")
@@ -80,9 +79,7 @@ class SemanticScholarSearcher(BaseSearcher):
                     "limit": 100,
                     "fields": "paperId,title,authors,year,venue,abstract,url,externalIds",
                 }
-                headers = {
-                    "User-Agent": "Geez-NLP-Survey (teklehaymanot@l3s.uni-hannover.de)"
-                }
+                headers = {"User-Agent": "Geez-NLP-Survey (teklehaymanot@l3s.uni-hannover.de)"}
 
                 # Make API request
                 response = requests.get(
@@ -114,13 +111,9 @@ class SemanticScholarSearcher(BaseSearcher):
                     time.sleep(self.rate_limit)
 
             except requests.exceptions.RequestException as e:
-                logger.warning(
-                    f"Network error searching Semantic Scholar for '{keyword}': {e}"
-                )
+                logger.warning(f"Network error searching Semantic Scholar for '{keyword}': {e}")
             except Exception as e:
-                logger.error(
-                    f"Unexpected error searching Semantic Scholar for '{keyword}': {e}"
-                )
+                logger.error(f"Unexpected error searching Semantic Scholar for '{keyword}': {e}")
 
         logger.info(f"Semantic Scholar search complete: found {len(papers)} papers")
 

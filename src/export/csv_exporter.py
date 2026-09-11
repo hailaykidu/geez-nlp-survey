@@ -10,7 +10,6 @@ from typing import List, Dict, Any
 from src.models.paper import Paper
 from src.utils.logger import setup_logger
 
-
 logger = setup_logger(__name__)
 
 
@@ -129,7 +128,9 @@ class CSVExporter:
         pillar_papers = self._group_by_pillar(papers)
         for pillar, pillar_group in pillar_papers.items():
             if pillar_group:
-                filename = f"papers_by_pillar_{pillar.replace(' ', '_').replace('&', 'and').lower()}.csv"
+                filename = (
+                    f"papers_by_pillar_{pillar.replace(' ', '_').replace('&', 'and').lower()}.csv"
+                )
                 path = self.export(pillar_group, filename)
                 outputs[f"pillar_{pillar}"] = path
 

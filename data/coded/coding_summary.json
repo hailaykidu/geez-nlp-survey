@@ -1,0 +1,23 @@
+{
+  "total_papers": 4,
+  "language_distribution": {
+    "Amharic": 2,
+    "Other": 3,
+    "Tigrinya": 2,
+    "Classical Ge'ez": 1
+  },
+  "pillar_distribution": {
+    "Lexical & Morphological Analysis": 1,
+    "Text Representation & Embeddings": 1,
+    "Language Resources & Datasets": 1,
+    "Sequence Labeling & Structure Extraction": 1
+  },
+  "tool_type_distribution": {
+    "Algorithm": 1,
+    "Dataset": 1,
+    "Pipeline": 1
+  },
+  "morphology_papers": 1,
+  "script_specific_papers": 1,
+  "avg_completeness": 0.8
+}

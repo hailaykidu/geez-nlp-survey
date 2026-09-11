@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Search keywords and parameters for Ge'ez-Script NLP survey",
+    "created": "2026-09-11",
+    "updated": "2026-09-11",
+    "note": "arXiv removed per user preference - focus on peer-reviewed venues only"
+  },
+  "search_terms": {
+    "amharic": [
+      "Amharic NLP",
+      "Amharic language processing",
+      "Amharic morphology",
+      "Amharic tokenization",
+      "Amharic embedding",
+      "Amharic POS tagging",
+      "Amharic NER",
+      "Amharic parsing",
+      "Amharic corpus",
+      "Amharic dataset"
+    ],
+    "tigrinya": [
+      "Tigrinya NLP",
+      "Tigrinya language processing",
+      "Tigrinya morphology",
+      "Tigrinya tokenization",
+      "Tigrinya processing",
+      "Tigrinya language"
+    ],
+    "geez": [
+      "Ge'ez",
+      "Geez",
+      "Classical Ge'ez",
+      "Ethiopic script",
+      "Fidel script",
+      "Ge'ez-script languages",
+      "Semitic NLP"
+    ]
+  },
+  "sources": {
+    "semantic_scholar": {
+      "name": "Semantic Scholar",
+      "description": "AI-powered research paper search (peer-reviewed papers)",
+      "base_url": "https://api.semanticscholar.org/graph/v1/paper/search",
+      "max_results": 100,
+      "rate_limit": 1,
+      "timeout": 10,
+      "enabled": true
+    },
+    "acl_anthology": {
+      "name": "ACL Anthology",
+      "description": "Association for Computational Linguistics official repository",
+      "base_url": "https://www.aclweb.org/anthology/",
+      "rate_limit": 1,
+      "timeout": 10,
+      "enabled": true
+    }
+  },
+  "filters": {
+    "year_min": 2016,
+    "year_max": 2026,
+    "language_codes": ["am", "ti", "gez"],
+    "exclude_venues": [],
+    "peer_reviewed_only": true,
+    "excluded_sources": ["arxiv"]
+  },
+  "notes": {
+    "arxiv_removal": "arXiv papers excluded - survey focuses on peer-reviewed venues only (ACL Anthology, Semantic Scholar)",
+    "peer_review": "All sources must be peer-reviewed conference proceedings or journals",
+    "venues_included": ["ACL", "EMNLP", "NAACL", "LREC", "COLING", "IEEE", "Springer", "Elsevier", "ACM", "Other peer-reviewed venues"],
+    "expected_coverage": "Semantic Scholar covers most peer-reviewed papers; ACL Anthology covers NLP-specific venues"
+  }
+}

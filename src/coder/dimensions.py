@@ -9,11 +9,12 @@ Defines the 5 dimensions used to systematically code papers in the survey:
 """
 
 from enum import Enum
-from typing import Dict, List, Set
+from typing import Dict, Set
 
 
 class Language(str, Enum):
     """Target languages for coding."""
+
     AMHARIC = "Amharic"
     TIGRINYA = "Tigrinya"
     CLASSICAL_GEEZ = "Classical Ge'ez"
@@ -22,6 +23,7 @@ class Language(str, Enum):
 
 class Pillar(str, Enum):
     """NLP research pillars."""
+
     TOKENIZATION = "Tokenization & Normalization"
     MORPHOLOGY = "Lexical & Morphological Analysis"
     EMBEDDINGS = "Text Representation & Embeddings"
@@ -33,6 +35,7 @@ class Pillar(str, Enum):
 
 class ToolType(str, Enum):
     """Type of tool/contribution."""
+
     DATASET = "Dataset"
     LIBRARY = "Library"
     PIPELINE = "Pipeline"
@@ -46,6 +49,7 @@ class ToolType(str, Enum):
 
 class MorphologyAssumption(str, Enum):
     """Type of morphological assumption."""
+
     AGGLUTINATIVE = "Agglutinative"
     FUSIONAL = "Fusional"
     ABUGIDA = "Abugida Script"
@@ -56,6 +60,7 @@ class MorphologyAssumption(str, Enum):
 
 class ScriptProperty(str, Enum):
     """Script-specific properties addressed."""
+
     UNICODE_HANDLING = "Unicode Handling"
     FIDEL_SCRIPT = "Fidel Script"
     DIACRITIC_MARKS = "Diacritic Marks"
@@ -67,6 +72,7 @@ class ScriptProperty(str, Enum):
 
 class TransferApproach(str, Enum):
     """Approach to language transfer/adaptation."""
+
     MONOLINGUAL = "Monolingual"
     CROSS_LINGUAL = "Cross-lingual"
     CROSS_SCRIPT = "Cross-script"
@@ -86,28 +92,77 @@ LANGUAGE_KEYWORDS: Dict[Language, Set[str]] = {
 
 PILLAR_KEYWORDS: Dict[Pillar, Set[str]] = {
     Pillar.TOKENIZATION: {
-        "tokeniz", "segmentation", "unicode normalization", "fidel", "word boundary",
-        "text boundary", "script normalization", "character level"
+        "tokeniz",
+        "segmentation",
+        "unicode normalization",
+        "fidel",
+        "word boundary",
+        "text boundary",
+        "script normalization",
+        "character level",
     },
     Pillar.MORPHOLOGY: {
-        "morpholog", "root", "lemm", "stemm", "pos tag", "part-of-speech",
-        "affix", "suffix", "prefix", "inflection", "derivation", "compound"
+        "morpholog",
+        "root",
+        "lemm",
+        "stemm",
+        "pos tag",
+        "part-of-speech",
+        "affix",
+        "suffix",
+        "prefix",
+        "inflection",
+        "derivation",
+        "compound",
     },
     Pillar.EMBEDDINGS: {
-        "embedding", "word2vec", "fasttext", "bert", "xlm", "glove",
-        "representation", "vector", "transformer", "contextual", "dense vector"
+        "embedding",
+        "word2vec",
+        "fasttext",
+        "bert",
+        "xlm",
+        "glove",
+        "representation",
+        "vector",
+        "transformer",
+        "contextual",
+        "dense vector",
     },
     Pillar.SEQUENCE_LABELING: {
-        "ner", "named entity", "parsing", "chunking", "pos", "tagging",
-        "labeling", "sequence label", "crf", "structure extraction"
+        "ner",
+        "named entity",
+        "parsing",
+        "chunking",
+        "pos",
+        "tagging",
+        "labeling",
+        "sequence label",
+        "crf",
+        "structure extraction",
     },
     Pillar.LANGUAGE_MODELS: {
-        "language model", "lm", "lstm", "rnn", "neural", "deep learning",
-        "transformer", "gpt", "bert", "pretraining", "fine-tuning"
+        "language model",
+        "lm",
+        "lstm",
+        "rnn",
+        "neural",
+        "deep learning",
+        "transformer",
+        "gpt",
+        "bert",
+        "pretraining",
+        "fine-tuning",
     },
     Pillar.RESOURCES: {
-        "corpus", "dataset", "benchmark", "annotation", "treebank",
-        "lexicon", "dictionary", "resource", "data resource"
+        "corpus",
+        "dataset",
+        "benchmark",
+        "annotation",
+        "treebank",
+        "lexicon",
+        "dictionary",
+        "resource",
+        "data resource",
     },
 }
 
@@ -123,8 +178,17 @@ TOOL_TYPE_KEYWORDS: Dict[ToolType, Set[str]] = {
 }
 
 MORPHOLOGY_KEYWORDS: Set[str] = {
-    "morpholog", "morphological", "root", "lemm", "stemm", "pos tag",
-    "part-of-speech", "affix", "inflection", "agglutinative", "fusional"
+    "morpholog",
+    "morphological",
+    "root",
+    "lemm",
+    "stemm",
+    "pos tag",
+    "part-of-speech",
+    "affix",
+    "inflection",
+    "agglutinative",
+    "fusional",
 }
 
 SCRIPT_KEYWORDS: Dict[ScriptProperty, Set[str]] = {
@@ -139,7 +203,12 @@ SCRIPT_KEYWORDS: Dict[ScriptProperty, Set[str]] = {
 
 TRANSFER_KEYWORDS: Dict[TransferApproach, Set[str]] = {
     TransferApproach.MONOLINGUAL: {"monolingual", "single language", "language-specific"},
-    TransferApproach.CROSS_LINGUAL: {"cross-lingual", "crosslingual", "multilingual", "language transfer"},
+    TransferApproach.CROSS_LINGUAL: {
+        "cross-lingual",
+        "crosslingual",
+        "multilingual",
+        "language transfer",
+    },
     TransferApproach.CROSS_SCRIPT: {"cross-script", "script transfer", "script adaptation"},
     TransferApproach.MULTILINGUAL: {"multilingual", "multiple language", "language universal"},
     TransferApproach.TRANSFER_LEARNING: {"transfer learning", "domain adaptation", "pretrain"},
@@ -149,11 +218,21 @@ TRANSFER_KEYWORDS: Dict[TransferApproach, Set[str]] = {
 
 # Keyword indicators for reproducibility
 CODE_AVAILABLE_KEYWORDS: Set[str] = {
-    "github", "code available", "source code", "public repository",
-    "open source", "implementation", "codebase"
+    "github",
+    "code available",
+    "source code",
+    "public repository",
+    "open source",
+    "implementation",
+    "codebase",
 }
 
 DATA_AVAILABLE_KEYWORDS: Set[str] = {
-    "dataset available", "data available", "download", "repository",
-    "supplementary", "appendix", "shared data"
+    "dataset available",
+    "data available",
+    "download",
+    "repository",
+    "supplementary",
+    "appendix",
+    "shared data",
 }

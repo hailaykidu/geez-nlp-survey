@@ -10,7 +10,6 @@ from typing import List, Dict, Any
 from src.models.paper import Paper
 from src.utils.logger import setup_logger
 
-
 logger = setup_logger(__name__)
 
 
@@ -50,7 +49,10 @@ class JSONExporter:
         return output_file
 
     def export_with_metadata(
-        self, papers: List[Paper], metadata: Dict[str, Any], filename: str = "papers_with_metadata.json"
+        self,
+        papers: List[Paper],
+        metadata: Dict[str, Any],
+        filename: str = "papers_with_metadata.json",
     ) -> Path:
         """Export papers with metadata.
 

@@ -11,6 +11,7 @@ import logging
 
 class ConfigLoadError(Exception):
     """Raised when configuration loading fails."""
+
     pass
 
 
@@ -71,13 +72,9 @@ class ConfigLoader:
                 self.logger.debug(f"Loaded search config from {config_path}")
                 return self._search_config
         except FileNotFoundError:
-            raise ConfigLoadError(
-                f"Search config file not found: {config_path.absolute()}"
-            )
+            raise ConfigLoadError(f"Search config file not found: {config_path.absolute()}")
         except json.JSONDecodeError as e:
-            raise ConfigLoadError(
-                f"Invalid JSON in search config: {config_path} - {str(e)}"
-            )
+            raise ConfigLoadError(f"Invalid JSON in search config: {config_path} - {str(e)}")
 
     def load_screening_config(self) -> Dict[str, Any]:
         """Load screening configuration from JSON.
@@ -106,13 +103,9 @@ class ConfigLoader:
                 self.logger.debug(f"Loaded screening config from {config_path}")
                 return self._screening_config
         except FileNotFoundError:
-            raise ConfigLoadError(
-                f"Screening config file not found: {config_path.absolute()}"
-            )
+            raise ConfigLoadError(f"Screening config file not found: {config_path.absolute()}")
         except json.JSONDecodeError as e:
-            raise ConfigLoadError(
-                f"Invalid JSON in screening config: {config_path} - {str(e)}"
-            )
+            raise ConfigLoadError(f"Invalid JSON in screening config: {config_path} - {str(e)}")
 
     def load_coding_config(self) -> Dict[str, Any]:
         """Load coding configuration from JSON.
@@ -144,13 +137,9 @@ class ConfigLoader:
                 self.logger.debug(f"Loaded coding config from {config_path}")
                 return self._coding_config
         except FileNotFoundError:
-            raise ConfigLoadError(
-                f"Coding config file not found: {config_path.absolute()}"
-            )
+            raise ConfigLoadError(f"Coding config file not found: {config_path.absolute()}")
         except json.JSONDecodeError as e:
-            raise ConfigLoadError(
-                f"Invalid JSON in coding config: {config_path} - {str(e)}"
-            )
+            raise ConfigLoadError(f"Invalid JSON in coding config: {config_path} - {str(e)}")
 
     def load_all_configs(self) -> Dict[str, Dict[str, Any]]:
         """Load all three configuration files at once.

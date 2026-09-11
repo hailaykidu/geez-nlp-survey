@@ -29,7 +29,7 @@ class CodingValidator:
             errors.append("No languages assigned")
         else:
             for lang in paper.languages:
-                if lang not in [l.value for l in Language]:
+                if lang not in [lng.value for lng in Language]:
                     errors.append(f"Invalid language: {lang}")
 
         # Check primary pillar
@@ -131,9 +131,7 @@ class CodingValidator:
                 "incomplete": 0,
             }
 
-        completeness_scores = [
-            CodingValidator.get_coding_completeness(p) for p in papers
-        ]
+        completeness_scores = [CodingValidator.get_coding_completeness(p) for p in papers]
         avg_completeness = sum(completeness_scores) / len(completeness_scores)
 
         fully_coded = sum(1 for s in completeness_scores if s == 1.0)

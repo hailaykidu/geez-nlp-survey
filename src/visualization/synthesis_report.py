@@ -241,8 +241,9 @@ Many contributions are project-specific rather than generalizable frameworks.
     def _generate_morphology_analysis(papers: List[Paper]) -> str:
         """Generate morphology analysis."""
         morphology_papers = sum(1 for p in papers if p.morphology_focus)
-        assumptions = Counter(p.morphological_assumption
-                             for p in papers if p.morphological_assumption)
+        assumptions = Counter(
+            p.morphological_assumption for p in papers if p.morphological_assumption
+        )
 
         assumption_details = []
         for assumption, count in assumptions.most_common():
@@ -416,8 +417,9 @@ With proper investment and coordination, Ge'ez-script NLP can transition from it
 fragmented state to become a model for low-resource language research more broadly.
 """
 
-    def save_synthesis_report(self, report: Dict[str, Any],
-                             filename: str = "synthesis_report.md") -> Path:
+    def save_synthesis_report(
+        self, report: Dict[str, Any], filename: str = "synthesis_report.md"
+    ) -> Path:
         """Save synthesis report to markdown file.
 
         Args:

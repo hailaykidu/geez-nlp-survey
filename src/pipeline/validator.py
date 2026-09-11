@@ -103,14 +103,10 @@ class PipelineValidator:
 
         results["valid_papers"] = valid_count
         results["invalid_papers"] = len(papers) - valid_count
-        results["validation_rate"] = (
-            valid_count / len(papers) * 100 if papers else 0
-        )
+        results["validation_rate"] = valid_count / len(papers) * 100 if papers else 0
 
         if completeness_scores:
-            results["completeness_avg"] = sum(completeness_scores) / len(
-                completeness_scores
-            )
+            results["completeness_avg"] = sum(completeness_scores) / len(completeness_scores)
 
         # Batch completeness
         batch_completeness = CodingValidator.get_batch_completeness(papers)
@@ -120,8 +116,10 @@ class PipelineValidator:
             "incomplete": batch_completeness["incomplete"],
         }
 
-        logger.info(f"Output validation: {valid_count}/{len(papers)} valid "
-                   f"({results['validation_rate']:.1f}%)")
+        logger.info(
+            f"Output validation: {valid_count}/{len(papers)} valid "
+            f"({results['validation_rate']:.1f}%)"
+        )
         logger.info(f"  Completeness: {results['completeness_avg']:.1%} avg")
         logger.info(f"  Fully coded: {batch_completeness['fully_coded']}")
 
@@ -188,9 +186,7 @@ class PipelineValidator:
 
         return checks
 
-    def generate_validation_report(
-        self, papers: List[Paper], output_dir: Path
-    ) -> Path:
+    def generate_validation_report(self, papers: List[Paper], output_dir: Path) -> Path:
         """Generate comprehensive validation report.
 
         Args:

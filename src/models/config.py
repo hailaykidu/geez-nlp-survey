@@ -13,6 +13,7 @@ class SearchConfig:
         sources: Configuration for each search source (API endpoints, auth, etc.)
         filters: Filtering options (year range, peer-reviewed, etc.)
     """
+
     keywords: Dict[str, List[str]]
     sources: Dict[str, Dict[str, Any]]
     filters: Dict[str, Any]
@@ -27,6 +28,7 @@ class ScreeningConfig:
         exclusion_criteria: Dictionary defining reasons for paper exclusion
         decision_tree: Step-by-step decision tree for screening decisions
     """
+
     inclusion_criteria: Dict[str, Any]
     exclusion_criteria: Dict[str, Any]
     decision_tree: Dict[str, str]
@@ -44,4 +46,5 @@ class CodingConfig:
             - morphology: Morphology-specific features
             - script_adaptation: Script-specific design and transfer approaches
     """
+
     dimensions: Dict[str, Dict[str, Any]]

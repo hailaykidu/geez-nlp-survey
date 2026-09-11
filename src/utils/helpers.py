@@ -65,9 +65,7 @@ def safe_file_write(
     return file_path
 
 
-def safe_file_read(
-    file_path: Union[str, Path], encoding: str = "utf-8"
-) -> str:
+def safe_file_read(file_path: Union[str, Path], encoding: str = "utf-8") -> str:
     """Safely read content from a file.
 
     Args:
@@ -281,9 +279,7 @@ def truncate_text(text: str, max_length: int = 200, suffix: str = "...") -> str:
     return text[: max_length - len(suffix)] + suffix
 
 
-def flatten_dict(
-    d: Dict[str, Any], parent_key: str = "", sep: str = "_"
-) -> Dict[str, Any]:
+def flatten_dict(d: Dict[str, Any], parent_key: str = "", sep: str = "_") -> Dict[str, Any]:
     """Flatten a nested dictionary.
 
     Args:

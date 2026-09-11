@@ -4,11 +4,11 @@ Coordinates all phases: search, screening, coding, export, and visualization.
 """
 
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any
 from datetime import datetime
 import json
 
-from src.models.paper import Paper
+
 from src.utils.config_loader import ConfigLoader
 from src.utils.logger import setup_logger
 from src.searcher.semantic_scholar_searcher import SemanticScholarSearcher

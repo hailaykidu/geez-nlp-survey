@@ -9,7 +9,6 @@ from collections import Counter
 from src.models.paper import Paper
 from src.utils.logger import setup_logger
 
-
 logger = setup_logger(__name__)
 
 
@@ -62,9 +61,7 @@ class ReportGenerator:
                 else "N/A"
             ),
             "venues": len(set(p.venue for p in papers if p.venue)),
-            "unique_authors": len(
-                set(author for p in papers for author in p.authors)
-            ),
+            "unique_authors": len(set(author for p in papers for author in p.authors)),
         }
 
     @staticmethod
@@ -80,23 +77,15 @@ class ReportGenerator:
             "total_language_mentions": len(all_languages),
             "unique_languages": len(language_counts),
             "distribution": dict(language_counts.most_common()),
-            "amharic_papers": sum(
-                1 for p in papers if "Amharic" in p.languages
-            ),
-            "tigrinya_papers": sum(
-                1 for p in papers if "Tigrinya" in p.languages
-            ),
-            "geez_papers": sum(
-                1 for p in papers if "Classical Ge'ez" in p.languages
-            ),
+            "amharic_papers": sum(1 for p in papers if "Amharic" in p.languages),
+            "tigrinya_papers": sum(1 for p in papers if "Tigrinya" in p.languages),
+            "geez_papers": sum(1 for p in papers if "Classical Ge'ez" in p.languages),
         }
 
     @staticmethod
     def _analyze_pillars(papers: List[Paper]) -> Dict[str, Any]:
         """Analyze research pillar distribution."""
-        pillar_counts = Counter(
-            p.primary_pillar for p in papers if p.primary_pillar
-        )
+        pillar_counts = Counter(p.primary_pillar for p in papers if p.primary_pillar)
 
         return {
             "total_papers_with_pillar": sum(pillar_counts.values()),
@@ -120,16 +109,12 @@ class ReportGenerator:
         """Analyze morphology focus."""
         morphology_papers = sum(1 for p in papers if p.morphology_focus)
         assumption_counts = Counter(
-            p.morphological_assumption
-            for p in papers
-            if p.morphological_assumption
+            p.morphological_assumption for p in papers if p.morphological_assumption
         )
 
         return {
             "morphology_focused_papers": morphology_papers,
-            "morphology_percentage": (
-                morphology_papers / len(papers) * 100 if papers else 0
-            ),
+            "morphology_percentage": (morphology_papers / len(papers) * 100 if papers else 0),
             "morphological_assumptions": dict(assumption_counts.most_common()),
         }
 
@@ -137,15 +122,11 @@ class ReportGenerator:
     def _analyze_script_design(papers: List[Paper]) -> Dict[str, Any]:
         """Analyze script-specific design."""
         script_papers = sum(1 for p in papers if p.script_specific_design)
-        transfer_counts = Counter(
-            p.transfer_approach for p in papers if p.transfer_approach
-        )
+        transfer_counts = Counter(p.transfer_approach for p in papers if p.transfer_approach)
 
         return {
             "script_aware_papers": script_papers,
-            "script_awareness_percentage": (
-                script_papers / len(papers) * 100 if papers else 0
-            ),
+            "script_awareness_percentage": (script_papers / len(papers) * 100 if papers else 0),
             "transfer_approaches": dict(transfer_counts.most_common()),
         }
 
@@ -157,16 +138,10 @@ class ReportGenerator:
 
         return {
             "papers_with_code": code_available,
-            "code_availability_percentage": (
-                code_available / len(papers) * 100 if papers else 0
-            ),
+            "code_availability_percentage": (code_available / len(papers) * 100 if papers else 0),
             "papers_with_data": data_available,
-            "data_availability_percentage": (
-                data_available / len(papers) * 100 if papers else 0
-            ),
-            "fully_reproducible": sum(
-                1 for p in papers if p.code_available and p.data_available
-            ),
+            "data_availability_percentage": (data_available / len(papers) * 100 if papers else 0),
+            "fully_reproducible": sum(1 for p in papers if p.code_available and p.data_available),
         }
 
     @staticmethod
@@ -177,17 +152,13 @@ class ReportGenerator:
         return {
             "papers_by_year": dict(sorted(year_counts.most_common(), reverse=True)),
             "year_range": (
-                f"{min(year_counts.keys())}-{max(year_counts.keys())}"
-                if year_counts
-                else "N/A"
+                f"{min(year_counts.keys())}-{max(year_counts.keys())}" if year_counts else "N/A"
             ),
             "latest_year": max(year_counts.keys()) if year_counts else None,
             "earliest_year": min(year_counts.keys()) if year_counts else None,
         }
 
-    def save_report(
-        self, report: Dict[str, Any], filename: str = "statistics_report.txt"
-    ) -> Path:
+    def save_report(self, report: Dict[str, Any], filename: str = "statistics_report.txt") -> Path:
         """Save report to text file.
 
         Args:

@@ -119,12 +119,14 @@ For more information, see README_USAGE.md
         return 0
 
     # Validate arguments
-    if not any([
-        args.run_full_pipeline,
-        args.phase,
-        args.validate_outputs,
-        args.generate_reports,
-    ]):
+    if not any(
+        [
+            args.run_full_pipeline,
+            args.phase,
+            args.validate_outputs,
+            args.generate_reports,
+        ]
+    ):
         parser.print_help()
         return 0
 
@@ -285,6 +287,7 @@ def _validate_outputs(args):
     papers_json = output_dir / "papers.json"
     if papers_json.exists():
         import json
+
         with open(papers_json, "r", encoding="utf-8") as f:
             papers_data = json.load(f)
             # Note: In production, would reconstruct Paper objects

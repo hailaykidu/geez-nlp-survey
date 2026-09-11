@@ -15,9 +15,7 @@ from src.models.paper import Paper
 from src.coder.dimensions import (
     Language,
     Pillar,
-    ToolType,
     MorphologyAssumption,
-    ScriptProperty,
     TransferApproach,
     LANGUAGE_KEYWORDS,
     PILLAR_KEYWORDS,
@@ -30,7 +28,6 @@ from src.coder.dimensions import (
 )
 from src.coder.validators import CodingValidator
 from src.utils.logger import setup_logger
-
 
 logger = setup_logger(__name__)
 
@@ -78,8 +75,7 @@ class PaperCoder:
         for i, paper in enumerate(papers, 1):
             self._code_paper(paper)
             logger.debug(
-                f"[{i}/{len(papers)}] Coded: {paper.title[:60]}... "
-                f"({paper.primary_pillar})"
+                f"[{i}/{len(papers)}] Coded: {paper.title[:60]}... " f"({paper.primary_pillar})"
             )
 
         # Validate batch
@@ -197,9 +193,7 @@ class PaperCoder:
             elif "unicode" in text or "script" in text:
                 paper.morphological_assumption = MorphologyAssumption.SCRIPT_AWARE.value
             else:
-                paper.morphological_assumption = (
-                    MorphologyAssumption.LANGUAGE_AGNOSTIC.value
-                )
+                paper.morphological_assumption = MorphologyAssumption.LANGUAGE_AGNOSTIC.value
 
     def _code_script_design(self, paper: Paper, text: str) -> None:
         """Code script-specific design dimension."""
@@ -263,9 +257,7 @@ class PaperCoder:
         pillar_counts = {}
         for paper in self.coded_papers:
             if paper.primary_pillar:
-                pillar_counts[paper.primary_pillar] = (
-                    pillar_counts.get(paper.primary_pillar, 0) + 1
-                )
+                pillar_counts[paper.primary_pillar] = pillar_counts.get(paper.primary_pillar, 0) + 1
 
         # Tool type distribution
         tool_counts = {}
@@ -274,14 +266,10 @@ class PaperCoder:
                 tool_counts[paper.tool_type] = tool_counts.get(paper.tool_type, 0) + 1
 
         # Morphology stats
-        morphology_count = sum(
-            1 for p in self.coded_papers if p.morphology_focus
-        )
+        morphology_count = sum(1 for p in self.coded_papers if p.morphology_focus)
 
         # Script design stats
-        script_count = sum(
-            1 for p in self.coded_papers if p.script_specific_design
-        )
+        script_count = sum(1 for p in self.coded_papers if p.script_specific_design)
 
         summary = {
             "total_papers": len(self.coded_papers),
@@ -290,9 +278,9 @@ class PaperCoder:
             "tool_type_distribution": tool_counts,
             "morphology_papers": morphology_count,
             "script_specific_papers": script_count,
-            "avg_completeness": CodingValidator.get_batch_completeness(
-                self.coded_papers
-            )["avg_completeness"],
+            "avg_completeness": CodingValidator.get_batch_completeness(self.coded_papers)[
+                "avg_completeness"
+            ],
         }
 
         summary_file = summary_dir / "coding_summary.json"
@@ -313,7 +301,5 @@ class PaperCoder:
             "pillars": list(set(p.primary_pillar for p in self.coded_papers if p.primary_pillar)),
             "tool_types": list(set(p.tool_type for p in self.coded_papers if p.tool_type)),
             "morphology_papers": sum(1 for p in self.coded_papers if p.morphology_focus),
-            "script_specific_papers": sum(
-                1 for p in self.coded_papers if p.script_specific_design
-            ),
+            "script_specific_papers": sum(1 for p in self.coded_papers if p.script_specific_design),
         }
