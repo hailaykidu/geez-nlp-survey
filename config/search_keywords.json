@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "Search keywords and parameters for Ge'ez-Script NLP survey",
+    "created": "2026-09-11"
+  },
+  "search_terms": {
+    "amharic": [
+      "Amharic NLP",
+      "Amharic language processing",
+      "Amharic morphology",
+      "Amharic tokenization",
+      "Amharic embedding",
+      "Amharic POS tagging",
+      "Amharic NER",
+      "Amharic parsing",
+      "Amharic corpus",
+      "Amharic dataset"
+    ],
+    "tigrinya": [
+      "Tigrinya NLP",
+      "Tigrinya language processing",
+      "Tigrinya morphology",
+      "Tigrinya tokenization",
+      "Tigrinya processing",
+      "Tigrinya language"
+    ],
+    "geez": [
+      "Ge'ez",
+      "Geez",
+      "Classical Ge'ez",
+      "Ethiopic script",
+      "Fidel script",
+      "Ge'ez-script languages",
+      "Semitic NLP"
+    ]
+  },
+  "sources": {
+    "semantic_scholar": {
+      "base_url": "https://api.semanticscholar.org/graph/v1/paper/search",
+      "description": "Semantic Scholar API - provides peer-reviewed papers",
+      "max_results": 100,
+      "rate_limit": 1,
+      "timeout": 10
+    },
+    "acl_anthology": {
+      "base_url": "https://www.aclweb.org/anthology/",
+      "description": "ACL Anthology - peer-reviewed NLP conference proceedings",
+      "rate_limit": 1,
+      "timeout": 10
+    }
+  },
+  "filters": {
+    "year_min": 2016,
+    "year_max": 2026,
+    "language_codes": ["am", "ti", "gez"],
+    "exclude_venues": []
+  }
+}
