@@ -136,11 +136,19 @@ class SystematicReviewOrchestrator:
         search_config = config.get("search", {})
         results = {}
 
+        # Flatten all keywords from all languages
+        keywords = []
+        search_terms = search_config.get("search_terms", {})
+        for language, terms in search_terms.items():
+            if isinstance(terms, list):
+                keywords.extend(terms)
+
+        logger.info(f"  - Total keywords to search: {len(keywords)}")
+
         # Semantic Scholar search
         logger.info("  - Searching Semantic Scholar...")
-        ss_searcher = SemanticScholarSearcher()
-        keywords = search_config.get("keywords", [])
-        ss_papers = ss_searcher.search_multiple(keywords)
+        ss_searcher = SemanticScholarSearcher(config)
+        ss_papers = ss_searcher.search(keywords)
         self.searched_papers.extend(ss_papers)
         results["semantic_scholar"] = {
             "papers_found": len(ss_papers),
@@ -150,8 +158,8 @@ class SystematicReviewOrchestrator:
 
         # ACL Anthology search
         logger.info("  - Searching ACL Anthology...")
-        acl_searcher = ACLAnthologySearcher()
-        acl_papers = acl_searcher.search_multiple(keywords)
+        acl_searcher = ACLAnthologySearcher(config)
+        acl_papers = acl_searcher.search(keywords)
         self.searched_papers.extend(acl_papers)
         results["acl_anthology"] = {
             "papers_found": len(acl_papers),
@@ -174,16 +182,18 @@ class SystematicReviewOrchestrator:
             Screening phase results
         """
         screener = PRISMAScreener()
-        self.screened_papers = screener.screen(self.searched_papers)
+        included, excluded = screener.screen(self.searched_papers)
+        self.screened_papers = included
 
-        screening_stats = screener.get_screening_stats()
+        screening_stats = screener.get_summary()
         logger.info(f"  - Screened {len(self.searched_papers)} papers")
-        logger.info(f"    Included: {screening_stats.get('included', 0)}")
-        logger.info(f"    Excluded: {screening_stats.get('excluded', 0)}")
+        logger.info(f"    Included: {screening_stats.get('papers_included', 0)}")
+        logger.info(f"    Excluded: {screening_stats.get('papers_excluded', 0)}")
 
         return {
             "total_screened": len(self.searched_papers),
-            "total_included": len(self.screened_papers),
+            "total_included": len(included),
+            "total_excluded": len(excluded),
             "statistics": screening_stats,
         }
 

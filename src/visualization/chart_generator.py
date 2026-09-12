@@ -70,45 +70,58 @@ class ChartGenerator:
 
         # Create figure
         fig, ax = plt.subplots(figsize=(10, 6))
-        langs = list(languages.keys())
-        counts = list(languages.values())
 
-        # Color gradient for Ge'ez languages
-        colors = [
-            (
-                "#1f77b4"
-                if "Amharic" in lang
-                else (
-                    "#ff7f0e" if "Tigrinya" in lang else "#2ca02c" if "Ge'ez" in lang else "#d62728"
-                )
-            )
-            for lang in langs
-        ]
-
-        bars = ax.bar(langs, counts, color=colors, edgecolor="black", linewidth=1.5)
-
-        # Add value labels on bars
-        for bar in bars:
-            height = bar.get_height()
-            ax.text(
-                bar.get_x() + bar.get_width() / 2.0,
-                height,
-                f"{int(height)}",
-                ha="center",
-                va="bottom",
-                fontsize=11,
+        # Handle empty data
+        if not languages:
+            ax.text(0.5, 0.5, "No data available", ha="center", va="center",
+                   fontsize=14, fontweight="bold", transform=ax.transAxes)
+            ax.set_title(
+                "Language Distribution in Ge'ez-Script NLP Survey",
+                fontsize=14,
                 fontweight="bold",
+                pad=20,
             )
+            ax.axis("off")
+        else:
+            langs = list(languages.keys())
+            counts = list(languages.values())
 
-        ax.set_xlabel("Language", fontsize=12, fontweight="bold")
-        ax.set_ylabel("Number of Papers", fontsize=12, fontweight="bold")
-        ax.set_title(
-            "Language Distribution in Ge'ez-Script NLP Survey",
-            fontsize=14,
-            fontweight="bold",
-            pad=20,
-        )
-        ax.grid(axis="y", alpha=0.3, linestyle="--")
+            # Color gradient for Ge'ez languages
+            colors = [
+                (
+                    "#1f77b4"
+                    if "Amharic" in lang
+                    else (
+                        "#ff7f0e" if "Tigrinya" in lang else "#2ca02c" if "Ge'ez" in lang else "#d62728"
+                    )
+                )
+                for lang in langs
+            ]
+
+            bars = ax.bar(langs, counts, color=colors, edgecolor="black", linewidth=1.5)
+
+            # Add value labels on bars
+            for bar in bars:
+                height = bar.get_height()
+                ax.text(
+                    bar.get_x() + bar.get_width() / 2.0,
+                    height,
+                    f"{int(height)}",
+                    ha="center",
+                    va="bottom",
+                    fontsize=11,
+                    fontweight="bold",
+                )
+
+            ax.set_xlabel("Language", fontsize=12, fontweight="bold")
+            ax.set_ylabel("Number of Papers", fontsize=12, fontweight="bold")
+            ax.set_title(
+                "Language Distribution in Ge'ez-Script NLP Survey",
+                fontsize=14,
+                fontweight="bold",
+                pad=20,
+            )
+            ax.grid(axis="y", alpha=0.3, linestyle="--")
 
         plt.tight_layout()
         output_file = self.output_dir / "chart_language_distribution.png"
@@ -132,28 +145,36 @@ class ChartGenerator:
 
         # Create figure
         fig, ax = plt.subplots(figsize=(12, 6))
-        pillar_names = [p.replace(" & ", "\n& ").replace(" & ", "\n& ") for p in pillars.keys()]
-        counts = list(pillars.values())
 
-        bars = ax.barh(pillar_names, counts, color="steelblue", edgecolor="black", linewidth=1.5)
+        # Handle empty data
+        if not pillars:
+            ax.text(0.5, 0.5, "No data available", ha="center", va="center",
+                   fontsize=14, fontweight="bold", transform=ax.transAxes)
+            ax.set_title("Research Pillar Distribution", fontsize=14, fontweight="bold", pad=20)
+            ax.axis("off")
+        else:
+            pillar_names = [p.replace(" & ", "\n& ").replace(" & ", "\n& ") for p in pillars.keys()]
+            counts = list(pillars.values())
 
-        # Add value labels
-        for i, bar in enumerate(bars):
-            width = bar.get_width()
-            ax.text(
-                width,
-                bar.get_y() + bar.get_height() / 2.0,
-                f"{int(width)}",
-                ha="left",
-                va="center",
-                fontsize=11,
-                fontweight="bold",
-                bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.7),
-            )
+            bars = ax.barh(pillar_names, counts, color="steelblue", edgecolor="black", linewidth=1.5)
 
-        ax.set_xlabel("Number of Papers", fontsize=12, fontweight="bold")
-        ax.set_title("Research Pillar Distribution", fontsize=14, fontweight="bold", pad=20)
-        ax.grid(axis="x", alpha=0.3, linestyle="--")
+            # Add value labels
+            for i, bar in enumerate(bars):
+                width = bar.get_width()
+                ax.text(
+                    width,
+                    bar.get_y() + bar.get_height() / 2.0,
+                    f"{int(width)}",
+                    ha="left",
+                    va="center",
+                    fontsize=11,
+                    fontweight="bold",
+                    bbox=dict(boxstyle="round,pad=0.3", facecolor="white", alpha=0.7),
+                )
+
+            ax.set_xlabel("Number of Papers", fontsize=12, fontweight="bold")
+            ax.set_title("Research Pillar Distribution", fontsize=14, fontweight="bold", pad=20)
+            ax.grid(axis="x", alpha=0.3, linestyle="--")
 
         plt.tight_layout()
         output_file = self.output_dir / "chart_pillar_distribution.png"
@@ -177,26 +198,34 @@ class ChartGenerator:
 
         # Create figure
         fig, ax = plt.subplots(figsize=(10, 8))
-        tool_names = list(tools.keys())
-        counts = list(tools.values())
 
-        colors = plt.cm.Set3(range(len(tool_names)))
-        wedges, texts, autotexts = ax.pie(
-            counts,
-            labels=tool_names,
-            autopct="%1.1f%%",
-            colors=colors,
-            startangle=90,
-            textprops={"fontsize": 11, "fontweight": "bold"},
-        )
+        # Handle empty data
+        if not tools:
+            ax.text(0.5, 0.5, "No data available", ha="center", va="center",
+                   fontsize=14, fontweight="bold", transform=ax.transAxes)
+            ax.set_title("Tool Type Distribution", fontsize=14, fontweight="bold", pad=20)
+            ax.axis("off")
+        else:
+            tool_names = list(tools.keys())
+            counts = list(tools.values())
 
-        # Enhance text
-        for autotext in autotexts:
-            autotext.set_color("black")
-            autotext.set_fontsize(10)
-            autotext.set_fontweight("bold")
+            colors = plt.cm.Set3(range(len(tool_names)))
+            wedges, texts, autotexts = ax.pie(
+                counts,
+                labels=tool_names,
+                autopct="%1.1f%%",
+                colors=colors,
+                startangle=90,
+                textprops={"fontsize": 11, "fontweight": "bold"},
+            )
 
-        ax.set_title("Tool Type Distribution", fontsize=14, fontweight="bold", pad=20)
+            # Enhance text
+            for autotext in autotexts:
+                autotext.set_color("black")
+                autotext.set_fontsize(10)
+                autotext.set_fontweight("bold")
+
+            ax.set_title("Tool Type Distribution", fontsize=14, fontweight="bold", pad=20)
 
         plt.tight_layout()
         output_file = self.output_dir / "chart_tool_type_distribution.png"
@@ -287,19 +316,25 @@ class ChartGenerator:
         focus_labels = ["With Morphology Focus", "Without Morphology Focus"]
         colors_focus = ["#2ca02c", "#d62728"]
 
-        wedges, texts, autotexts = ax1.pie(
-            focus_data,
-            labels=focus_labels,
-            autopct="%1.1f%%",
-            colors=colors_focus,
-            startangle=90,
-            textprops={"fontsize": 11, "fontweight": "bold"},
-        )
+        # Handle empty data
+        if sum(focus_data) == 0:
+            ax1.text(0.5, 0.5, "No data available", ha="center", va="center",
+                    fontsize=12, fontweight="bold", transform=ax1.transAxes)
+            ax1.axis("off")
+        else:
+            wedges, texts, autotexts = ax1.pie(
+                focus_data,
+                labels=focus_labels,
+                autopct="%1.1f%%",
+                colors=colors_focus,
+                startangle=90,
+                textprops={"fontsize": 11, "fontweight": "bold"},
+            )
 
-        for autotext in autotexts:
-            autotext.set_color("white")
-            autotext.set_fontweight("bold")
-            autotext.set_fontsize(11)
+            for autotext in autotexts:
+                autotext.set_color("white")
+                autotext.set_fontweight("bold")
+                autotext.set_fontsize(11)
 
         ax1.set_title("Morphology Focus", fontsize=12, fontweight="bold", pad=15)
 
@@ -311,32 +346,38 @@ class ChartGenerator:
         assumption_names = list(assumptions.keys())
         assumption_counts = list(assumptions.values())
 
-        bars = ax2.bar(
-            range(len(assumption_names)),
-            assumption_counts,
-            color="steelblue",
-            edgecolor="black",
-            linewidth=1.5,
-        )
-
-        ax2.set_xticks(range(len(assumption_names)))
-        ax2.set_xticklabels(assumption_names, rotation=45, ha="right")
-        ax2.set_ylabel("Number of Papers", fontsize=11, fontweight="bold")
-        ax2.set_title("Morphological Assumptions", fontsize=12, fontweight="bold", pad=15)
-        ax2.grid(axis="y", alpha=0.3, linestyle="--")
-
-        # Add value labels
-        for bar in bars:
-            height = bar.get_height()
-            ax2.text(
-                bar.get_x() + bar.get_width() / 2.0,
-                height,
-                f"{int(height)}",
-                ha="center",
-                va="bottom",
-                fontsize=10,
-                fontweight="bold",
+        if not assumption_names:
+            ax2.text(0.5, 0.5, "No data available", ha="center", va="center",
+                    fontsize=12, fontweight="bold", transform=ax2.transAxes)
+            ax2.axis("off")
+        else:
+            bars = ax2.bar(
+                range(len(assumption_names)),
+                assumption_counts,
+                color="steelblue",
+                edgecolor="black",
+                linewidth=1.5,
             )
+
+            ax2.set_xticks(range(len(assumption_names)))
+            ax2.set_xticklabels(assumption_names, rotation=45, ha="right")
+            ax2.set_ylabel("Number of Papers", fontsize=11, fontweight="bold")
+            ax2.grid(axis="y", alpha=0.3, linestyle="--")
+
+            # Add value labels
+            for bar in bars:
+                height = bar.get_height()
+                ax2.text(
+                    bar.get_x() + bar.get_width() / 2.0,
+                    height,
+                    f"{int(height)}",
+                    ha="center",
+                    va="bottom",
+                    fontsize=10,
+                    fontweight="bold",
+                )
+
+        ax2.set_title("Morphological Assumptions", fontsize=12, fontweight="bold", pad=15)
 
         plt.tight_layout()
         output_file = self.output_dir / "chart_morphology_focus.png"

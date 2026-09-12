@@ -1,0 +1,49 @@
+{
+  "fields": {
+    "id": "string - unique identifier",
+    "title": "string - paper title",
+    "authors": "list of strings - author names",
+    "year": "integer - publication year",
+    "venue": "string - publication venue",
+    "abstract": "string - paper abstract",
+    "languages": "list of strings - target languages",
+    "primary_pillar": "string - main research pillar",
+    "tool_type": "string - type of contribution",
+    "morphology_focus": "boolean - morphology emphasis",
+    "morphological_assumption": "string - morphology type",
+    "script_specific_design": "boolean - script awareness",
+    "transfer_approach": "string - transfer method",
+    "code_available": "boolean - code repository available",
+    "data_available": "boolean - data/resources available",
+    "source": "string - data source",
+    "screening_decision": "string - PRISMA screening result"
+  },
+  "dimensions": {
+    "languages": [
+      "Amharic",
+      "Tigrinya",
+      "Classical Ge'ez",
+      "Other"
+    ],
+    "pillars": [
+      "Tokenization & Normalization",
+      "Lexical & Morphological Analysis",
+      "Text Representation & Embeddings",
+      "Sequence Labeling & Structure Extraction",
+      "Language Models & Deep Learning",
+      "Language Resources & Datasets",
+      "Other NLP"
+    ],
+    "tool_types": [
+      "Dataset",
+      "Library",
+      "Pipeline",
+      "Algorithm",
+      "Framework",
+      "Corpus",
+      "Tool",
+      "Model",
+      "Other"
+    ]
+  }
+}
