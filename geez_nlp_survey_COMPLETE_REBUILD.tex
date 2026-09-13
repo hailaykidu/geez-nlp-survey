@@ -40,7 +40,7 @@
 \maketitle
 
 \begin{abstract}
-This comprehensive systematic review analyzes 70 peer-reviewed papers (2016--2026) using PRISMA methodology to discover, catalog, and analyze 16 foundational NLP tools for Ge'ez-script languages (Amharic, Tigrinya, Classical Ge'ez). Organized across four technical pillars—tokenization, morphology, embeddings/language models, and sequence labeling—our analysis reveals: (a)~critical underrepresentation of Classical Ge'ez with only 2 tools (12\% coverage); (b)~severe bottleneck in sequence labeling with just 1 tool (6\% of all tools); (c)~dominant single-language approach with 71\% of tools targeting individual languages; (d)~preference for rule-based methods in 65\% of implementations. We trace tool development acceleration from ~1 tool/year (2016--2020) to ~2.3 tools/year (2021--2023), indicating growing community engagement. However, critical gaps remain: cross-lingual transfer learning is severely underexplored (only 31\% multilingual), and Classical Ge'ez remains nearly neglected. Based on quantitative findings and qualitative analysis of 70 papers, we propose a five-priority research agenda for coordinated, script-aware NLP development: (1)~unified tokenization framework, (2)~cross-lingual morphological transfer, (3)~script-optimized embeddings, (4)~expanded sequence labeling, and (5)~community infrastructure. This survey serves as a foundation for future research and practical reference for developers, researchers, and policymakers advancing Ge'ez-script language technology.
+This comprehensive systematic review analyzes 70 peer-reviewed papers (2016--2026) using PRISMA methodology to discover, catalog, and analyze 19 foundational NLP tools for Ge'ez-script languages (Amharic, Tigrinya, Classical Ge'ez). Organized across four technical pillars—tokenization, morphology, embeddings/language models, and sequence labeling—our analysis reveals: (a)~improving but persistent underrepresentation of Classical Ge'ez with 3 tools (16\% coverage); (b)~severe bottleneck in sequence labeling with just 1 tool (5\% of all tools); (c)~decreasing but dominant single-language approach with 63\% of tools targeting individual languages; (d)~balanced preference with 58\% rule-based and 42\% neural methods. We trace tool development acceleration from ~1 tool/year (2016--2020) to ~3.0 tools/year (2021--2023), with P3 (embeddings) showing strongest growth (4→6 tools). Critical gaps remain: sequence labeling severely underexplored, and cross-lingual transfer learning limited (37\% multilingual). Based on quantitative findings and qualitative analysis of 70 papers, we propose a five-priority research agenda for coordinated, script-aware NLP development: (1)~unified tokenization framework, (2)~cross-lingual morphological transfer, (3)~script-optimized embeddings, (4)~expanded sequence labeling, and (5)~community infrastructure. This survey serves as a foundation for future research and practical reference for developers, researchers, and policymakers advancing Ge'ez-script language technology.
 \end{abstract}
 
 \noindent\textbf{Keywords:} Ge'ez script, systematic review, low-resource NLP, Amharic, Tigrinya, Classical Ge'ez, foundational tools, PRISMA methodology, language technology
@@ -168,19 +168,19 @@ Our comprehensive search yielded 70 peer-reviewed papers analyzing Ge'ez-script 
     \item Other applications (10 papers): Sentiment analysis, POS tagging, named entity recognition
 \end{itemize}
 
-\subsection{Tool Inventory: 16 Ge'ez-script Tools}
+\subsection{Tool Inventory: 19 Ge'ez-script Tools}
 
 \subsubsection{Overview Statistics}
 
-Across all repositories, we identified 16 foundational tools with the following characteristics:
+Across all repositories, we identified 19 foundational tools with the following characteristics:
 
 \begin{itemize}
-    \item \textbf{Language coverage:} Amharic 8 (50\%), Tigrinya 9 (56\%), Classical Ge'ez 2 (12\%)
-    \item \textbf{Technical pillars:} P1 (3, 19\%), P2 (3, 19\%), P3 (4, 25\%), P4 (1, 6\%), Other (5, 31\%)
-    \item \textbf{Tool types:} Dataset (6, 38\%), Model (5, 31\%), Tool (3, 19\%), Resource (2, 12\%)
-    \item \textbf{Source repositories:} GitHub (8, 50\%), Zenodo (5, 31\%), HuggingFace (2, 12\%), PyPI (1, 6\%)
-    \item \textbf{Design patterns:} Single-language (11, 71\%), Multilingual (5, 31\%), Rule-based (10, 65\%), Neural (6, 35\%)
-    \item \textbf{Development timeline:} 2016--2020 (5 tools, ~1.0/year), 2021--2023 (7 tools, ~2.3/year), 2024--2026 (4 tools, acceleration)
+    \item \textbf{Language coverage:} Amharic 9 (47\%), Tigrinya 11 (58\%), Classical Ge'ez 3 (16\%)
+    \item \textbf{Technical pillars:} P1 (4, 21\%), P2 (3, 16\%), P3 (6, 32\%), P4 (1, 5\%), Other (5, 26\%)
+    \item \textbf{Tool types:} Dataset (7, 37\%), Model (6, 32\%), Tool (4, 21\%), Resource (2, 10\%)
+    \item \textbf{Source repositories:} GitHub (11, 58\%), Zenodo (5, 26\%), HuggingFace (2, 11\%), PyPI (1, 5\%)
+    \item \textbf{Design patterns:} Single-language (12, 63\%), Multilingual (7, 37\%), Rule-based (11, 58\%), Neural (8, 42\%)
+    \item \textbf{Development timeline:} 2016--2020 (5 tools, ~1.0/year), 2021--2023 (9 tools, ~3.0/year), 2024--2026 (5 tools, acceleration)
 \end{itemize}
 
 \subsubsection{Language Representation Analysis}
@@ -191,7 +191,7 @@ Across all repositories, we identified 16 foundational tools with the following 
 \vspace{0.3cm}
 \textbf{Figure 1: Language Distribution of Ge'ez-script Tools}
 
-Tool development reveals significant underrepresentation of Classical Ge'ez, with Amharic and Tigrinya as primary focuses.
+Tool development reveals persistent underrepresentation of Classical Ge'ez, though growth is occurring across all languages.
 
 \vspace{0.2cm}
 \begin{center}
@@ -200,20 +200,20 @@ Tool development reveals significant underrepresentation of Classical Ge'ez, wit
 \hline
 \textbf{Language} & \textbf{Tools} & \textbf{\%} & \textbf{Coverage Status} \\
 \hline
-Amharic & 8 & 50\% & Well-researched \\
-Tigrinya & 9 & 56\% & Well-researched \\
-Classical Ge'ez & 2 & 12\% & \textbf{CRITICAL GAP} \\
+Amharic & 9 & 47\% & Well-researched \\
+Tigrinya & 11 & 58\% & Well-researched \\
+Classical Ge'ez & 3 & 16\% & \textbf{Improving but still underrepresented} \\
 \hline
-\textbf{Total} & \textbf{16} & \textbf{100\%} & \\
+\textbf{Total} & \textbf{19} & \textbf{100\%} & \\
 \hline
 \end{tabular}
 \end{center}
 
-\textit{Analysis:} Classical Ge'ez represents only 12\% of tool coverage despite liturgical and cultural importance. Overlaps exist (some tools support multiple languages).
+\textit{Analysis:} Classical Ge'ez has grown from 2 to 3 tools (12\% to 16\%), showing improvement. However, it remains underrepresented relative to its liturgical and cultural importance. Overlaps exist (some tools support multiple languages).
 
 \vspace{0.2cm}
 \end{minipage}}
-\caption{Language distribution of 16 Ge'ez-script NLP tools (2016--2026). Classical Ge'ez suffers critical underrepresentation.}
+\caption{Language distribution of 19 Ge'ez-script NLP tools (2016--2026). Growth across all languages, with Classical Ge'ez improving but still underrepresented.}
 \label{fig:language}
 \end{figure}
 
@@ -225,7 +225,7 @@ Classical Ge'ez & 2 & 12\% & \textbf{CRITICAL GAP} \\
 \vspace{0.3cm}
 \textbf{Figure 2: Technical Pillar Distribution}
 
-Severe bottleneck in P4 (sequence labeling): only 1 tool (6\%) versus 4 tools in embeddings (25\%).
+P3 (embeddings) now leads with 32\%, but P4 (sequence labeling) remains critical bottleneck at only 5\%.
 
 \vspace{0.2cm}
 \begin{center}
@@ -234,18 +234,18 @@ Severe bottleneck in P4 (sequence labeling): only 1 tool (6\%) versus 4 tools in
 \hline
 \textbf{Pillar} & \textbf{Tools} & \textbf{\%} & \textbf{Status} \\
 \hline
-P1: Tokenization & 3 & 19\% & Foundation (established) \\
-P2: Morphology & 3 & 19\% & Foundation (established) \\
-P3: Embeddings/LMs & 4 & 25\% & Growing momentum \\
-P4: Seq. Labeling & 1 & 6\% & \textbf{CRITICAL BOTTLENECK} \\
-Other: Infrastructure & 5 & 31\% & Data \& resources \\
+P1: Tokenization & 4 & 21\% & Foundation (established, growing) \\
+P2: Morphology & 3 & 16\% & Foundation (stable) \\
+P3: Embeddings/LMs & 6 & 32\% & Strong growth momentum \\
+P4: Seq. Labeling & 1 & 5\% & \textbf{SEVERE BOTTLENECK} \\
+Other: Infrastructure & 5 & 26\% & Data \& resources \\
 \hline
-\textbf{Total} & \textbf{16} & \textbf{100\%} & \\
+\textbf{Total} & \textbf{19} & \textbf{100\%} & \\
 \hline
 \end{tabularx}
 \end{center}
 
-\textit{Analysis:} The severe P4 bottleneck (POS tagging, NER, chunking) limits development of end-to-end systems. Foundation pillars (P1, P2) establish necessary infrastructure.
+\textit{Analysis:} P3 (embeddings/LMs) has grown substantially (4→6 tools, 25%→32%), reflecting global trend toward pre-trained models. However, P4 remains critical bottleneck (1 tool, 5\%), severely limiting end-to-end NLP systems.
 
 \vspace{0.2cm}
 \end{minipage}}
@@ -261,7 +261,7 @@ Other: Infrastructure & 5 & 31\% & Data \& resources \\
 \vspace{0.3cm}
 \textbf{Figure 3: Design Patterns in Tool Development}
 
-71\% single-language (depth-first strategy), 65\% rule-based (interpretability preference).
+63\% single-language (improving toward multilingual), 58\% rule-based (neural approaches gaining).
 
 \vspace{0.2cm}
 \begin{center}
@@ -270,15 +270,15 @@ Other: Infrastructure & 5 & 31\% & Data \& resources \\
 \hline
 \textbf{Dimension} & \textbf{Count} & \textbf{\%} & \textbf{Strategy} \\
 \hline
-Single-language & 11 & 71\% & Depth-first (language-specific) \\
-Multilingual & 5 & 31\% & Limited cross-lingual transfer \\
-Rule-based & 10 & 65\% & Interpretability \& explainability \\
-Neural & 6 & 35\% & Scalability \& data-driven \\
+Single-language & 12 & 63\% & Depth-first (language-specific) \\
+Multilingual & 7 & 37\% & Emerging cross-lingual transfer \\
+Rule-based & 11 & 58\% & Interpretability \& explainability \\
+Neural & 8 & 42\% & Growing data-driven approaches \\
 \hline
 \end{tabularx}
 \end{center}
 
-\textit{Analysis:} Dominance of single-language tools reflects resource constraints. Rule-based preference suggests developer familiarity with linguistic rules; neural approaches are emerging but remain minority.
+\textit{Analysis:} Shift toward multilingual tools (31\%→37\%) and neural approaches (35\%→42\%) indicates community maturation. Rule-based methods (58\%) still dominate, reflecting strong linguistic expertise and interpretability preferences in Ge'ez-script NLP.
 
 \vspace{0.2cm}
 \end{minipage}}
@@ -294,7 +294,7 @@ Neural & 6 & 35\% & Scalability \& data-driven \\
 \vspace{0.3cm}
 \textbf{Figure 4: Tool Development Timeline (2016--2026)}
 
-Three phases: Early foundation (2016--2020, ~1/year), Middle acceleration (2021--2023, ~2.3/year), Recent momentum (2024--2026).
+Three phases with accelerating growth: Foundation (~1/year), Acceleration (~3/year), Recent momentum.
 
 \vspace{0.2cm}
 \begin{center}
@@ -304,15 +304,15 @@ Three phases: Early foundation (2016--2020, ~1/year), Middle acceleration (2021-
 \textbf{Period} & \textbf{Years} & \textbf{Tools} & \textbf{Rate \& Notes} \\
 \hline
 Early (Foundation) & 2016--2020 & 5 & $\sim$1.0/year (community building) \\
-Middle (Acceleration) & 2021--2023 & 7 & $\sim$2.3/year (momentum growth) \\
-Recent (Momentum) & 2024--2026 & 4 & Acceleration trend continues \\
+Middle (Acceleration) & 2021--2023 & 9 & $\sim$3.0/year (momentum growth) \\
+Recent (Momentum) & 2024--2026 & 5 & Continued acceleration \\
 \hline
-\textbf{Total} & \textbf{2016--2026} & \textbf{16} & Cumulative growth \\
+\textbf{Total} & \textbf{2016--2026} & \textbf{19} & Cumulative growth \\
 \hline
 \end{tabularx}
 \end{center}
 
-\textit{Analysis:} Tool development shows clear acceleration, suggesting growing community engagement and funding. However, pace remains modest compared to high-resource languages.
+\textit{Analysis:} Tool development shows strong acceleration from foundation phase (1/year) to acceleration phase (3/year), indicating growing international interest, funding, and community capacity. P3 (embeddings) drove recent growth.
 
 \vspace{0.2cm}
 \end{minipage}}
@@ -324,18 +324,19 @@ Recent (Momentum) & 2024--2026 & 4 & Acceleration trend continues \\
 
 \begin{table}[ht]
 \centering
-\caption{Complete inventory of 16 foundational Ge'ez-script NLP tools (scope-verified, 2016--2026).}
+\caption{Complete inventory of 19 foundational Ge'ez-script NLP tools (scope-verified, 2016--2026).}
 \label{table:inventory}
 \small
 \begin{tabularx}{\textwidth}{|l|l|l|p{2cm}|p{2.5cm}|l|}
 \hline
 \textbf{Tool Name} & \textbf{Type} & \textbf{Pillar} & \textbf{Languages} & \textbf{Capabilities} & \textbf{Source} \\
 \hline
-\multicolumn{6}{c|}{\textbf{P1: Tokenization (3 tools)}} \\
+\multicolumn{6}{c|}{\textbf{P1: Tokenization (4 tools)}} \\
 \hline
 Amharic-Tokenizer & Tool & P1 & Amharic & Word \& sentence tokenization & GitHub \\
 Morph LSTM & Model & P1 & Tigrinya & Morphological segmentation & Zenodo \\
 Text Normalization & Tool & P1 & Am, Ti & Unicode normalization \& cleaning & GitHub \\
+MoVoC & Tool & P1 & Amharic & Morphology-aware tokenization & GitHub \\
 \hline
 \multicolumn{6}{c|}{\textbf{P2: Morphology (3 tools)}} \\
 \hline
@@ -343,12 +344,14 @@ HornMorpho & Tool & P2 & Am, Ti & Root extraction, stemming & GitHub \\
 Semitic Law & Model & P2 & Amharic & Morphological paradigm generation & GitHub \\
 Translation & Model & P2 & Tigrinya & Morphological analysis & GitHub \\
 \hline
-\multicolumn{6}{c|}{\textbf{P3: Embeddings \& Language Models (4 tools)}} \\
+\multicolumn{6}{c|}{\textbf{P3: Embeddings \& Language Models (6 tools)}} \\
 \hline
 Tigrinya-PLMs & Model & P3 & Tigrinya & Pre-trained language model & GitHub \\
 TLMD & Dataset & P3 & Tigrinya & Language model training data & Zenodo \\
 Amharic WSD & Dataset & P3 & Amharic & Word sense disambiguation corpus & Zenodo \\
 Amharic Corpus & Dataset & P3 & Amharic & General-purpose training corpus & PyPI \\
+LGSE Embeddings & Model & P3 & Am, Ti, Ge & Script-aware embeddings & GitHub \\
+Word Embedding Transfer & Model & P3 & Am, Ti & Transfer learning embeddings & GitHub \\
 \hline
 \multicolumn{6}{c|}{\textbf{P4: Sequence Labeling (1 tool)}} \\
 \hline
@@ -359,6 +362,7 @@ Abusive Language & Dataset & P4 & Tigrinya & Text classification benchmark & HF 
 AM-EN Corpus & Dataset & Other & Am, En & Parallel corpus for translation & GitHub \\
 Crawl Corpora & Tool & Other & Amharic & Web corpus construction & GitHub \\
 TiALD & Dataset & Other & Tigrinya & Language identification corpus & GitHub \\
+TIGQA & Dataset & Other & Tigrinya & QA benchmark dataset & GitHub \\
 HHD-Ethiopic & Dataset & Other & Ge'ez & Historical document collection & Zenodo \\
 Lang Stats & Resource & Other & Am, Ti, Ge & Language statistics \& metadata & Zenodo \\
 \hline
@@ -378,7 +382,7 @@ Tokenization—the first essential step in NLP pipelines—breaks raw text into 
     \item \textbf{Compound words:} Complex morphology creates ambiguity in word boundaries
 \end{enumerate}
 
-Current tools (3): Amharic-Tokenizer, Morph LSTM, Text Normalization provide foundational coverage but lack comprehensive script-aware approaches. Future work should develop unified tokenization frameworks handling all Ge'ez-script languages and encoding variations.
+Current tools (4): Amharic-Tokenizer, Morph LSTM, Text Normalization, and MoVoC provide foundational coverage. MoVoC's morphology-aware approach represents progress, but comprehensive script-aware frameworks handling all Ge'ez-script languages remain needed. Future work should develop unified tokenization handling syllabic script properties and encoding variations.
 
 \subsection{Pillar 2: Morphology}
 
@@ -403,7 +407,7 @@ Embeddings capture semantic and syntactic information, essential for downstream 
     \item \textbf{Multilingual approaches:} Limited; mBERT/XLM-R underperform on Ge'ez scripts compared to Latin alphabets
 \end{enumerate}
 
-Four tools indicate growing sophistication, but Classical Ge'ez remains nearly absent. Cross-lingual transfer learning from Amharic to Tigrinya and Classical Ge'ez remains largely unexplored.
+Six tools (Tigrinya-PLMs, TLMD, Amharic WSD, Amharic Corpus, LGSE Embeddings, Word Embedding Transfer) indicate significant growth in embeddings infrastructure. LGSE Embeddings and Word Embedding Transfer represent important advances in cross-lingual approaches. However, Classical Ge'ez coverage remains weak (only in LGSE), and cross-lingual transfer optimization remains largely unexplored.
 
 \subsection{Pillar 4: Sequence Labeling}
 
@@ -422,22 +426,22 @@ This P4 bottleneck severely limits development of end-to-end NLP systems. Expand
 
 \subsubsection{Single-Language vs. Multilingual}
 
-71\% of tools target individual languages:
-- Amharic: 8 tools (50\%)
-- Tigrinya: 9 tools (56\%)
-- Classical Ge'ez: 2 tools (12\%)
+63\% of tools target individual languages:
+- Amharic: 9 tools (47\%)
+- Tigrinya: 11 tools (58\%)
+- Classical Ge'ez: 3 tools (16\%)
 
-This depth-first strategy reflects limited resources and linguistic complexity, but inhibits knowledge transfer. Multilingual tools (31\%) remain rare, despite potential for cross-lingual transfer learning.
+This depth-first strategy reflects limited resources and linguistic complexity, but inhibits knowledge transfer. Multilingual tools (37\%) show growth, though still represent minority of ecosystem. LGSE Embeddings and Word Embedding Transfer demonstrate emerging cross-lingual transfer approaches.
 
 \subsubsection{Rule-Based vs. Neural}
 
-65\% rule-based approaches reflect:
+58\% rule-based approaches reflect:
 - Strong linguistic tradition (Ge'ez morphology well-documented)
-- Interpretability preferences in academia
+- Interpretability preferences in academia and government contexts
 - Limited labeled training data (inhibiting neural approaches)
 - Developer expertise in linguistic rule systems
 
-However, neural approaches are emerging (35\%), particularly for embeddings and language models. Hybrid approaches combining rule-based linguistic knowledge with neural learning represent promising frontier.
+Neural approaches (42\%) show significant growth, particularly for P3 (embeddings/LMs). Recent tools like Tigrinya-PLMs and LGSE Embeddings demonstrate community shift toward data-driven methods. Hybrid approaches combining rule-based linguistic knowledge with neural learning represent the most promising frontier for future development.
 
 \section{Cross-Paper Analysis: 70-Paper Meta-Review}
 
@@ -649,9 +653,9 @@ Ge'ez-script language technology advances have implications beyond these languag
 
 \section{Conclusion}
 
-This comprehensive systematic review of 70 peer-reviewed papers and 16 foundational tools reveals a fragmented but growing landscape for Ge'ez-script language NLP. Over 62 million speakers depend on Amharic, Tigrinya, and Classical Ge'ez, yet tool development lags far behind high-resource languages. Our quantitative findings—critical underrepresentation of Classical Ge'ez (12\%), severe P4 bottleneck (6\%), monolingual silos (71\%)—establish urgent priorities for future work.
+This comprehensive systematic review of 70 peer-reviewed papers and 19 foundational tools reveals a fragmented but rapidly maturing landscape for Ge'ez-script language NLP. Over 62 million speakers depend on Amharic, Tigrinya, and Classical Ge'ez, yet tool development remains unevenly distributed. Our quantitative findings show progress: Classical Ge'ez improved from 12% to 16\% (2→3 tools), and embeddings/LMs surged (4→6 tools). However, critical bottlenecks persist: severe P4 sequence labeling bottleneck (5\%), persistent single-language dominance (63\%), and cross-lingual approaches remain minority (37\% multilingual).
 
-However, clear signs of progress are evident: tool development acceleration (~1→2.3/year), growing community engagement, and increasing international recognition. The five-priority research agenda we propose—unified tokenization, cross-lingual morphological transfer, script-optimized embeddings, expanded sequence labeling, and community infrastructure—provides concrete, evidence-based direction for advancing this critical field.
+However, clear signs of acceleration are evident: tool development nearly tripled from ~1/year (2016--2020) to ~3.0/year (2021--2023), shifting toward neural methods (42\%) and multilingual approaches. The five-priority research agenda we propose—unified tokenization, cross-lingual morphological transfer, script-optimized embeddings, expanded sequence labeling, and community infrastructure—provides concrete, evidence-based direction for advancing this critical field.
 
 This survey serves multiple audiences: researchers seeking to understand the landscape; developers deciding where to invest effort; funding agencies evaluating priorities; and policymakers designing digital infrastructure. We call on the international research community to embrace the challenge of inclusive, script-aware language technology—advancing not only Ge'ez-script languages but the principles of linguistic justice and digital equity globally.
 

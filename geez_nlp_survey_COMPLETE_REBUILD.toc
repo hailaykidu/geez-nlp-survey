@@ -1,54 +1,54 @@
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Motivation and Context}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Prior Surveys and Positioning}{3}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Survey Structure and Scope}{3}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Methodology}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Literature Search and Screening}{4}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Inclusion Criteria}{4}{subsubsection.2.1.1}%
-\contentsline {subsubsection}{\numberline {2.1.2}Exclusion Criteria}{4}{subsubsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.2}Tool Discovery Strategy}{4}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Deduplication and Verification}{5}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Data Extraction and Analysis}{5}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Results}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Literature Review Findings}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Tool Inventory: 16 Ge'ez-script Tools}{5}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Overview Statistics}{5}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Language Representation Analysis}{6}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Technical Pillar Analysis}{6}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Design Pattern Analysis}{6}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Development Timeline Analysis}{6}{subsubsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.3}Complete Tool Inventory Table}{6}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Detailed Analysis}{6}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Pillar 1: Tokenization}{6}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Pillar 2: Morphology}{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Pillar 3: Embeddings and Language Models}{8}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Pillar 4: Sequence Labeling}{8}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Design Pattern Insights}{9}{subsection.4.5}%
-\contentsline {subsubsection}{\numberline {4.5.1}Single-Language vs. Multilingual}{9}{subsubsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.2}Rule-Based vs. Neural}{9}{subsubsection.4.5.2}%
-\contentsline {section}{\numberline {5}Cross-Paper Analysis: 70-Paper Meta-Review}{10}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Venue Distribution}{10}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Temporal Trends}{10}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Research Topic Distribution}{10}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Key Findings and Implications}{10}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Finding 1: Critical Language Disparity}{10}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Finding 2: P4 Bottleneck Limits System Development}{10}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Finding 3: Monolingual Silos Inhibit Knowledge Transfer}{11}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Finding 4: Rule-Based Dominance Reflects Resource Constraints}{11}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Finding 5: Acceleration Signals Growing Community}{11}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Five-Priority Research Agenda}{11}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Priority 1: Unified, Script-Aware Tokenization Framework}{11}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Priority 2: Cross-Lingual Morphological Transfer Learning}{11}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Priority 3: Script-Optimized Embeddings and Language Models}{12}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Priority 4: Expanded Sequence Labeling Infrastructure}{12}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Priority 5: Centralized Community Infrastructure and Governance}{12}{subsection.7.5}%
-\contentsline {section}{\numberline {8}Discussion}{12}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Limitations of Current Tooling}{12}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Methodological Considerations}{13}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Global Context}{13}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Recommendations for Stakeholders}{13}{section.9}%
-\contentsline {subsection}{\numberline {9.1}For Researchers}{13}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}For Developers and Tool Builders}{13}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}For Funding Agencies}{14}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}For Policy Makers}{14}{subsection.9.4}%
-\contentsline {section}{\numberline {10}Conclusion}{14}{section.10}%
+\contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Motivation and Context}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Prior Surveys and Positioning}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Survey Structure and Scope}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Methodology}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Literature Search and Screening}{5}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Inclusion Criteria}{5}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Exclusion Criteria}{5}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Tool Discovery Strategy}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Deduplication and Verification}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Data Extraction and Analysis}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Results}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Literature Review Findings}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Tool Inventory: 19 Ge'ez-script Tools}{6}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Overview Statistics}{6}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Language Representation Analysis}{7}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Technical Pillar Analysis}{7}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Design Pattern Analysis}{7}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Development Timeline Analysis}{7}{subsubsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3}Complete Tool Inventory Table}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Detailed Analysis}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Pillar 1: Tokenization}{7}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Pillar 2: Morphology}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Pillar 3: Embeddings and Language Models}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Pillar 4: Sequence Labeling}{10}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Design Pattern Insights}{10}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Single-Language vs. Multilingual}{10}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Rule-Based vs. Neural}{11}{subsubsection.4.5.2}%
+\contentsline {section}{\numberline {5}Cross-Paper Analysis: 70-Paper Meta-Review}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Venue Distribution}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Temporal Trends}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Research Topic Distribution}{11}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Key Findings and Implications}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Finding 1: Critical Language Disparity}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Finding 2: P4 Bottleneck Limits System Development}{12}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Finding 3: Monolingual Silos Inhibit Knowledge Transfer}{12}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Finding 4: Rule-Based Dominance Reflects Resource Constraints}{12}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Finding 5: Acceleration Signals Growing Community}{12}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Five-Priority Research Agenda}{12}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Priority 1: Unified, Script-Aware Tokenization Framework}{12}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Priority 2: Cross-Lingual Morphological Transfer Learning}{12}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Priority 3: Script-Optimized Embeddings and Language Models}{13}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Priority 4: Expanded Sequence Labeling Infrastructure}{13}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Priority 5: Centralized Community Infrastructure and Governance}{13}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Discussion}{13}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Limitations of Current Tooling}{13}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Methodological Considerations}{14}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Global Context}{14}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Recommendations for Stakeholders}{14}{section.9}%
+\contentsline {subsection}{\numberline {9.1}For Researchers}{14}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}For Developers and Tool Builders}{14}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}For Funding Agencies}{15}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}For Policy Makers}{15}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Conclusion}{15}{section.10}%

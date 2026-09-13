@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.23)  13 SEP 2026 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian) (preloaded format=pdflatex 2025.12.23)  13 SEP 2026 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,7 +387,7 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count306
 \l__pdf_internal_box=\box56
 )
-No file geez_nlp_survey_COMPLETE_REBUILD.aux.
+(./geez_nlp_survey_COMPLETE_REBUILD.aux)
 \openout1 = `geez_nlp_survey_COMPLETE_REBUILD.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -408,6 +408,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
 LaTeX Font Info:    ... okay on input line 29.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -465,6 +466,9 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring ON on input line 29.
+
+(./geez_nlp_survey_COMPLETE_REBUILD.out)
+(./geez_nlp_survey_COMPLETE_REBUILD.out)
 \@outlinefile=\write3
 \openout3 = `geez_nlp_survey_COMPLETE_REBUILD.out'.
 
@@ -486,13 +490,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-No file geez_nlp_survey_COMPLETE_REBUILD.toc.
+(./geez_nlp_survey_COMPLETE_REBUILD.toc
+
+[2])
 \tf@toc=\write4
 \openout4 = `geez_nlp_survey_COMPLETE_REBUILD.toc'.
 
 
 
-[2]
+[3]
 Overfull \hbox (15.2426pt too wide) in paragraph at lines 78--79
 []\T1/cmr/bx/n/12 Peer re-view: \T1/cmr/m/n/12 Only peer-reviewed con-fer-ence/
 journal pa-pers (ACL, EMNLP, NAACL,
@@ -500,28 +506,28 @@ journal pa-pers (ACL, EMNLP, NAACL,
 
 
 
-[3]
-
 [4]
 
 [5]
+
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 251--251
-[]|\T1/cmr/m/n/10.95 Foundation (es-
+[]|\T1/cmr/m/n/10.95 Foundation
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 251--251
-[]|\T1/cmr/m/n/10.95 Foundation (es-
+\T1/cmr/m/n/10.95 (es-tab-lished,
+ []
+
+
+Underfull \hbox (badness 3439) in paragraph at lines 251--251
+[]|\T1/cmr/m/n/10.95 Foundation (sta-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 251--251
-[]|\T1/cmr/bx/n/10.95 CRITICAL
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 251--251
-\T1/cmr/bx/n/10.95 BOT-TLE-
+[]|\T1/cmr/m/n/10.95 Strong growth
  []
 
 
@@ -541,12 +547,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 284--284
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/10.95 Limited cross-
+[]|\T1/cmr/m/n/10.95 Emerging cross-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 284--284
-[]|\T1/cmr/m/n/10.95 Scalability &
+[]|\T1/cmr/m/n/10.95 Growing data-
  []
 
 
@@ -561,12 +567,12 @@ Underfull \hbox (badness 4967) in paragraph at lines 318--318
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 318--318
-[]|$\OMS/cmsy/m/n/10.95 ^^X$\T1/cmr/m/n/10.95 2.3/year (mo-
+[]|$\OMS/cmsy/m/n/10.95 ^^X$\T1/cmr/m/n/10.95 3.0/year (mo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 318--318
-[]|\T1/cmr/m/n/10.95 Acceleration
+Underfull \hbox (badness 3826) in paragraph at lines 318--318
+[]|\T1/cmr/m/n/10.95 Continued ac-cel-
  []
 
 
@@ -580,126 +586,156 @@ Underfull \hbox (badness 10000) in alignment at lines 318--318
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 365--365
+Underfull \hbox (badness 2478) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Word & sen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Morphological
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Unicode nor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \T1/cmr/m/n/10.95 mal-iza-tion &
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+[]|\T1/cmr/m/n/10.95 Morphology-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+\T1/cmr/m/n/10.95 aware to-k-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Root ex-trac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Morphological
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Morphological
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Pre-trained
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \T1/cmr/m/n/10.95 lan-guage
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Language
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Word sense
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \T1/cmr/m/n/10.95 dis-am-bigua-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 General-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+[]|\T1/cmr/m/n/10.95 Script-aware
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+[]|\T1/cmr/m/n/10.95 Transfer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+\T1/cmr/m/n/10.95 learn-ing em-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Text clas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \T1/cmr/m/n/10.95 si-fi-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Web cor-pus
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Language
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \T1/cmr/m/n/10.95 iden-ti-fi-ca-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
+[]|\T1/cmr/m/n/10.95 QA bench-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Historical
  []
 
 
-Underfull \hbox (badness 1062) in paragraph at lines 365--365
+Underfull \hbox (badness 1062) in paragraph at lines 369--369
 \T1/cmr/m/n/10.95 doc-u-ment col-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 []|\T1/cmr/m/n/10.95 Language
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+Underfull \hbox (badness 10000) in paragraph at lines 369--369
 \T1/cmr/m/n/10.95 statis-tics &
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 365--365
+Underfull \hbox (badness 10000) in alignment at lines 369--369
 [][][][][][] 
  []
 
 
-LaTeX Warning: Float too large for page by 7.89302pt on input line 366.
+LaTeX Warning: Float too large for page by 143.89302pt on input line 370.
 
 
 
-[6]
+[7]
 
 ! LaTeX Error: Unicode character ፨ (U+1368)
                not set up for use with LaTeX.
@@ -708,7 +744,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 ...ion systems (Ethiopian comma \texttt{፨}
+l.381 ...ion systems (Ethiopian comma \texttt{፨}
                                                   , colon \texttt{፩}, ques...
 
 You may provide a definition with
@@ -722,7 +758,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 ...an comma \texttt{፨}, colon \texttt{፩}
+l.381 ...an comma \texttt{፨}, colon \texttt{፩}
                                                   , question mark \texttt{፧})
 
 You may provide a definition with
@@ -736,10 +772,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 ... \texttt{፩}, question mark \texttt{፧}
+l.381 ... \texttt{፩}, question mark \texttt{፧}
                                                   )
 You may provide a definition with
 \DeclareUnicodeCharacter 
+
+
+Overfull \hbox (1.982pt too wide) in paragraph at lines 385--386
+[]\T1/cmr/m/n/12 Current tools (4): Amharic-Tokenizer, Morph LSTM, Text Nor-mal
+-iza-tion, and MoVoC
+ []
 
 
 ! LaTeX Error: Unicode character ሰ (U+1230)
@@ -749,7 +791,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.388 ...generate word families (e.g., Amharic ሰ
+l.392 ...generate word families (e.g., Amharic ሰ
                                                    = S-D system)
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -762,7 +804,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.390 ...ant doubling changes meaning (Amharic ደ
+l.394 ...ant doubling changes meaning (Amharic ደ
                                                    vs. ድ)
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -775,35 +817,33 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.390 ...ling changes meaning (Amharic ደ vs. ድ
+l.394 ...ling changes meaning (Amharic ደ vs. ድ
                                                   )
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
 
-[7]
-Overfull \hbox (1.6144pt too wide) in paragraph at lines 401--402
+[8]
+Overfull \hbox (1.6144pt too wide) in paragraph at lines 405--406
 []\T1/cmr/bx/n/12 Monolingual em-bed-dings: \T1/cmr/m/n/12 Word2vec and Fast-Te
 xt for Amharic; lim-ited Tigrinya
  []
 
 
 
-[8]
-
 [9]
-Overfull \hbox (44.14258pt too wide) in paragraph at lines 484--485
-\T1/cmr/m/n/12 Classical Ge'ez suf-fers dra-matic un-der-rep-re-sen-ta-tion (12
-% of tools) com-pared to Amharic/Tigrinya
+
+[10]
+Overfull \hbox (14.55946pt too wide) in paragraph at lines 444--445
+[]\T1/cmr/m/n/12 Neural ap-proaches (42%) show sig-nif-i-cant growth, par-tic-u
+-larly for P3 (em-bed-dings/LMs).
  []
 
 
-
-[10]
-Overfull \hbox (5.90741pt too wide) in paragraph at lines 545--545
-[]\T1/cmr/bx/n/14.4 Priority 3: Script-Optimized Em-bed-dings and Lan-guage Mod
--
+Overfull \hbox (44.14258pt too wide) in paragraph at lines 488--489
+\T1/cmr/m/n/12 Classical Ge'ez suf-fers dra-matic un-der-rep-re-sen-ta-tion (12
+% of tools) com-pared to Amharic/Tigrinya
  []
 
 
@@ -811,23 +851,23 @@ Overfull \hbox (5.90741pt too wide) in paragraph at lines 545--545
 [11]
 
 [12]
-Overfull \hbox (1.57086pt too wide) in paragraph at lines 597--602
-[]\T1/cmr/bx/n/12 Strengths: \T1/cmr/m/n/12 - Sys-tem-atic, re-pro-ducible sear
-ch method-ol-ogy - Clear in-clu-sion/exclusion
- []
-
-
-Overfull \hbox (3.18024pt too wide) in paragraph at lines 616--617
-[]\T1/cmr/bx/n/12 African lan-guage tech-nol-ogy: \T1/cmr/m/n/12 Con-tributes t
-o con-ti-nen-tal ini-tia-tives (PanAfriCon
+Overfull \hbox (5.90741pt too wide) in paragraph at lines 549--549
+[]\T1/cmr/bx/n/14.4 Priority 3: Script-Optimized Em-bed-dings and Lan-guage Mod
+-
  []
 
 
 
 [13]
-Overfull \hbox (16.13417pt too wide) in paragraph at lines 654--655
-[]\T1/cmr/m/n/12 However, clear signs of progress are ev-i-dent: tool de-vel-op
--ment ac-cel-er-a-tion ( 1\TS1/cmr/m/n/12 ^^Y\T1/cmr/m/n/12 2.3/year),
+Overfull \hbox (1.57086pt too wide) in paragraph at lines 601--606
+[]\T1/cmr/bx/n/12 Strengths: \T1/cmr/m/n/12 - Sys-tem-atic, re-pro-ducible sear
+ch method-ol-ogy - Clear in-clu-sion/exclusion
+ []
+
+
+Overfull \hbox (3.18024pt too wide) in paragraph at lines 620--621
+[]\T1/cmr/bx/n/12 African lan-guage tech-nol-ogy: \T1/cmr/m/n/12 Con-tributes t
+o con-ti-nen-tal ini-tia-tives (PanAfriCon
  []
 
 
@@ -836,7 +876,9 @@ Overfull \hbox (16.13417pt too wide) in paragraph at lines 654--655
 
 [15]
 
-[16] (./geez_nlp_survey_COMPLETE_REBUILD.aux)
+[16]
+
+[17] (./geez_nlp_survey_COMPLETE_REBUILD.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -853,17 +895,17 @@ Package rerunfilecheck Warning: File `geez_nlp_survey_COMPLETE_REBUILD.out' has
 
 Package rerunfilecheck Info: Checksums for `geez_nlp_survey_COMPLETE_REBUILD.ou
 t':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  C6686633C5844C4DF4B538FDF86A8F9D;11426.
+(rerunfilecheck)             Before: C6686633C5844C4DF4B538FDF86A8F9D;11426
+(rerunfilecheck)             After:  8DD3691F6001BDDC4725ECD832970A8F;11426.
  ) 
 Here is how much of TeX's memory you used:
- 12603 strings out of 475178
- 194248 string characters out of 5766538
- 621306 words of memory out of 5000000
- 35329 multiletter control sequences out of 15000+600000
- 577693 words of font info for 86 fonts, out of 8000000 for 9000
+ 12672 strings out of 475178
+ 195585 string characters out of 5766538
+ 626499 words of memory out of 5000000
+ 35388 multiletter control sequences out of 15000+600000
+ 578034 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,14n,79p,1565b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,79p,1583b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </homes/neumann/teklehaymanot/.texlive2025/texmf-var/fonts/pk/ljfour/jknappe
 n/ec/ectt1200.600pk> </homes/neumann/teklehaymanot/.texlive2025/texmf-var/fonts
 /pk/ljfour/jknappen/ec/ecti1200.600pk> </homes/neumann/teklehaymanot/.texlive20
@@ -873,19 +915,21 @@ mes/neumann/teklehaymanot/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
 bx1728.600pk> </homes/neumann/teklehaymanot/.texlive2025/texmf-var/fonts/pk/ljf
 our/jknappen/ec/ecrm1200.600pk> </homes/neumann/teklehaymanot/.texlive2025/texm
 f-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </homes/neumann/teklehaymanot
-/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </homes/neu
-mann/teklehaymanot/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1095.
+/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.600pk> </homes/neu
+mann/teklehaymanot/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.
 600pk> </homes/neumann/teklehaymanot/.texlive2025/texmf-var/fonts/pk/ljfour/jkn
-appen/ec/ectt1440.600pk> </homes/neumann/teklehaymanot/.texlive2025/texmf-var/f
-onts/pk/ljfour/jknappen/ec/ecti1440.600pk> </homes/neumann/teklehaymanot/.texli
-ve2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </homes/neumann/te
-klehaymanot/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on geez_nlp_survey_COMPLETE_REBUILD.pdf (16 pages, 220609 bytes)
+appen/ec/ecbx1095.600pk> </homes/neumann/teklehaymanot/.texlive2025/texmf-var/f
+onts/pk/ljfour/jknappen/ec/ectt1440.600pk> </homes/neumann/teklehaymanot/.texli
+ve2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1440.600pk> </homes/neumann/te
+klehaymanot/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> 
+</homes/neumann/teklehaymanot/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecbx2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb>
+Output written on geez_nlp_survey_COMPLETE_REBUILD.pdf (17 pages, 231618 bytes)
 .
 PDF statistics:
- 815 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 121 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1048 PDF objects out of 1200 (max. 8388607)
+ 469 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 433 words of extra memory for PDF output out of 10000 (max. 10000000)
 
