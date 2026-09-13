@@ -8,13 +8,13 @@ This repository contains a comprehensive systematic review of NLP tools and rese
 
 ## 📄 Primary Deliverable
 
-**`geez_nlp_survey_COMPLETE_REBUILD.pdf`** (17 pages, 227 KB)
+**`geez_nlp_survey_COMPLETE_REBUILD.pdf`** (10 pages, 197 KB)
 - ✅ **MAIN SUBMISSION FILE** for PanAfriCon AI 2026
-- Comprehensive, full-length manuscript
-- Complete extended discussion, methodology, and analysis
-- All 4 figures, 19-tool inventory (including MoVoC, LGSE Embeddings, Word Embedding Transfer, TIGQA)
+- Authoritative systematic tool-centred analysis
+- Complete methodology, results, and detailed analysis
+- 2 figures, 17-tool inventory with component analysis
 - 5-priority research agenda and recommendations
-- Bibliography with 70 papers and 2 featured citations
+- Bibliography with 70 papers and 2 featured citations (LGSE Project, EMNLP 2025)
 
 **Alternative (streamlined):** `geez_nlp_survey_FINAL_ENHANCED.pdf` (5 pages, 138 KB, core content only)
 
@@ -101,9 +101,9 @@ pdflatex geez_nlp_survey_COMPLETE_REBUILD.tex
 
 | Metric | Value |
 |--------|-------|
-| **Pages** | 17 (comprehensive) |
-| **File Size** | 227 KB |
-| **Ge'ez-script Tools** | 19 (verified scope) |
+| **Pages** | 10 (research paper) |
+| **File Size** | 197 KB |
+| **Ge'ez-script Tools** | 17 (verified scope) |
 | **Papers Analyzed** | 70 (peer-reviewed) |
 | **Technical Pillars** | 4 (P1, P2, P3, P4) |
 | **Scope** | Amharic, Tigrinya, Classical Ge'ez |
@@ -116,8 +116,8 @@ teklehaymanot@l3s.uni-hannover.de
 
 ---
 
-**Status:** ✅ Publication-Ready (17-page comprehensive manuscript with 19 tools)  
+**Status:** ✅ Publication-Ready (10-page authoritative research paper)  
 **Submission Target:** PanAfriCon AI 2026  
 **Last Updated:** September 13, 2026  
 **Compile Command:** `pdflatex geez_nlp_survey_COMPLETE_REBUILD.tex`  
-**Tools Included:** 19 verified Ge'ez-script NLP tools including MoVoC, LGSE Embeddings, Word Embedding Transfer, TIGQA
+**Based on:** Authoritative abstract with tool-centred analysis, 17 verified tools, 70 papers
