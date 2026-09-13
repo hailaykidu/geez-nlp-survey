@@ -1,0 +1,479 @@
+{
+  "limitations": {
+    "Amharic-Tokenizer": {
+      "stated": [],
+      "survey_identified": [
+        "Single-language only",
+        "No cross-lingual capability",
+        "No neural variants"
+      ]
+    },
+    "HornMorpho": {
+      "stated": [
+        "Requires rule maintenance as language evolves"
+      ],
+      "survey_identified": [
+        "Cross-lingual: only Amharic/Tigrinya",
+        "No Ge'ez variant",
+        "No integrated POS tagging"
+      ]
+    },
+    "semitic-scattering-law": {
+      "stated": [],
+      "survey_identified": [
+        "Amharic-only",
+        "Limited documentation",
+        "No public model weights"
+      ]
+    },
+    "Tigrinya-PLMs": {
+      "stated": [
+        "Pre-training corpus limited to available Tigrinya text"
+      ],
+      "survey_identified": [
+        "Single-language",
+        "No cross-lingual capability",
+        "No Amharic/Ge'ez variants"
+      ]
+    },
+    "TLMD: Tigrinya Language Modeling Dataset": {
+      "stated": [],
+      "survey_identified": [
+        "Single language",
+        "Size/quality details unclear",
+        "No cross-lingual variants"
+      ]
+    },
+    "Amharic-English Machine Translation Corpus": {
+      "stated": [],
+      "survey_identified": [
+        "Amharic-English only",
+        "No Tigrinya/Ge'ez variants"
+      ]
+    },
+    "Tigrinya Abusive Language Detection Dataset": {
+      "stated": [],
+      "survey_identified": [
+        "Single task",
+        "Single language"
+      ]
+    },
+    "Amharic Word Sense Disambiguation Dataset": {
+      "stated": [],
+      "survey_identified": [
+        "Single language",
+        "Semantic annotations only"
+      ]
+    },
+    "Morphological Segmentation with LSTM for Tigrinya": {
+      "stated": [],
+      "survey_identified": [
+        "Tigrinya-only",
+        "No interpretability",
+        "Limited evaluation"
+      ]
+    },
+    "Crawl for Parallel Corpora": {
+      "stated": [],
+      "survey_identified": []
+    },
+    "TiALD: Tigrinya Abusive Language Dataset": {
+      "stated": [],
+      "survey_identified": []
+    },
+    "Language Translation Model for Underserved Communities": {
+      "stated": [],
+      "survey_identified": []
+    },
+    "Replicating NLP Approaches for African Languages": {
+      "stated": [],
+      "survey_identified": []
+    },
+    "HHD-Ethiopic: Historical Handwritten Dataset": {
+      "stated": [],
+      "survey_identified": []
+    },
+    "Gurage Font Collection": {
+      "stated": [],
+      "survey_identified": []
+    },
+    "Indonesian Sentence Embeddings": {
+      "stated": [],
+      "survey_identified": []
+    },
+    "Ethiopia: Distribution of Mother-Tongue Languages": {
+      "stated": [],
+      "survey_identified": []
+    }
+  },
+  "discussions": {
+    "Amharic-Tokenizer": {
+      "strengths": [
+        "Well-maintained by community (100+ GitHub stars)",
+        "Handles complex Amharic word boundaries"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Rule-based approach prioritizes interpretability"
+      ],
+      "field_significance": "Establishes tokenization baseline for Ge'ez-script languages; enables downstream processing"
+    },
+    "HornMorpho": {
+      "strengths": [
+        "Rare cross-language morphological coverage",
+        "Addresses complex templatic morphology",
+        "Active development"
+      ],
+      "design_tradeoffs": [
+        "Rule-based approach prioritizes interpretability over neural methods",
+        "Requires extensive linguistic rules"
+      ],
+      "field_significance": "Establishes morphological baseline for Ge'ez-script languages; enables downstream tasks like NER"
+    },
+    "semitic-scattering-law": {
+      "strengths": [
+        "Algorithmic innovation for Semitic morphology",
+        "Neural approach complements rule-based tools"
+      ],
+      "design_tradeoffs": [
+        "Neural approach trades interpretability for potential accuracy",
+        "Requires morphologically annotated data"
+      ],
+      "field_significance": "Contributes novel morphological baseline; represents emerging neural methods"
+    },
+    "Tigrinya-PLMs": {
+      "strengths": [
+        "Rare Tigrinya-specific PLM",
+        "Enables transfer learning for low-resource language"
+      ],
+      "design_tradeoffs": [
+        "Single-language: prioritizes Tigrinya depth",
+        "Requires large corpus for pre-training"
+      ],
+      "field_significance": "Rare contribution to underrepresented languages; addresses critical research gap"
+    },
+    "TLMD: Tigrinya Language Modeling Dataset": {
+      "strengths": [
+        "Rare Tigrinya dataset",
+        "Enables neural approaches for low-resource language"
+      ],
+      "design_tradeoffs": [
+        "Infrastructure-first: data before models",
+        "Single-domain focus"
+      ],
+      "field_significance": "Provides critical language infrastructure for Tigrinya NLP research"
+    },
+    "Amharic-English Machine Translation Corpus": {
+      "strengths": [
+        "Rare parallel corpus for Amharic"
+      ],
+      "design_tradeoffs": [
+        "Infrastructure-first: data before models"
+      ],
+      "field_significance": "Enables machine translation and cross-lingual NLP research"
+    },
+    "Tigrinya Abusive Language Detection Dataset": {
+      "strengths": [
+        "Addresses low-resource language NLP task"
+      ],
+      "design_tradeoffs": [
+        "Task-specific rather than general purpose"
+      ],
+      "field_significance": "Enables content moderation research for Tigrinya"
+    },
+    "Amharic Word Sense Disambiguation Dataset": {
+      "strengths": [
+        "Rare semantic resource for Amharic"
+      ],
+      "design_tradeoffs": [
+        "Infrastructure-first: manual annotation required"
+      ],
+      "field_significance": "Enables semantic NLP research for Amharic"
+    },
+    "Morphological Segmentation with LSTM for Tigrinya": {
+      "strengths": [
+        "Neural approach for morphologically complex language"
+      ],
+      "design_tradeoffs": [
+        "Neural trades interpretability for accuracy"
+      ],
+      "field_significance": "Extends morphological capabilities to underrepresented languages"
+    },
+    "Crawl for Parallel Corpora": {
+      "strengths": [
+        "Addresses specific research gap"
+      ],
+      "design_tradeoffs": [
+        "Focused approach"
+      ],
+      "field_significance": "Contributes to ecosystem"
+    },
+    "TiALD: Tigrinya Abusive Language Dataset": {
+      "strengths": [
+        "Addresses specific research gap"
+      ],
+      "design_tradeoffs": [
+        "Focused approach"
+      ],
+      "field_significance": "Contributes to ecosystem"
+    },
+    "Language Translation Model for Underserved Communities": {
+      "strengths": [
+        "Addresses specific research gap"
+      ],
+      "design_tradeoffs": [
+        "Focused approach"
+      ],
+      "field_significance": "Contributes to ecosystem"
+    },
+    "Replicating NLP Approaches for African Languages": {
+      "strengths": [
+        "Addresses specific research gap"
+      ],
+      "design_tradeoffs": [
+        "Focused approach"
+      ],
+      "field_significance": "Contributes to ecosystem"
+    },
+    "HHD-Ethiopic: Historical Handwritten Dataset": {
+      "strengths": [
+        "Addresses specific research gap"
+      ],
+      "design_tradeoffs": [
+        "Focused approach"
+      ],
+      "field_significance": "Contributes to ecosystem"
+    },
+    "Gurage Font Collection": {
+      "strengths": [
+        "Addresses specific research gap"
+      ],
+      "design_tradeoffs": [
+        "Focused approach"
+      ],
+      "field_significance": "Contributes to ecosystem"
+    },
+    "Indonesian Sentence Embeddings": {
+      "strengths": [
+        "Addresses specific research gap"
+      ],
+      "design_tradeoffs": [
+        "Focused approach"
+      ],
+      "field_significance": "Contributes to ecosystem"
+    },
+    "Ethiopia: Distribution of Mother-Tongue Languages": {
+      "strengths": [
+        "Addresses specific research gap"
+      ],
+      "design_tradeoffs": [
+        "Focused approach"
+      ],
+      "field_significance": "Contributes to ecosystem"
+    }
+  },
+  "ablations": {
+    "Amharic-Tokenizer": {
+      "core_components": [
+        "Word boundary detection algorithm",
+        "Amharic character set handling"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (Tigrinya/Ge'ez)",
+        "Neural alternatives",
+        "Multi-script support"
+      ],
+      "optional_components": [
+        "Batch processing",
+        "API interface"
+      ],
+      "design_insight": "Task-specialized: optimized for Amharic tokenization; foundational tool"
+    },
+    "HornMorpho": {
+      "core_components": [
+        "Root extraction engine",
+        "Pattern matching system for templatic morphology",
+        "Lexicon/knowledge base"
+      ],
+      "missing_components": [
+        "POS tagging (would enable syntax)",
+        "Lemmatization",
+        "Neural baseline for comparison"
+      ],
+      "optional_components": [
+        "Batch processing",
+        "GUI interface"
+      ],
+      "design_insight": "Depth-first strategy: deep morphological expertise before breadth to other languages"
+    },
+    "semitic-scattering-law": {
+      "core_components": [
+        "Neural encoder for morphological patterns",
+        "Root-pattern matching layer"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer",
+        "POS integration",
+        "Extensive evaluation"
+      ],
+      "optional_components": [
+        "Visualization of patterns"
+      ],
+      "design_insight": "Representation-focused: prioritizes neural embeddings for morphological phenomena"
+    },
+    "Tigrinya-PLMs": {
+      "core_components": [
+        "Transformer encoder",
+        "Tokenizer for Tigrinya",
+        "Pre-trained weights"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer",
+        "Multi-task fine-tuning",
+        "Extensive benchmarking"
+      ],
+      "optional_components": [
+        "Model distillation",
+        "Quantization variants"
+      ],
+      "design_insight": "Community service: addresses critical gaps in underrepresented languages"
+    },
+    "TLMD: Tigrinya Language Modeling Dataset": {
+      "core_components": [
+        "Annotated Tigrinya text corpus"
+      ],
+      "missing_components": [
+        "Multi-domain variants",
+        "Cross-lingual alignment",
+        "Linguistic annotations"
+      ],
+      "optional_components": [],
+      "design_insight": "Infrastructure-first approach: enables downstream tool development"
+    },
+    "Amharic-English Machine Translation Corpus": {
+      "core_components": [
+        "Aligned Amharic-English sentence pairs"
+      ],
+      "missing_components": [
+        "Other language pairs",
+        "Linguistic annotations",
+        "Quality metrics"
+      ],
+      "optional_components": [],
+      "design_insight": "Data infrastructure enables downstream applications"
+    },
+    "Tigrinya Abusive Language Detection Dataset": {
+      "core_components": [
+        "Annotated Tigrinya text"
+      ],
+      "missing_components": [
+        "Sentiment analysis",
+        "Other classification tasks"
+      ],
+      "optional_components": [],
+      "design_insight": "Task-specific: optimized for single classification problem"
+    },
+    "Amharic Word Sense Disambiguation Dataset": {
+      "core_components": [
+        "Sense-annotated Amharic text"
+      ],
+      "missing_components": [
+        "Cross-lingual variants"
+      ],
+      "optional_components": [],
+      "design_insight": "Resource infrastructure for downstream applications"
+    },
+    "Morphological Segmentation with LSTM for Tigrinya": {
+      "core_components": [
+        "LSTM encoder",
+        "Character embeddings"
+      ],
+      "missing_components": [
+        "POS tagging",
+        "Cross-lingual transfer"
+      ],
+      "optional_components": [],
+      "design_insight": "Neural approach: prioritizes accuracy for morphological phenomena"
+    },
+    "Crawl for Parallel Corpora": {
+      "core_components": [
+        "Primary component"
+      ],
+      "missing_components": [
+        "Extension opportunities"
+      ],
+      "optional_components": [],
+      "design_insight": "Specialized design for target application"
+    },
+    "TiALD: Tigrinya Abusive Language Dataset": {
+      "core_components": [
+        "Primary component"
+      ],
+      "missing_components": [
+        "Extension opportunities"
+      ],
+      "optional_components": [],
+      "design_insight": "Specialized design for target application"
+    },
+    "Language Translation Model for Underserved Communities": {
+      "core_components": [
+        "Primary component"
+      ],
+      "missing_components": [
+        "Extension opportunities"
+      ],
+      "optional_components": [],
+      "design_insight": "Specialized design for target application"
+    },
+    "Replicating NLP Approaches for African Languages": {
+      "core_components": [
+        "Primary component"
+      ],
+      "missing_components": [
+        "Extension opportunities"
+      ],
+      "optional_components": [],
+      "design_insight": "Specialized design for target application"
+    },
+    "HHD-Ethiopic: Historical Handwritten Dataset": {
+      "core_components": [
+        "Primary component"
+      ],
+      "missing_components": [
+        "Extension opportunities"
+      ],
+      "optional_components": [],
+      "design_insight": "Specialized design for target application"
+    },
+    "Gurage Font Collection": {
+      "core_components": [
+        "Primary component"
+      ],
+      "missing_components": [
+        "Extension opportunities"
+      ],
+      "optional_components": [],
+      "design_insight": "Specialized design for target application"
+    },
+    "Indonesian Sentence Embeddings": {
+      "core_components": [
+        "Primary component"
+      ],
+      "missing_components": [
+        "Extension opportunities"
+      ],
+      "optional_components": [],
+      "design_insight": "Specialized design for target application"
+    },
+    "Ethiopia: Distribution of Mother-Tongue Languages": {
+      "core_components": [
+        "Primary component"
+      ],
+      "missing_components": [
+        "Extension opportunities"
+      ],
+      "optional_components": [],
+      "design_insight": "Specialized design for target application"
+    }
+  }
+}

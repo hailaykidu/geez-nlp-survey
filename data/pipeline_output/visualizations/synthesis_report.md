@@ -1,12 +1,12 @@
 # Ge'ez-Script NLP Tools: A Systematic Review
 
-*Generated: 2026-09-12 08:25:25*
+*Generated: 2026-09-12 14:53:57*
 
 
 This systematic review examines natural language processing tools and resources for Ge'ez-script
-languages (Amharic, Tigrinya, and Classical Ge'ez). We reviewed 4 papers published
-across multiple venues, identifying 4 papers on Amharic, 1 on Tigrinya,
-and 3 on Classical Ge'ez. Our analysis covers research across five key pillars:
+languages (Amharic, Tigrinya, and Classical Ge'ez). We reviewed 2 papers published
+across multiple venues, identifying 1 papers on Amharic, 2 on Tigrinya,
+and 0 on Classical Ge'ez. Our analysis covers research across five key pillars:
 tokenization, morphological analysis, text representation, sequence labeling, and language models.
 We identify critical gaps in resource availability, reproducibility, and script-specific design
 patterns. This review provides a foundation for future research priorities in Ge'ez-script NLP.
@@ -32,16 +32,16 @@ methodology, ensuring systematic and transparent examination of the literature.
 
 KEY FINDINGS
 
-1. Morphological Focus: 2 papers (50.0%) explicitly
+1. Morphological Focus: 1 papers (50.0%) explicitly
    address morphological analysis, reflecting the agglutinative nature of these languages.
 
-2. Script-Specific Design: 3 papers (75.0%) incorporate
+2. Script-Specific Design: 0 papers (0.0%) incorporate
    Ge'ez-specific design patterns (Unicode handling, Fidel script properties, Abugida structure).
 
-3. Code Availability: 2 papers (50.0%) provide publicly
+3. Code Availability: 1 papers (50.0%) provide publicly
    available source code.
 
-4. Data Availability: 1 papers (25.0%) share datasets or
+4. Data Availability: 1 papers (50.0%) share datasets or
    resources, with significant room for improvement in reproducibility.
 
 5. Temporal Trend: Publication activity shows uneven distribution across years, indicating
@@ -52,14 +52,12 @@ KEY FINDINGS
 RESEARCH LANDSCAPE
 
 Language Coverage:
-   - Amharic: 4 papers
-   - Other: 4 papers
-   - Classical Ge'ez: 3 papers
-   - Tigrinya: 1 papers
+   - Tigrinya: 2 papers
+   - Other: 2 papers
+   - Amharic: 1 papers
 
 Research Pillars Addressed:
-   - Language Models & Deep Learning: 2 papers
-   - Text Representation & Embeddings: 1 papers
+   - Lexical & Morphological Analysis: 1 papers
    - Sequence Labeling & Structure Extraction: 1 papers
 
 The research landscape reveals concentration in certain areas (particularly morphological analysis
@@ -70,18 +68,18 @@ with Tigrinya and Classical Ge'ez receiving substantially less attention.
 
 LANGUAGE-SPECIFIC FINDINGS
 
-Amharic: 4 papers
-- Morphology focus: 2 papers
+Amharic: 1 papers
+- Morphology focus: 0 papers
 - Represents the most studied Ge'ez-script language
 - Broader coverage across research pillars
 
-Tigrinya: 1 papers
-- Morphology focus: 0 papers
+Tigrinya: 2 papers
+- Morphology focus: 1 papers
 - Limited compared to Amharic
 - Often addressed in multi-lingual transfer learning studies
 
-Classical Ge'ez: 3 papers
-- Morphology focus: 1 papers
+Classical Ge'ez: 0 papers
+- Morphology focus: 0 papers
 - Minimal dedicated research
 - Primarily addressed in specialized historical/religious contexts
 
@@ -93,9 +91,8 @@ focus while Tigrinya and Classical Ge'ez remain substantially understudied.
 RESEARCH PILLARS ANALYSIS
 
 Distribution:
-   - Language Models & Deep Learning: 2 papers (50.0%)
-- Text Representation & Embeddings: 1 papers (25.0%)
-- Sequence Labeling & Structure Extraction: 1 papers (25.0%)
+   - Lexical & Morphological Analysis: 1 papers (50.0%)
+- Sequence Labeling & Structure Extraction: 1 papers (50.0%)
 
 Findings:
 - Tokenization & Normalization: Foundational work addressing Unicode and script normalization
@@ -113,7 +110,7 @@ than advanced applications, indicating foundational research orientation.
 TOOL ECOSYSTEM ANALYSIS
 
 Contribution Types:
-   - Algorithm: 4 papers (100.0%)
+   - Framework: 1 papers (50.0%)
 
 Key Observations:
 1. Dataset Contributions: Core infrastructure for research advancement
@@ -128,10 +125,10 @@ Many contributions are project-specific rather than generalizable frameworks.
 
 MORPHOLOGY-CENTRIC ANALYSIS
 
-Morphological Focus: 2 papers (50.0%)
+Morphological Focus: 1 papers (50.0%)
 
 Morphological Assumptions Addressed:
-   - Language-Agnostic: 2 papers
+   - Language-Agnostic: 1 papers
 
 Implications:
 - Agglutinative Structure: Core challenge in tokenization and lemmatization
@@ -145,11 +142,11 @@ and script-specific solutions, not simply adaptation of high-resource language a
 
 SCRIPT-SPECIFIC DESIGN ANALYSIS
 
-Papers Addressing Script Design: 3 (75.0%)
+Papers Addressing Script Design: 0 (0.0%)
 
 Transfer Approaches:
-   - Cross-lingual: 2 papers
-- Monolingual: 2 papers
+   - Cross-lingual: 1 papers
+- Monolingual: 1 papers
 
 Script Considerations:
 1. Unicode Handling: Normalization forms (NFC, NFD, NFKC, NFKD)
@@ -157,16 +154,16 @@ Script Considerations:
 3. Abugida Structure: Inherent vowels and combining diacritics
 4. Diacritic Marks: Subtle distinctions in character representation
 
-Critical Finding: Only 3/4 papers explicitly design for Ge'ez-specific
+Critical Finding: Only 0/2 papers explicitly design for Ge'ez-specific
 properties, indicating insufficient recognition of unique script requirements in current research.
 
 
 
 REPRODUCIBILITY ASSESSMENT
 
-Code Availability: 2/4 papers (50.0%)
-Data Availability: 1/4 papers (25.0%)
-Full Reproducibility: 1/4 papers (25.0%)
+Code Availability: 1/2 papers (50.0%)
+Data Availability: 1/2 papers (50.0%)
+Full Reproducibility: 1/2 papers (50.0%)
 
 Reproducibility Crisis: Majority of papers lack publicly available code and/or data,
 hindering verification, replication, and downstream research.
@@ -180,13 +177,13 @@ Recommendations:
 
 IDENTIFIED GAPS AND LIMITATIONS
 
-1. Language Imbalance: 4/4 papers address Tigrinya/Ge'ez,
+1. Language Imbalance: 2/2 papers address Tigrinya/Ge'ez,
    representing critical underrepresentation.
 
-2. Script Design Gap: Only 3/4 papers explicitly address Ge'ez-specific
+2. Script Design Gap: Only 0/2 papers explicitly address Ge'ez-specific
    properties despite unique script requirements.
 
-3. Morphology Coverage: While 2/4 papers address morphology,
+3. Morphology Coverage: While 1/2 papers address morphology,
    deeper linguistic analysis remains limited.
 
 4. Tool Fragmentation: No unified framework for Ge'ez-script NLP; contributions remain scattered.
@@ -235,7 +232,7 @@ RECOMMENDATIONS FOR FUTURE RESEARCH
 
 CONCLUSION
 
-This systematic review of 4 papers reveals a nascent but growing research community
+This systematic review of 2 papers reveals a nascent but growing research community
 addressing Ge'ez-script NLP. While foundational work has established important methodologies
 in tokenization and morphological analysis, significant gaps remain in language coverage,
 script-specific design, and community infrastructure.

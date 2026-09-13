@@ -1,0 +1,6 @@
+Name,Type,Pillar,Languages,Capabilities,Source,Stated_Limitations,Identified_Gaps,URL
+crawl-for-parallel-corpora,Dataset,Other,Unspecified,translation,github,0,2,https://github.com/MarsPanther/crawl-for-parallel-corpora
+Replicating NLP Approaches for African L,Resource,Other,Unspecified,Not_specified,zenodo,0,3,
+LazarusNLP/indonesian-sentence-embedding,Model,P3,Unspecified,embeddings,zenodo,0,4,
+Ethiopia – Distribution of Mother-Tongue,Resource,Other,Unspecified,Not_specified,zenodo,0,3,
+raeytype/gurage-font-collection: Modern ,Resource,Other,Unspecified,Not_specified,zenodo,0,3,

@@ -1,0 +1,1372 @@
+[
+  {
+    "id": "amharic_english_machine_translation_corpus",
+    "name": "Amharic-English-Machine-Translation-Corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/MarsPanther/Amharic-English-Machine-Translation-Corpus",
+    "description": "Amharic English Machine Translation Corpus prepared through website crawelling and custom preprocessing."
+  },
+  {
+    "id": "crawl_for_parallel_corpora",
+    "name": "crawl-for-parallel-corpora",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/MarsPanther/crawl-for-parallel-corpora",
+    "description": "simple bs4 based web crawl for a corpus in need of statistical machine translation"
+  },
+  {
+    "id": "amharicnlp",
+    "name": "amharicNLP",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/yonasab12/amharicNLP",
+    "description": ""
+  },
+  {
+    "id": "amharic_nlp_toolkit",
+    "name": "amharic_nlp_toolkit",
+    "contribution_types": [
+      "Tool/Software"
+    ],
+    "technical_pillars": [
+      "P1",
+      "P2",
+      "P4"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Ey0s/amharic_nlp_toolkit",
+    "description": "Lightweight Amharic NLP toolkit for normalization, tokenization, stopword filtering, stemming, and basic linguistic tagging."
+  },
+  {
+    "id": "publicnlpa",
+    "name": "PublicNLPA",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/milliongashawbeza/PublicNLPA",
+    "description": "A public repository for Amharic Language processing . "
+  },
+  {
+    "id": "amharic_hate_speech_detection_rephrasing_application",
+    "name": "Amharic-Hate-Speech-Detection-Rephrasing-Application",
+    "contribution_types": [
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Aman-byte1/Amharic-Hate-Speech-Detection-Rephrasing-Application",
+    "description": "\u12e8\u12a0\u121b\u122d\u129b \u12e8\u1325\u120b\u127b \u1295\u130d\u130d\u122d \u1218\u1208\u12eb \u12a5\u1293 \u12e8\u12a0\u1308\u120b\u1208\u1345 \u121b\u1235\u1270\u12ab\u12a8\u12eb \u1218\u1270\u130d\u1260\u122a\u12eb \u1290\u12cd\u1362 \u12ed\u1205 \u1355\u122e\u1300\u12ad\u1275 \u12e8\u121b\u123d\u1295 \u1218\u121b\u122a\u12eb \u121e\u12f4\u120e\u127d\u1295 \u12a5\u1293 \u12e8\u1300\u121a\u1292 \u12a4\u1352\u12a0\u12ed\u1295 \u12ed\u1320\u1240\u121b\u120d\u1362 (Amharic hate speech detection and polite rephrasing application. This project uses machine learning model"
+  },
+  {
+    "id": "fidel_agents",
+    "name": "FIDEL-Agents",
+    "contribution_types": [
+      "Linguistic Resource",
+      "Algorithm/Method",
+      "Pipeline",
+      "Tool/Software",
+      "Benchmark"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Amharic",
+      "Classical Ge'ez"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Catalode/FIDEL-Agents",
+    "description": "A benchmark measuring AI agent reliability on paired Amharic and English tasks in simulated Ethiopian workflows."
+  },
+  {
+    "id": "ethiopian_modern_farmer",
+    "name": "Ethiopian-Modern-Farmer",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Aman-byte1/Ethiopian-Modern-Farmer",
+    "description": "\u1208\u12a2\u1275\u12ee\u1335\u12eb \u1308\u1260\u122c\u12ce\u127d \u12e8\u1230\u1265\u120d \u121d\u122d\u1275 \u1275\u1295\u1260\u12eb\u1363 \u12e8\u121b\u12f3\u1260\u122a\u12eb \u121d\u12ad\u122d\u1363 \u12e8\u121d\u130d\u1265 \u1325\u122b\u1275 \u121d\u122d\u1218\u122b \u12a5\u1293 \u12e8\u12a0\u121b\u122d\u129b AI \u12a0\u121b\u12ab\u122a \u12e8\u121a\u1230\u1325 \u1218\u1270\u130d\u1260\u122a\u12eb \u1362 (A platform providing crop yield prediction, fertilizer advice, food quality inspection, and an Amharic AI advisor "
+  },
+  {
+    "id": "amharic_ecommerce_data_extractor",
+    "name": "Amharic-Ecommerce-Data-Extractor",
+    "contribution_types": [
+      "Pipeline",
+      "Dataset",
+      "Model"
+    ],
+    "technical_pillars": [
+      "P3",
+      "P4"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/abeladamushumet/Amharic-Ecommerce-Data-Extractor",
+    "description": "Modular NLP pipeline that scrapes Amharic Telegram e-commerce posts, fine-tunes multilingual transformers for NER (product, price, location), explains predictions with SHAP/LIME, and produces vendor l"
+  },
+  {
+    "id": "semitic_scattering_law",
+    "name": "semitic-scattering-law",
+    "contribution_types": [
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "P2",
+      "P3"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/faresrafat3/semitic-scattering-law",
+    "description": "Exploratory research on how root-scatter affects neural language model performance in Semitic morphology (Arabic, Hebrew, Amharic)."
+  },
+  {
+    "id": "tigrinya_nlp",
+    "name": "tigrinya-nlp",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Tigrinya"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/makda-tsegazeab/tigrinya-nlp",
+    "description": ""
+  },
+  {
+    "id": "tigrinya_tokenizer",
+    "name": "Tigrinya-Tokenizer",
+    "contribution_types": [
+      "Pipeline",
+      "Tool/Software",
+      "Linguistic Resource"
+    ],
+    "technical_pillars": [
+      "P1",
+      "P2"
+    ],
+    "languages": [
+      "Tigrinya"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/haben-ai/Tigrinya-Tokenizer",
+    "description": "Tigriyna_BPE_Tokenizer is a Byte Pair Encoding (BPE)\u2013based tokenizer designed specifically for the Tigrinya language, a low-resource Semitic language. The project focuses on reducing token fragmentati"
+  },
+  {
+    "id": "amhariccorpus",
+    "name": "AmharicCorpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "P4"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace",
+      "GitHub"
+    ],
+    "source_count": 2,
+    "url": "https://github.com/maobedkova/AmharicCorpus",
+    "description": "The set of files used for the development of the Amharic Corpus."
+  },
+  {
+    "id": "mewaeltsegay/tigrinya_bpe_tokenizer",
+    "name": "mewaeltsegay/Tigrinya-BPE-Tokenizer",
+    "contribution_types": [
+      "Tool/Software"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Tigrinya"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/mewaeltsegay/Tigrinya-BPE-Tokenizer",
+    "description": ""
+  },
+  {
+    "id": "rasyosef/amharic_sentences_corpus",
+    "name": "rasyosef/amharic-sentences-corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/rasyosef/amharic-sentences-corpus",
+    "description": ""
+  },
+  {
+    "id": "yordanoswuletaw/amharic_pretraining_corpus",
+    "name": "yordanoswuletaw/amharic-pretraining-corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/yordanoswuletaw/amharic-pretraining-corpus",
+    "description": ""
+  },
+  {
+    "id": "michsethowusu/amharic_sentiments_corpus",
+    "name": "michsethowusu/amharic-sentiments-corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/michsethowusu/amharic-sentiments-corpus",
+    "description": ""
+  },
+  {
+    "id": "reubencf/amharic_corpus",
+    "name": "Reubencf/Amharic_corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/Reubencf/Amharic_corpus",
+    "description": ""
+  },
+  {
+    "id": "amharic_tokenizer",
+    "name": "Amharic-Tokenizer",
+    "contribution_types": [
+      "Tool/Software",
+      "Linguistic Resource"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Amharic",
+      "Classical Ge'ez"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/sefineh-ai/Amharic-Tokenizer",
+    "description": "Syllable-aware BPE tokenizer for the Amharic language (\u12a0\u121b\u122d\u129b) \u2013 fast, accurate, trainable."
+  },
+  {
+    "id": "am_llm",
+    "name": "am-llm",
+    "contribution_types": [
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "P3"
+    ],
+    "languages": [
+      "Amharic",
+      "Classical Ge'ez"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/nemozen/am-llm",
+    "description": "Amharic Large Language Model"
+  },
+  {
+    "id": "amharic_text_processor",
+    "name": "Amharic-Text-Processor",
+    "contribution_types": [
+      "Pipeline",
+      "Tool/Software"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Amharic",
+      "Classical Ge'ez"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/ethiopicai/Amharic-Text-Processor",
+    "description": "Modular Amharic text preprocessing toolkit with composable processors and pipeline."
+  },
+  {
+    "id": "amharic_word_embedding_word2vec",
+    "name": "Amharic-Word-Embedding-Word2vec",
+    "contribution_types": [
+      "Model"
+    ],
+    "technical_pillars": [
+      "P3"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/gashawdemlew/Amharic-Word-Embedding-Word2vec",
+    "description": "Amharic-Word Embedding-Word2vec is a pre-trained distributed word representation (word embedding) which aims to provide the Amharic NLP researcher with free to use."
+  },
+  {
+    "id": "amharic_poem_wax_and_gold_meaning_detector",
+    "name": "Amharic-Poem-Wax-and-Gold-Meaning-Detector",
+    "contribution_types": [
+      "Tool/Software"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/surafiel-habib/Amharic-Poem-Wax-and-Gold-Meaning-Detector",
+    "description": "The Amharic Poem Wax and Gold Meaning-Detector is an NLP tool designed to analyze the intricate metaphors and meanings within traditional Ethiopian poetry. Developed by Surafiel Habib, Feven Tesfaye a"
+  },
+  {
+    "id": "geez_to_amharic_machine_translation",
+    "name": "Geez-To-Amharic-Machine-Translation",
+    "contribution_types": [
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "P3"
+    ],
+    "languages": [
+      "Amharic",
+      "Classical Ge'ez"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/fasil729/Geez-To-Amharic-Machine-Translation",
+    "description": "Geez To Amharic Machine Translation using Transformer NLP model"
+  },
+  {
+    "id": "character_level_amharic_to_english_tts",
+    "name": "Character-Level-Amharic-to-English-TTS",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Abel-D/Character-Level-Amharic-to-English-TTS",
+    "description": "This is a project for CS724 NLP course project."
+  },
+  {
+    "id": "amharictranslator",
+    "name": "AmharicTranslator",
+    "contribution_types": [
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "P3"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/yohanneszewde2556/AmharicTranslator",
+    "description": "Multilingual NLP project that translates Amharic into  English using transformer-based models."
+  },
+  {
+    "id": "artaispellchecker",
+    "name": "ArtaiSpellChecker",
+    "contribution_types": [
+      "Tool/Software"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/abdulmunimjemal/ArtaiSpellChecker",
+    "description": "Amharic Context Aware Spell Checker "
+  },
+  {
+    "id": "kid_s_amharic_story_tts_app",
+    "name": "Kid-s-Amharic-Story-TTS-App",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Aman-byte1/Kid-s-Amharic-Story-TTS-App",
+    "description": "\u12e8\u12a0\u121b\u122d\u129b \u12e8\u120d\u1306\u127d \u1270\u1228\u1276\u127d\u1295 \u12c8\u12f0 \u12f5\u121d\u133d \u12e8\u121a\u1240\u12ed\u122d\u1293 \u12e8\u121a\u12eb\u132b\u12cd\u1275 \u12e8 Streamlit \u1218\u1270\u130d\u1260\u122a\u12eb\u1362(A Streamlit application that converts and plays Amharic children's stories into audio.)"
+  },
+  {
+    "id": "local_language_nlp_pipeline",
+    "name": "local-language-nlp-pipeline",
+    "contribution_types": [
+      "Pipeline",
+      "Linguistic Resource"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/bakiizese/local-language-nlp-pipeline",
+    "description": "A first-principles NLP preprocessing and classification pipeline built in PyTorch for low-resource language(Amharic), demonstrating explicit geometric and high-dimensional tensor transformations."
+  },
+  {
+    "id": "tafsiri",
+    "name": "tafsiri",
+    "contribution_types": [
+      "Benchmark",
+      "Dataset",
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "P4"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/ianktoo/tafsiri",
+    "description": "Generate & evaluate fine-tuning-ready African-language translation datasets, powered by Daraja AI's Babel models. Multi-signal eval (confidence, back-translation, LLM-as-judge) + SQLite persistence."
+  },
+  {
+    "id": "nlp_project_amharic_text_summarization",
+    "name": "NLP_Project_Amharic_Text_Summarization",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/bekiTil/NLP_Project_Amharic_Text_Summarization",
+    "description": "Amharic Text Summarization "
+  },
+  {
+    "id": "amharic_nlp_exploration",
+    "name": "amharic-nlp-exploration",
+    "contribution_types": [
+      "Algorithm/Method",
+      "Dataset",
+      "Tool/Software",
+      "Benchmark",
+      "Model"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/AmanuelZ/amharic-nlp-exploration",
+    "description": "Exploring the state of NLP for Amharic \u2014 tokenizer analysis, dataset survey, model evaluation, and sentiment fine-tuning"
+  },
+  {
+    "id": "nlp_for_amharic",
+    "name": "NLP-for-amharic",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Nathanielight/NLP-for-amharic",
+    "description": ""
+  },
+  {
+    "id": "nlp_tigrigna_to_amharic",
+    "name": "NLP-Tigrigna-to-Amharic",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/eyoelm5/NLP-Tigrigna-to-Amharic",
+    "description": ""
+  },
+  {
+    "id": "amharic_normalizer",
+    "name": "amharic-normalizer",
+    "contribution_types": [
+      "Pipeline"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/bikoendalew/amharic-normalizer",
+    "description": "Normalize Amharic homophones for accurate text search and NLP pipelines."
+  },
+  {
+    "id": "nlp_based_amharic_hate_speech_detection",
+    "name": "nlp-based-amharic-hate-speech-detection",
+    "contribution_types": [
+      "Pipeline"
+    ],
+    "technical_pillars": [
+      "P2"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/nahomWM/nlp-based-amharic-hate-speech-detection",
+    "description": "This project implements a hate speech detection system specifically designed for Amharic language text."
+  },
+  {
+    "id": "amharic_rag_assistant",
+    "name": "amharic-rag-assistant",
+    "contribution_types": [
+      "Pipeline",
+      "Dataset",
+      "Linguistic Resource"
+    ],
+    "technical_pillars": [
+      "P2",
+      "P3"
+    ],
+    "languages": [
+      "Amharic",
+      "Classical Ge'ez"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/IsaakAlemu/amharic-rag-assistant",
+    "description": "Low-resource Ethiopic NLP RAG system with custom hybrid dense+BM25 retrieval, ChromaDB, and Streamlit."
+  },
+  {
+    "id": "nlp_amharic_to_afan_oromoo_translation_assignment_",
+    "name": "NLP-Amharic-to-Afan-Oromoo-translation-assignment-",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/marakiteferi/NLP-Amharic-to-Afan-Oromoo-translation-assignment-",
+    "description": ""
+  },
+  {
+    "id": "amharic_gold_and_wax_identify_using_nlp",
+    "name": "Amharic-Gold-and-wax-identify-using-nlp",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Ameno-ab/Amharic-Gold-and-wax-identify-using-nlp",
+    "description": ""
+  },
+  {
+    "id": "amharic_plagiarism_checker",
+    "name": "amharic_plagiarism_checker",
+    "contribution_types": [
+      "Tool/Software",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/AbiyuNigussie/amharic_plagiarism_checker",
+    "description": "A plagiarism detection tool for Amharic text using Natural Language Processing (NLP). Built with Flask, this project allows users to check the similarity of text, providing a plagiarism score based on"
+  },
+  {
+    "id": "nlp_amharic_to_english_translator_with_mt5",
+    "name": "NLP-Amharic-to-English-Translator-with-MT5",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/felekekinfe/NLP-Amharic-to-English-Translator-with-MT5",
+    "description": ""
+  },
+  {
+    "id": "speech_to_text_pipeline",
+    "name": "speech-to-text-pipeline",
+    "contribution_types": [
+      "Pipeline",
+      "Dataset",
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/sayleee1/speech-to-text-pipeline",
+    "description": "Web app to collect Amharic speech data for NLP model training"
+  },
+  {
+    "id": "transformers_from_scratch",
+    "name": "transformers_from_scratch",
+    "contribution_types": [
+      "Model"
+    ],
+    "technical_pillars": [
+      "P3"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Abel-Marie/transformers_from_scratch",
+    "description": "Full encoder-decoder Transformer built from scratch in PyTorch for Amharic-English translation."
+  },
+  {
+    "id": "inclusive_nlp_ethiopia_2030",
+    "name": "inclusive-nlp-ethiopia-2030",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Amharic",
+      "Classical Ge'ez"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Abraham-W/inclusive-nlp-ethiopia-2030",
+    "description": "Official repository for the Inclusive NLP Ethiopia initiative. Developing high-fidelity Amharic datasets and linguistic guidelines to mitigate gender bias and orthographic noise in frontier LLMs. Led "
+  },
+  {
+    "id": "multilingual_search_engine",
+    "name": "multilingual-search-engine",
+    "contribution_types": [
+      "Pipeline"
+    ],
+    "technical_pillars": [
+      "P2"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Natnael-Ab/multilingual-search-engine",
+    "description": "A multilingual information retrieval system supporting English-Amharic search using BM25, TF-IDF, query expansion and Flask."
+  },
+  {
+    "id": "babel",
+    "name": "BABEL",
+    "contribution_types": [
+      "Linguistic Resource",
+      "Algorithm/Method",
+      "Dataset",
+      "Tool/Software",
+      "Benchmark",
+      "Model"
+    ],
+    "technical_pillars": [
+      "P3"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/biniyamlombe/BABEL",
+    "description": "BABEL: Benchmarking Architectures and Budgets for Extremely Low-resource Languages scaling law study for Amharic, Yiddish, and       Tibetan  "
+  },
+  {
+    "id": "text_processing_on_ethiopian_language_pairs",
+    "name": "Text-Processing-on-Ethiopian-Language-Pairs",
+    "contribution_types": [
+      "Dataset",
+      "Tool/Software"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Nati-Hab1/Text-Processing-on-Ethiopian-Language-Pairs",
+    "description": "\ud83d\udcca Comparative Analysis of Amharic and Tigrigna - A Python-based project that measures linguistic similarity between Amharic and Tigrigna by analyzing word-level and phoneme overlap using SERA-based G2"
+  },
+  {
+    "id": "text_scraper",
+    "name": "Text_Scraper",
+    "contribution_types": [
+      "Pipeline",
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "P4"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Alazar-io/Text_Scraper",
+    "description": "A Python-based web scraper using Playwright to extract and clean Amharic news articles from websites, designed for building dataset for NLP tasks. It can also be adapted for general-purpose web data c"
+  },
+  {
+    "id": "ethiopian_food_advisor_ai_agent",
+    "name": "Ethiopian_food_advisor_AI_Agent",
+    "contribution_types": [
+      "Pipeline"
+    ],
+    "technical_pillars": [
+      "P1",
+      "P2"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/behailu412/Ethiopian_food_advisor_AI_Agent",
+    "description": "simple Ethiopian food recipes advisor AI agent A smart, bilingual ingredient-based recipe recommendation system.  The Ethiopian Recipe Advisor is a Python-based web application built with Streamlit. I"
+  },
+  {
+    "id": "multilingual_nlp_processor",
+    "name": "multilingual-nlp-processor",
+    "contribution_types": [
+      "Pipeline"
+    ],
+    "technical_pillars": [
+      "P2"
+    ],
+    "languages": [
+      "Tigrinya"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Tesfay-Hagos/multilingual-nlp-processor",
+    "description": "A Streamlit-based NLP pipeline supporting English and Tigrinya. Features stopword elimination, lemmatization, frequency analysis, and compound relevance scoring."
+  },
+  {
+    "id": "hornmorpho",
+    "name": "HornMorpho",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "P2",
+      "P4"
+    ],
+    "languages": [
+      "Amharic",
+      "Tigrinya"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/fgaim/HornMorpho",
+    "description": "Morphological analysis and generation of Amharic, Oromo, and Tigrinya"
+  },
+  {
+    "id": "parallel_corpus",
+    "name": "Parallel-Corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/msquarme/Parallel-Corpus",
+    "description": "Scraping JW.org to create a parallel corpus for Tigrigna -  English and  Amharic - English"
+  },
+  {
+    "id": "unified_amharic_english_corpus",
+    "name": "unified-amharic-english-corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/wubet/unified-amharic-english-corpus",
+    "description": ""
+  },
+  {
+    "id": "synthesized_en_am_parallel_corpus",
+    "name": "Synthesized-En-Am-Parallel-Corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/liku-amare/Synthesized-En-Am-Parallel-Corpus",
+    "description": "English-Amharic Parallel Corpus made using Google Translate's Cloud Translation API. "
+  },
+  {
+    "id": "omdena_ethiopia",
+    "name": "Omdena-Ethiopia",
+    "contribution_types": [
+      "Dataset",
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "P3"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/vigneshmj1997/Omdena-Ethiopia",
+    "description": "This repository is dedicated to collecting, extracting, and cleaning Amharic text corpus, and building a language model using the collected data."
+  },
+  {
+    "id": "amharic_etv_corpus_pre_processing",
+    "name": "amharic-etv-corpus-pre-processing",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Mikyas1/amharic-etv-corpus-pre-processing",
+    "description": ""
+  },
+  {
+    "id": "ghana_chat_data_prep",
+    "name": "ghana-chat-data-prep",
+    "contribution_types": [
+      "Pipeline",
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/michsethowusu/ghana-chat-data-prep",
+    "description": "End-to-end pipeline for preparing and translating Ghana chat corpus into Twi, Ewe, and Ga via Amharic pivot"
+  },
+  {
+    "id": "tibebai",
+    "name": "TibebAI",
+    "contribution_types": [
+      "Dataset",
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/Mr-Ndi/TibebAI",
+    "description": "Machine learning experiments on student performance prediction. Inspired by tibeb (wisdom) in Amharic, this project explores regression models to understand how study factors influence exam scores."
+  },
+  {
+    "id": "amharic_movie_recommender",
+    "name": "Amharic-Movie-Recommender",
+    "contribution_types": [
+      "Other"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/mikiiiss/Amharic-Movie-Recommender",
+    "description": "A machine learning project that recommends Amharic movies based on YouTube user comments."
+  },
+  {
+    "id": "medicine_recomendation__with_ai_main",
+    "name": "medicine_recomendation-_with-AI-main",
+    "contribution_types": [
+      "Model",
+      "Algorithm/Method"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "GitHub"
+    ],
+    "source_count": 1,
+    "url": "https://github.com/annah11/medicine_recomendation-_with-AI-main",
+    "description": "A Flask-based web application that predicts diseases based on user-provided symptoms in both English and Amharic. The app leverages machine learning models (SVM) to classify diseases from a set of sym"
+  },
+  {
+    "id": "bonnief/tigrinya_nllb_tokenizer",
+    "name": "Bonnief/tigrinya-nllb-tokenizer",
+    "contribution_types": [
+      "Tool/Software"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Tigrinya"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/Bonnief/tigrinya-nllb-tokenizer",
+    "description": ""
+  },
+  {
+    "id": "lamekyemane09/qwen3_4b_tigrinya_tokenizer",
+    "name": "lamekyemane09/qwen3-4b-tigrinya-tokenizer",
+    "contribution_types": [
+      "Tool/Software"
+    ],
+    "technical_pillars": [
+      "P1"
+    ],
+    "languages": [
+      "Tigrinya"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/lamekyemane09/qwen3-4b-tigrinya-tokenizer",
+    "description": ""
+  },
+  {
+    "id": "mikeendale/gpt2_amharic_sentences_corpus",
+    "name": "mikeendale/gpt2-amharic-sentences-corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/mikeendale/gpt2-amharic-sentences-corpus",
+    "description": ""
+  },
+  {
+    "id": "surafelkindu/amharic_corpus",
+    "name": "surafelkindu/Amharic_corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/surafelkindu/Amharic_corpus",
+    "description": ""
+  },
+  {
+    "id": "biniyamajaw/amharic_corpus",
+    "name": "BiniyamAjaw/amharic-corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/BiniyamAjaw/amharic-corpus",
+    "description": ""
+  },
+  {
+    "id": "yhtechnology/amharic_corpus",
+    "name": "YHtechnology/amharic_corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/YHtechnology/amharic_corpus",
+    "description": ""
+  },
+  {
+    "id": "dataoceanai/ethiopian_amharic_free_dialogue_speech_corpus",
+    "name": "DataoceanAI/Ethiopian_Amharic_Free_Dialogue_Speech_Corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/DataoceanAI/Ethiopian_Amharic_Free_Dialogue_Speech_Corpus",
+    "description": ""
+  },
+  {
+    "id": "b1n1yam/amharic_combined_corpus",
+    "name": "b1n1yam/amharic-combined-corpus",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/b1n1yam/amharic-combined-corpus",
+    "description": ""
+  },
+  {
+    "id": "soundwaveet/leyu_amharic_speech_corpus_2026",
+    "name": "SoundWaveET/leyu-amharic-speech-corpus-2026",
+    "contribution_types": [
+      "Dataset"
+    ],
+    "technical_pillars": [
+      "Unclassified"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "all_sources": [
+      "HuggingFace"
+    ],
+    "source_count": 1,
+    "url": "https://huggingface.co/datasets/SoundWaveET/leyu-amharic-speech-corpus-2026",
+    "description": ""
+  }
+]

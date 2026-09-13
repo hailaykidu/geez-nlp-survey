@@ -4,68 +4,55 @@ SYSTEMATIC REVIEW STATISTICS REPORT
 
 SUMMARY
 ----------------------------------------
-total_papers: 4
-year_range: 2025-2026
-venues: 4
-unique_authors: 15
+total_papers: 0
+year_range: N/A
+venues: 0
+unique_authors: 0
 
 LANGUAGE_STATISTICS
 ----------------------------------------
-total_language_mentions: 12
-unique_languages: 4
+total_language_mentions: 0
+unique_languages: 0
 distribution:
-  Amharic: 4
-  Other: 4
-  Classical Ge'ez: 3
-  Tigrinya: 1
-amharic_papers: 4
-tigrinya_papers: 1
-geez_papers: 3
+amharic_papers: 0
+tigrinya_papers: 0
+geez_papers: 0
 
 PILLAR_STATISTICS
 ----------------------------------------
-total_papers_with_pillar: 4
-unique_pillars: 3
+total_papers_with_pillar: 0
+unique_pillars: 0
 distribution:
-  Language Models & Deep Learning: 2
-  Text Representation & Embeddings: 1
-  Sequence Labeling & Structure Extraction: 1
 
 TOOL_TYPE_STATISTICS
 ----------------------------------------
-total_papers_with_tool_type: 4
-unique_tool_types: 1
+total_papers_with_tool_type: 0
+unique_tool_types: 0
 distribution:
-  Algorithm: 4
 
 MORPHOLOGY_STATISTICS
 ----------------------------------------
-morphology_focused_papers: 2
-morphology_percentage: 50.0
+morphology_focused_papers: 0
+morphology_percentage: 0
 morphological_assumptions:
-  Language-Agnostic: 2
 
 SCRIPT_DESIGN_STATISTICS
 ----------------------------------------
-script_aware_papers: 3
-script_awareness_percentage: 75.0
+script_aware_papers: 0
+script_awareness_percentage: 0
 transfer_approaches:
-  Cross-lingual: 2
-  Monolingual: 2
 
 REPRODUCIBILITY_STATISTICS
 ----------------------------------------
-papers_with_code: 2
-code_availability_percentage: 50.0
-papers_with_data: 1
-data_availability_percentage: 25.0
-fully_reproducible: 1
+papers_with_code: 0
+code_availability_percentage: 0
+papers_with_data: 0
+data_availability_percentage: 0
+fully_reproducible: 0
 
 TEMPORAL_STATISTICS
 ----------------------------------------
 papers_by_year:
-  2026: 1
-  2025: 3
-year_range: 2025-2026
-latest_year: 2026
-earliest_year: 2025
+year_range: N/A
+latest_year: None
+earliest_year: None

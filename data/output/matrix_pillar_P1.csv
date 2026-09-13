@@ -1,0 +1,3 @@
+Name,Type,Pillar,Languages,Capabilities,Source,Stated_Limitations,Identified_Gaps,URL
+Amharic-Tokenizer,Tool,P1,Amharic,tokenization,github,0,3,https://github.com/sefineh-ai/Amharic-Tokenizer
+MORPHOLOGICAL SEGMENTATION WITH LSTM NEU,Model,P1,Tigrinya,"tokenization, morphological_analysis",zenodo,0,4,

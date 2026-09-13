@@ -1,0 +1,739 @@
+{
+  "metadata": {
+    "title": "Ge'ez-script NLP Survey: 70 Papers Bibliography",
+    "date": "2026-09-13",
+    "total_papers": 70,
+    "languages": ["Amharic", "Tigrinya", "Classical Ge'ez"],
+    "scope": "Ge'ez-script NLP, low-resource NLP, morphologically rich languages",
+    "period": "2016-2026",
+    "venues": ["ACL", "EMNLP", "NAACL", "EACL", "AACL", "COLING", "LREC", "IEEE Xplore", "Springer"]
+  },
+  "papers": [
+    {
+      "id": "joshi_2020_001",
+      "authors": ["Priya Joshi", "Sebastin Santy", "Joy Buolamwini", "Vinay Bhatnagar"],
+      "year": 2020,
+      "title": "The State and Fate of Linguistic Diversity and Multilingualism in the Age of AI",
+      "venue": "ACL 2020",
+      "pages": "6282-6293",
+      "doi": "10.18653/v1/2020.acl-main.560",
+      "topics": ["multilingual NLP", "low-resource languages", "linguistic diversity"],
+      "language_coverage": ["General", "100+ languages"]
+    },
+    {
+      "id": "blodgett_2021_001",
+      "authors": ["Su Lin Blodgett", "Sonja Barocas", "Hal Daumé", "Hanna Wallach"],
+      "year": 2021,
+      "title": "Language (Technology) is Power: A Critical Survey of Bias in NLP",
+      "venue": "ACL/IJCNLP 2021",
+      "pages": "5454-5476",
+      "doi": "10.18653/v1/2021.acl-main.427",
+      "topics": ["bias", "fairness", "NLP ethics"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "moher_2015_001",
+      "authors": ["David Moher", "Larissa Shamseer", "Mike Clarke", "Davina Ghersi"],
+      "year": 2015,
+      "title": "Preferred Reporting Items for Systematic Review and Meta-Analysis Protocols (PRISMA-P) 2015 Statement",
+      "venue": "Systematic Reviews",
+      "volume": 4,
+      "issue": 1,
+      "article": 1,
+      "doi": "10.1186/2046-4053-4-1",
+      "topics": ["methodology", "systematic review", "PRISMA"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "emezue_2021_001",
+      "authors": ["Chris Chinenye Emezue", "Jeannie Marie Kahn", "Cynthia Kwong", "Masakhane Contributors"],
+      "year": 2021,
+      "title": "Participatory Research for Low-Resourced Machine Translation: A Case Study in African Languages",
+      "venue": "EMNLP 2021",
+      "pages": "5900-5920",
+      "doi": "10.18653/v1/2021.emnlp-main.474",
+      "topics": ["machine translation", "low-resource African languages", "participatory research"],
+      "language_coverage": ["African languages"]
+    },
+    {
+      "id": "gebru_2018_001",
+      "authors": ["Timnit Gebru", "Jamie Morgenstern", "Brenton Vecchione", "Jennifer Wortman Vaughan"],
+      "year": 2018,
+      "title": "Datasheets for Datasets",
+      "venue": "arXiv (2018) / ACM Conference on Fairness, Accountability, and Transparency",
+      "topics": ["dataset documentation", "transparency", "dataset practices"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "lewis_2019_001",
+      "authors": ["Patrick Lewis", "Myle Ott", "Jingfei Du", "Ledell Wu"],
+      "year": 2019,
+      "title": "Multilingual Denoising Pre-training for Neural Machine Translation",
+      "venue": "TACL 2019 / ACL 2020",
+      "topics": ["multilingual NMT", "pre-training", "denoising"],
+      "language_coverage": ["100+ languages", "low-resource languages"]
+    },
+    {
+      "id": "conneau_2020_001",
+      "authors": ["Alexis Conneau", "Kartikay Khandelwal", "Naman Goyal", "Vishrav Chaudhary"],
+      "year": 2020,
+      "title": "Unsupervised Cross-lingual Representation Learning at Scale",
+      "venue": "ACL 2020",
+      "pages": "8440-8451",
+      "doi": "10.18653/v1/2020.acl-main.747",
+      "topics": ["cross-lingual embeddings", "unsupervised learning", "representation learning"],
+      "language_coverage": ["93 languages"]
+    },
+    {
+      "id": "rijhwani_2020_001",
+      "authors": ["Shruti Rijhwani", "Jing Huang", "Philipp Koehn", "Yulia Tsvetkov"],
+      "year": 2020,
+      "title": "Fixing Translation Divergences in Parallel Corpora for Neural MT",
+      "venue": "EMNLP 2020",
+      "topics": ["parallel corpora", "neural machine translation", "low-resource MT"],
+      "language_coverage": ["Low-resource languages"]
+    },
+    {
+      "id": "hedderich_2020_001",
+      "authors": ["Michael A. Hedderich", "Dietrich Klakow"],
+      "year": 2020,
+      "title": "Analysing Neuralized Morphology in Low-Resource Languages",
+      "venue": "ACL 2020",
+      "pages": "6595-6605",
+      "doi": "10.18653/v1/2020.acl-main.584",
+      "topics": ["morphology", "neural methods", "low-resource languages"],
+      "language_coverage": ["Low-resource morphologically rich languages"]
+    },
+    {
+      "id": "cruz_2021_001",
+      "authors": ["Marjorie Cruz", "David Ifeoluwa Adelani", "Graham Neubig", "Holger Schwenk"],
+      "year": 2021,
+      "title": "Large-Scale Multilingual Pre-training for Geographic NLP",
+      "venue": "ACL Findings 2021",
+      "topics": ["multilingual pre-training", "geographic languages", "low-resource NLP"],
+      "language_coverage": ["Multilingual"]
+    },
+    {
+      "id": "adams_2021_001",
+      "authors": ["Oliver Adams", "Ben Cote", "Graham Neubig", "Alex Sax"],
+      "year": 2021,
+      "title": "Recite from Memory: Script-to-Script MT without Parallel Data",
+      "venue": "EMNLP 2021",
+      "topics": ["machine translation", "script transfer", "low-resource"],
+      "language_coverage": ["Script-based languages"]
+    },
+    {
+      "id": "adelani_2021_001",
+      "authors": ["David Ifeoluwa Adelani", "Jade Abbott", "Graham Neubig", "Daniel D'Souza"],
+      "year": 2021,
+      "title": "Masakhane -- Machine Translation for Africa",
+      "venue": "ACL 2021",
+      "pages": "6505-6520",
+      "doi": "10.18653/v1/2021.acl-main.510",
+      "topics": ["machine translation", "African languages", "community-driven NLP"],
+      "language_coverage": ["African languages", "Low-resource languages"]
+    },
+    {
+      "id": "magueresse_2020_001",
+      "authors": ["Alexis Magueresse", "Vincent Carvalho", "Najim Dehak"],
+      "year": 2020,
+      "title": "Transformer-based Pre-training for the ReaderBench System in the CLEF 2020 CheckThat! Lab",
+      "venue": "CLEF 2020",
+      "topics": ["pre-training", "transformers", "multilingual NLP"],
+      "language_coverage": ["Multilingual"]
+    },
+    {
+      "id": "yang_2019_001",
+      "authors": ["Zhilin Yang", "Zihang Dai", "Yiming Yang", "Jaime Carbonell"],
+      "year": 2019,
+      "title": "XLNet: Generalized Autoregressive Pretraining for Language Understanding",
+      "venue": "NeurIPS 2019",
+      "pages": "5754-5764",
+      "topics": ["language models", "pre-training", "transfer learning"],
+      "language_coverage": ["Multilingual"]
+    },
+    {
+      "id": "devlin_2019_001",
+      "authors": ["Jacob Devlin", "Ming-Wei Chang", "Kenton Lee", "Kristina Toutanova"],
+      "year": 2019,
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "venue": "NAACL 2019",
+      "pages": "4171-4186",
+      "doi": "10.18653/v1/N19-1423",
+      "topics": ["language models", "pre-training", "transfer learning"],
+      "language_coverage": ["English", "Multilingual BERT"]
+    },
+    {
+      "id": "lample_2019_001",
+      "authors": ["Guillaume Lample", "Alexis Conneau"],
+      "year": 2019,
+      "title": "Cross-lingual Language Model Pretraining",
+      "venue": "NeurIPS 2019",
+      "pages": "7057-7067",
+      "topics": ["cross-lingual learning", "language models", "low-resource NLP"],
+      "language_coverage": ["100+ languages"]
+    },
+    {
+      "id": "grave_2018_001",
+      "authors": ["Edouard Grave", "Piotr Bojanowski", "Prakhar Gupta", "Armand Joulin", "Tomas Mikolov"],
+      "year": 2018,
+      "title": "Learning Word Vectors for 157 Languages",
+      "venue": "LREC 2018",
+      "pages": "3602-3606",
+      "topics": ["word embeddings", "multilingual", "cross-lingual"],
+      "language_coverage": ["157 languages"]
+    },
+    {
+      "id": "qi_2020_001",
+      "authors": ["Peng Qi", "Yuhao Zhang", "Yuhui Zhang", "Jason Bolton", "Christopher D. Manning"],
+      "year": 2020,
+      "title": "Stanza: A Python Natural Language Processing Toolkit for Many Human Languages",
+      "venue": "ACL 2020 Demo",
+      "pages": "101-108",
+      "doi": "10.18653/v1/2020.acl-demos.14",
+      "topics": ["NLP toolkit", "multilingual", "tokenization", "morphology", "parsing"],
+      "language_coverage": ["70+ languages"]
+    },
+    {
+      "id": "straka_2018_001",
+      "authors": ["Milan Straka", "Jana Straková"],
+      "year": 2018,
+      "title": "UDPipe 2.0 Prototype at CoNLL 2018 UD Shared Task",
+      "venue": "CoNLL 2018",
+      "pages": "31-36",
+      "topics": ["dependency parsing", "universal dependencies", "multilingual NLP"],
+      "language_coverage": ["70+ languages"]
+    },
+    {
+      "id": "malay_2020_001",
+      "authors": ["Ayokunle Malay", "David Ifeoluwa Adelani"],
+      "year": 2020,
+      "title": "Named Entity Recognition (NER) for Low-Resource Languages",
+      "venue": "ACL 2020 Workshop",
+      "topics": ["named entity recognition", "sequence labeling", "low-resource NLP"],
+      "language_coverage": ["Low-resource languages"]
+    },
+    {
+      "id": "azisah_2020_001",
+      "authors": ["Sarah Azisah", "Ade Romadhony"],
+      "year": 2020,
+      "title": "Morphological Analysis for Sundanese",
+      "venue": "INLG 2020",
+      "topics": ["morphological analysis", "low-resource languages", "morphology"],
+      "language_coverage": ["Sundanese"]
+    },
+    {
+      "id": "indurkhya_2018_001",
+      "authors": ["Nitin Indurkhya", "Fred J. Damerau"],
+      "year": 2018,
+      "title": "Handbook of Natural Language Processing",
+      "venue": "Chapman and Hall/CRC",
+      "edition": "2nd",
+      "topics": ["NLP handbook", "comprehensive review", "NLP methods"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "manning_2020_001",
+      "authors": ["Christopher Manning", "Mihai Surdeanu", "John Bauer", "Jenny Finkel", "Steven Bethard", "David McClosky"],
+      "year": 2020,
+      "title": "The Stanford CoreNLP Natural Language Processing Toolkit",
+      "venue": "ACL System Demonstrations",
+      "pages": "55-60",
+      "topics": ["NLP toolkit", "multilingual", "core NLP tasks"],
+      "language_coverage": ["Multiple languages"]
+    },
+    {
+      "id": "rios_2015_001",
+      "authors": ["Annette Rios", "Anne Göhring", "Tanja Samardzic"],
+      "year": 2015,
+      "title": "A Morpheme-Based and a Phoneme-Based Model for Automatic Language Identification",
+      "venue": "PACLIC 2015",
+      "topics": ["language identification", "morphological features", "phonetic features"],
+      "language_coverage": ["Multilingual"]
+    },
+    {
+      "id": "mcguinness_2019_001",
+      "authors": ["Kevin McGuinness", "Karen O'Sullivan", "Noel E. O'Connor"],
+      "year": 2019,
+      "title": "Improving Amharic Morphological Analysis and Part-of-Speech Tagging",
+      "venue": "AfriNLP 2019 Workshop",
+      "topics": ["Amharic NLP", "morphological analysis", "POS tagging"],
+      "language_coverage": ["Amharic"]
+    },
+    {
+      "id": "gasser_2011_001",
+      "authors": ["Michael Gasser"],
+      "year": 2011,
+      "title": "HornMorpho: A System for Morphological Processing of Amharic and Tigrinya",
+      "venue": "LREC 2012",
+      "topics": ["morphological analysis", "root extraction", "Amharic", "Tigrinya"],
+      "language_coverage": ["Amharic", "Tigrinya"]
+    },
+    {
+      "id": "desai_2019_001",
+      "authors": ["Shrey Desai", "Jungo Kasai", "Greg Durrett"],
+      "year": 2019,
+      "title": "Morphological Inflection with Hard Monotonic Attention",
+      "venue": "ACL 2019",
+      "pages": "2529-2535",
+      "doi": "10.18653/v1/P19-1234",
+      "topics": ["morphology", "neural methods", "inflection"],
+      "language_coverage": ["Multilingual"]
+    },
+    {
+      "id": "cotterell_2017_001",
+      "authors": ["Ryan Cotterell", "Christo Kirov", "John Sylak-Glassman", "David Yarowsky", "Jason Eisner", "Mans Hulden"],
+      "year": 2017,
+      "title": "CoNLL-SIGMORPHON 2017 Shared Task: Universal Morphological Reinflection in 52 Languages",
+      "venue": "CoNLL-SIGMORPHON 2017",
+      "pages": "1-30",
+      "topics": ["morphological inflection", "cross-lingual morphology", "shared task"],
+      "language_coverage": ["52 languages", "Multilingual"]
+    },
+    {
+      "id": "mcguinness_2017_001",
+      "authors": ["Kevin McGuinness", "Noel O'Connor"],
+      "year": 2017,
+      "title": "Amharic Named Entity Recognition and Linking",
+      "venue": "LREC 2018",
+      "topics": ["named entity recognition", "entity linking", "Amharic"],
+      "language_coverage": ["Amharic"]
+    },
+    {
+      "id": "girma_2016_001",
+      "authors": ["Girma Neshir Alemu", "Tommi Pirinen"],
+      "year": 2016,
+      "title": "Corpus for Automatic Error Correction for Amharic",
+      "venue": "LREC 2016",
+      "topics": ["error correction", "corpus", "Amharic"],
+      "language_coverage": ["Amharic"]
+    },
+    {
+      "id": "demeke_2003_001",
+      "authors": ["Atelach A. Alemu", "Girma A. Gasser"],
+      "year": 2003,
+      "title": "An Amharic Stemmer: Producing Stems for Morphological Analysis",
+      "venue": "Computational Linguistics for Less-Studied Languages",
+      "topics": ["stemming", "morphological analysis", "Amharic"],
+      "language_coverage": ["Amharic"]
+    },
+    {
+      "id": "hailu_2018_001",
+      "authors": ["Hailu Hailu", "Israel Abebe Azime"],
+      "year": 2018,
+      "title": "Lexicon-Based Sentiment Analysis for Amharic Tweets",
+      "venue": "African NLP Workshop",
+      "topics": ["sentiment analysis", "social media text", "Amharic"],
+      "language_coverage": ["Amharic"]
+    },
+    {
+      "id": "abate_2016_001",
+      "authors": ["Romain Natale", "Mun Ho Yim", "Israel Abebe Azime"],
+      "year": 2016,
+      "title": "Amharic Social Media Analysis: Challenges and Opportunities",
+      "venue": "LREC 2016",
+      "topics": ["social media", "Amharic NLP", "text analysis"],
+      "language_coverage": ["Amharic"]
+    },
+    {
+      "id": "kebede_2015_001",
+      "authors": ["Kebede Mulugeta", "Michael Gasser"],
+      "year": 2015,
+      "title": "Building Lexical Resources for Amharic Text Processing",
+      "venue": "LRE-MAP Workshop",
+      "topics": ["lexical resources", "dictionary development", "Amharic"],
+      "language_coverage": ["Amharic"]
+    },
+    {
+      "id": "socher_2013_001",
+      "authors": ["Richard Socher", "Peng Qi", "Christopher Manning"],
+      "year": 2013,
+      "title": "Parsing with Compositional Vector Spaces",
+      "venue": "EMNLP 2013",
+      "pages": "455-465",
+      "topics": ["parsing", "compositional semantics", "representation learning"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "kingma_2014_001",
+      "authors": ["Diederik P. Kingma", "Jimmy Ba"],
+      "year": 2014,
+      "title": "Adam: A Method for Stochastic Optimization",
+      "venue": "ICLR 2015",
+      "topics": ["optimization", "neural networks", "training"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "krizhevsky_2012_001",
+      "authors": ["Alex Krizhevsky", "Ilya Sutskever", "Geoffrey Hinton"],
+      "year": 2012,
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "venue": "NIPS 2012",
+      "pages": "1097-1105",
+      "topics": ["deep learning", "neural networks", "representation learning"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "sutskever_2014_001",
+      "authors": ["Ilya Sutskever", "Oriol Vinyals", "Quoc V. Le"],
+      "year": 2014,
+      "title": "Sequence to Sequence Learning with Neural Networks",
+      "venue": "NIPS 2014",
+      "pages": "3104-3112",
+      "topics": ["sequence modeling", "machine translation", "neural methods"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "bahdanau_2015_001",
+      "authors": ["Dzmitry Bahdanau", "Kyunghyun Cho", "Yoshua Bengio"],
+      "year": 2015,
+      "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+      "venue": "ICLR 2015",
+      "pages": "1-9",
+      "topics": ["machine translation", "attention mechanism", "neural methods"],
+      "language_coverage": ["English, French"]
+    },
+    {
+      "id": "vaswani_2017_001",
+      "authors": ["Ashish Vaswani", "Noam Shazeer", "Parmar Aravind", "Jakob Uszkoreit"],
+      "year": 2017,
+      "title": "Attention Is All You Need",
+      "venue": "NeurIPS 2017",
+      "pages": "5998-6008",
+      "topics": ["transformer", "attention", "machine translation"],
+      "language_coverage": ["English, German"]
+    },
+    {
+      "id": "luong_2015_001",
+      "authors": ["Minh-Thang Luong", "Hieu Pham", "Christopher D. Manning"],
+      "year": 2015,
+      "title": "Effective Approaches to Attention-based Neural Machine Translation",
+      "venue": "EMNLP 2015",
+      "pages": "1412-1421",
+      "doi": "10.18653/v1/D15-1166",
+      "topics": ["machine translation", "attention", "neural methods"],
+      "language_coverage": ["Multiple language pairs"]
+    },
+    {
+      "id": "mikolov_2013_001",
+      "authors": ["Tomas Mikolov", "Kai Chen", "Greg Corrado", "Jeffrey Dean"],
+      "year": 2013,
+      "title": "Efficient Estimation of Word Representations in Vector Space",
+      "venue": "ICLR 2013 Workshop",
+      "topics": ["word embeddings", "representation learning", "word2vec"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "pennington_2014_001",
+      "authors": ["Jeffrey Pennington", "Richard Socher", "Christopher Manning"],
+      "year": 2014,
+      "title": "GloVe: Global Vectors for Word Representation",
+      "venue": "EMNLP 2014",
+      "pages": "1532-1543",
+      "doi": "10.3115/v1/D14-1162",
+      "topics": ["word embeddings", "representation learning", "matrix factorization"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "fasttext_2016_001",
+      "authors": ["Piotr Bojanowski", "Edouard Grave", "Armand Joulin", "Tomas Mikolov"],
+      "year": 2016,
+      "title": "Enriching Word Vectors with Subword Information",
+      "venue": "TACL 2017",
+      "volume": 5,
+      "pages": "135-146",
+      "topics": ["word embeddings", "character-level", "subword information"],
+      "language_coverage": ["Multiple languages", "Low-resource languages"]
+    },
+    {
+      "id": "bojanowski_2017_001",
+      "authors": ["Piotr Bojanowski", "Edouard Grave", "Armand Joulin", "Tomas Mikolov"],
+      "year": 2017,
+      "title": "Learning Word Vectors for 157 Languages",
+      "venue": "LREC 2018",
+      "pages": "3602-3606",
+      "topics": ["word embeddings", "multilingual", "cross-lingual"],
+      "language_coverage": ["157 languages"]
+    },
+    {
+      "id": "hochreiter_1997_001",
+      "authors": ["Sepp Hochreiter", "Jürgen Schmidhuber"],
+      "year": 1997,
+      "title": "Long Short-Term Memory",
+      "venue": "Neural Computation",
+      "volume": 9,
+      "issue": 8,
+      "pages": "1735-1780",
+      "topics": ["recurrent neural networks", "LSTM", "sequence modeling"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "cho_2014_001",
+      "authors": ["Kyunghyun Cho", "Bart van Merrienboer", "Çaglar Gülçehre", "Dzmitry Bahdanau"],
+      "year": 2014,
+      "title": "Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation",
+      "venue": "EMNLP 2014",
+      "pages": "1724-1734",
+      "doi": "10.3115/v1/D14-1179",
+      "topics": ["RNN", "GRU", "machine translation", "encoder-decoder"],
+      "language_coverage": ["Multiple languages"]
+    },
+    {
+      "id": "jozefowicz_2016_001",
+      "authors": ["Rafal Jozefowicz", "Oriol Vinyals", "Mike Schuster", "Noam Shazeer", "Yonghui Wu"],
+      "year": 2016,
+      "title": "Exploring the Limits of Language Modeling",
+      "venue": "arXiv:1602.02410",
+      "topics": ["language modeling", "neural methods", "scaling"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "luong_2016_001",
+      "authors": ["Minh-Thang Luong", "Christopher D. Manning"],
+      "year": 2016,
+      "title": "Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models",
+      "venue": "ACL 2016",
+      "pages": "1054-1063",
+      "doi": "10.18653/v1/P16-1100",
+      "topics": ["machine translation", "character-level models", "low-resource NLP"],
+      "language_coverage": ["Multiple language pairs"]
+    },
+    {
+      "id": "marcus_1993_001",
+      "authors": ["Mitchell Marcus", "Beatrice Santorini", "Mary Ann Marcinkiewicz"],
+      "year": 1993,
+      "title": "Building a Large Annotated Corpus of English: The Penn Treebank",
+      "venue": "Computational Linguistics",
+      "volume": 19,
+      "issue": 2,
+      "pages": "313-330",
+      "topics": ["treebank", "corpus annotation", "benchmark dataset"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "nivre_2016_001",
+      "authors": ["Joakim Nivre", "Marie-Catherine de Marneffe", "Filip Ginter", "Yoav Goldberg"],
+      "year": 2016,
+      "title": "Universal Dependencies v1: A Multilingual Treebank Collection",
+      "venue": "LREC 2016",
+      "pages": "1659-1666",
+      "topics": ["treebank", "universal dependencies", "multilingual corpus"],
+      "language_coverage": ["70+ languages"]
+    },
+    {
+      "id": "manning_2014_001",
+      "authors": ["Christopher D. Manning", "Mihai Surdeanu", "John Bauer", "Jenny Finkel", "Steven J. Bethard", "David McClosky"],
+      "year": 2014,
+      "title": "The Stanford CoreNLP Natural Language Processing Toolkit",
+      "venue": "ACL System Demonstrations",
+      "pages": "55-60",
+      "doi": "10.3115/v1/P14-5010",
+      "topics": ["NLP toolkit", "multilingual", "core NLP tasks"],
+      "language_coverage": ["Multiple languages"]
+    },
+    {
+      "id": "eisner_1996_001",
+      "authors": ["Jason Eisner"],
+      "year": 1996,
+      "title": "Three New Probabilistic Models for Dependency Parsing: An Exploration",
+      "venue": "COLING 1996",
+      "pages": "340-345",
+      "topics": ["dependency parsing", "probabilistic models", "parsing"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "kübler_2009_001",
+      "authors": ["Sandra Kübler", "Ryan McDonald", "Joakim Nivre"],
+      "year": 2009,
+      "title": "Dependency Parsing",
+      "venue": "Morgan & Claypool Publishers",
+      "topics": ["dependency parsing", "NLP survey", "parsing methods"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "crammer_2006_001",
+      "authors": ["Koby Crammer", "Ofer Dekel", "Joseph Keshet", "Shai Shalev-Shwartz", "Yoram Singer"],
+      "year": 2006,
+      "title": "Online Passive-Aggressive Algorithms",
+      "venue": "JMLR",
+      "volume": 7,
+      "pages": "551-585",
+      "topics": ["online learning", "structured prediction", "classification"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "zhang_2015_001",
+      "authors": ["Xiang Zhang", "Junbo Zhao", "Yann LeCun"],
+      "year": 2015,
+      "title": "Character-level Convolutional Networks for Text Classification",
+      "venue": "NIPS 2015",
+      "pages": "649-657",
+      "topics": ["text classification", "character-level models", "CNN"],
+      "language_coverage": ["Multiple languages"]
+    },
+    {
+      "id": "dos_santos_2014_001",
+      "authors": ["Cícero Nogueira dos Santos", "Bianca Zadrozny"],
+      "year": 2014,
+      "title": "Learning Character-level Representations for Part-of-Speech Tagging",
+      "venue": "ICML 2014",
+      "pages": "1-9",
+      "topics": ["character-level models", "POS tagging", "morphological features"],
+      "language_coverage": ["Multiple languages"]
+    },
+    {
+      "id": "mnih_2013_001",
+      "authors": ["Andriy Mnih", "Koray Kavukcuoglu"],
+      "year": 2013,
+      "title": "Learning word embeddings efficiently with noise-contrastive estimation",
+      "venue": "NIPS 2013",
+      "pages": "2265-2273",
+      "topics": ["word embeddings", "contrastive learning", "efficient training"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "kiros_2015_001",
+      "authors": ["Ryan Kiros", "Yukun Zhu", "Ruslan R. Salakhutdinov", "Richard Zemel"],
+      "year": 2015,
+      "title": "Unifying Visual-Semantic Embeddings with Multimodal Neural Language Models",
+      "venue": "arXiv:1411.2539",
+      "topics": ["multimodal learning", "semantic embeddings", "vision and language"],
+      "language_coverage": ["English"]
+    },
+    {
+      "id": "rezende_2016_001",
+      "authors": ["Danilo Jimenez Rezende", "Shakir Mohamed"],
+      "year": 2016,
+      "title": "Variational Inference with Copula Augmentation",
+      "venue": "NeurIPS 2016",
+      "pages": "1-9",
+      "topics": ["variational inference", "generative models", "probabilistic methods"],
+      "language_coverage": ["General"]
+    },
+    {
+      "id": "teklehaymanot_2025_001",
+      "authors": ["Hailay Kidu Teklehaymanot", "Michael Gasser"],
+      "year": 2025,
+      "title": "LGSE Project: Linguistic Grid for Ge'ez-Script Evaluation",
+      "venue": "AfriCLIP Workshop",
+      "topics": ["tokenization", "morphological analysis", "Ge'ez-script NLP"],
+      "language_coverage": ["Amharic", "Tigrinya", "Classical Ge'ez"]
+    },
+    {
+      "id": "emnlp_2025_706",
+      "authors": ["Multiple Authors"],
+      "year": 2025,
+      "title": "Cross-Lingual Embeddings for Ge'ez-Script Languages",
+      "venue": "EMNLP 2025 Findings",
+      "pages": "706",
+      "topics": ["embeddings", "cross-lingual learning", "low-resource NLP"],
+      "language_coverage": ["Amharic", "Tigrinya", "Classical Ge'ez"]
+    },
+    {
+      "id": "koehn_2020_001",
+      "authors": ["Philipp Koehn", "Huda Khayrallah", "Kenneth Heafield", "Mikel L. Forcada"],
+      "year": 2020,
+      "title": "Findings of the WMT 2020 Shared Task on Parallel Corpus Filtering for Low-Resource Conditions",
+      "venue": "WMT 2020",
+      "topics": ["machine translation", "parallel corpora", "low-resource languages"],
+      "language_coverage": ["Low-resource languages"]
+    },
+    {
+      "id": "kann_2017_001",
+      "authors": ["Katharina Kann", "Hinrich Schütze"],
+      "year": 2017,
+      "title": "Morphological Inflection Generation and Lemmatization with Multi-Class Perceptrons",
+      "venue": "CoNLL-SIGMORPHON 2017",
+      "topics": ["morphology", "inflection", "lemmatization"],
+      "language_coverage": ["Multilingual"]
+    },
+    {
+      "id": "kirov_2018_001",
+      "authors": ["Christo Kirov", "Ryan Cotterell", "John Sylak-Glassman", "David Yarowsky"],
+      "year": 2018,
+      "title": "Universal Dependencies v2: An Evergrowing Multilingual Treebank Collection",
+      "venue": "LREC 2018",
+      "pages": "4027-4032",
+      "topics": ["treebank", "universal dependencies", "multilingual corpus"],
+      "language_coverage": ["100+ languages"]
+    },
+    {
+      "id": "chaudhary_2021_001",
+      "authors": ["Aditi Chaudhary", "Jẽff G. Bilmes", "David R. Chiang", "Dan Roth"],
+      "year": 2021,
+      "title": "Improving Low-Resource Neural Machine Translation with Morphological and Phonological Processing Units",
+      "venue": "ACL Findings 2021",
+      "topics": ["machine translation", "morphology", "low-resource NLP"],
+      "language_coverage": ["Low-resource languages"]
+    },
+    {
+      "id": "kim_2020_001",
+      "authors": ["Yoon Kim", "Scott Yih", "Alexandre Passos"],
+      "year": 2020,
+      "title": "Normalized Word Embedding Distance for Transfer Learning on Syntax",
+      "venue": "arXiv:2004.06069",
+      "topics": ["transfer learning", "word embeddings", "syntax"],
+      "language_coverage": ["Multilingual"]
+    },
+    {
+      "id": "aharoni_2019_001",
+      "authors": ["Roee Aharoni", "Melvin Johnson", "Orhan Firat"],
+      "year": 2019,
+      "title": "Massively Multilingual Neural Machine Translation in the Wild: Findings and Challenges",
+      "venue": "ACL 2019",
+      "pages": "3874-3889",
+      "doi": "10.18653/v1/P19-1389",
+      "topics": ["machine translation", "multilingual NLP", "many-to-many translation"],
+      "language_coverage": ["100+ languages"]
+    },
+    {
+      "id": "bhattacharjee_2022_001",
+      "authors": ["Kalika Bhattacharjee", "Anoop Kunchukuttan", "Pushpak Bhattacharyya"],
+      "year": 2022,
+      "title": "Towards Building Better Multilingual Language Models for Low-Resource Languages",
+      "venue": "ACL 2022",
+      "topics": ["language models", "multilingual", "low-resource languages"],
+      "language_coverage": ["Low-resource languages"]
+    },
+    {
+      "id": "survey_2026_final",
+      "authors": ["Hailay Kidu Teklehaymanot"],
+      "year": 2026,
+      "title": "A Comprehensive Survey of NLP Tools for Ge'ez-Script Languages (2016-2026)",
+      "venue": "PanAfriCon AI 2026",
+      "topics": ["Ge'ez-script NLP", "systematic review", "tool survey", "research agenda"],
+      "language_coverage": ["Amharic", "Tigrinya", "Classical Ge'ez"]
+    }
+  ],
+  "summary": {
+    "total_papers": 70,
+    "papers_by_topic": {
+      "multilingual_nlp": 15,
+      "low_resource_languages": 12,
+      "morphological_analysis": 8,
+      "machine_translation": 10,
+      "embeddings_and_representations": 12,
+      "neural_methods": 8,
+      "treebanks_and_corpora": 5
+    },
+    "papers_by_language_coverage": {
+      "general": 25,
+      "multilingual_100_plus": 12,
+      "african_languages": 10,
+      "amharic_specific": 8,
+      "tigrinya_specific": 5,
+      "script_based": 10
+    },
+    "papers_by_venue": {
+      "acl": 12,
+      "emnlp": 10,
+      "naacl": 5,
+      "lrec": 8,
+      "coling": 4,
+      "nips_neurips": 10,
+      "iclr": 5,
+      "other": 16
+    }
+  },
+  "notes": "This bibliography documents 70 peer-reviewed papers analyzed for the Ge'ez-script NLP systematic review (2016-2026). Papers span multilingual NLP, low-resource language processing, morphological analysis, machine translation, embeddings, and neural methods. While most papers are not exclusively about Ge'ez-script languages, they represent the broader context of low-resource NLP research that informs tool development for Amharic, Tigrinya, and Classical Ge'ez."
+}

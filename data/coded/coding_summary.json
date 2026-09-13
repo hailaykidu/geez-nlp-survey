@@ -1,20 +1,9 @@
 {
-  "total_papers": 4,
-  "language_distribution": {
-    "Amharic": 4,
-    "Classical Ge'ez": 3,
-    "Other": 4,
-    "Tigrinya": 1
-  },
-  "pillar_distribution": {
-    "Text Representation & Embeddings": 1,
-    "Language Models & Deep Learning": 2,
-    "Sequence Labeling & Structure Extraction": 1
-  },
-  "tool_type_distribution": {
-    "Algorithm": 4
-  },
-  "morphology_papers": 2,
-  "script_specific_papers": 3,
-  "avg_completeness": 0.9
+  "total_papers": 0,
+  "language_distribution": {},
+  "pillar_distribution": {},
+  "tool_type_distribution": {},
+  "morphology_papers": 0,
+  "script_specific_papers": 0,
+  "avg_completeness": 0.0
 }

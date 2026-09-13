@@ -1,0 +1,4 @@
+Name,Type,Pillar,Languages,Capabilities,Source,Stated_Limitations,Identified_Gaps,URL
+Language-Translation-Model-for-Underserv,Model,P2,Tigrinya,"morphological_analysis, translation",github,0,2,https://github.com/shristighimire/Language-Translation-Model-for-Underserved-Communities-
+HornMorpho,Tool,P2,"Amharic, Tigrinya","morphological_analysis, ner",github,0,1,https://github.com/fgaim/HornMorpho
+semitic-scattering-law,Model,P2,Amharic,morphological_analysis,github,0,3,https://github.com/faresrafat3/semitic-scattering-law

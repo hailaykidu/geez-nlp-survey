@@ -1,0 +1,377 @@
+{
+  "configuration": {
+    "search": {
+      "metadata": {
+        "version": "1.0",
+        "description": "Search keywords and parameters for Ge'ez-Script NLP survey",
+        "created": "2026-09-11"
+      },
+      "search_terms": {
+        "amharic": [
+          "Amharic NLP",
+          "Amharic language processing",
+          "Amharic morphology",
+          "Amharic tokenization",
+          "Amharic embedding",
+          "Amharic POS tagging",
+          "Amharic NER",
+          "Amharic parsing",
+          "Amharic corpus",
+          "Amharic dataset"
+        ],
+        "tigrinya": [
+          "Tigrinya NLP",
+          "Tigrinya language processing",
+          "Tigrinya morphology",
+          "Tigrinya tokenization",
+          "Tigrinya processing",
+          "Tigrinya language"
+        ],
+        "geez": [
+          "Ge'ez",
+          "Geez",
+          "Classical Ge'ez",
+          "Ethiopic script",
+          "Fidel script",
+          "Ge'ez-script languages",
+          "Semitic NLP"
+        ]
+      },
+      "sources": {
+        "semantic_scholar": {
+          "base_url": "https://api.semanticscholar.org/graph/v1/paper/search",
+          "description": "Semantic Scholar API - provides peer-reviewed papers",
+          "max_results": 100,
+          "rate_limit": 1,
+          "timeout": 10
+        },
+        "acl_anthology": {
+          "base_url": "https://www.aclweb.org/anthology/",
+          "description": "ACL Anthology - peer-reviewed NLP conference proceedings",
+          "rate_limit": 1,
+          "timeout": 10
+        }
+      },
+      "filters": {
+        "year_min": 2016,
+        "year_max": 2026,
+        "language_codes": [
+          "am",
+          "ti",
+          "gez"
+        ],
+        "exclude_venues": []
+      }
+    },
+    "screening": {
+      "metadata": {
+        "version": "1.0",
+        "description": "PRISMA inclusion/exclusion criteria for Ge'ez-Script NLP survey",
+        "created": "2026-09-11"
+      },
+      "inclusion_criteria": {
+        "peer_reviewed": {
+          "enabled": true,
+          "description": "Paper must be peer-reviewed",
+          "note": "Conference proceedings (ACL, EMNLP, NAACL, etc.) or peer-reviewed journals"
+        },
+        "target_language_mentioned": {
+          "enabled": true,
+          "description": "Paper must mention Ge'ez-script language or script",
+          "keywords": [
+            "Amharic",
+            "Tigrinya",
+            "Classical Ge'ez",
+            "Ge'ez",
+            "Geez",
+            "Ethiopic",
+            "Fidel",
+            "Ethiopian",
+            "Abugida"
+          ]
+        },
+        "foundational_tool_contribution": {
+          "enabled": true,
+          "description": "Paper must contribute foundational NLP tool/dataset/algorithm",
+          "pillars": [
+            "tokenization",
+            "morphology",
+            "embeddings",
+            "sequence_labeling"
+          ]
+        },
+        "tool_development_central": {
+          "enabled": true,
+          "description": "Tool development must be central to paper, not auxiliary",
+          "note": "Not just applying existing tools to downstream tasks"
+        },
+        "year_range": {
+          "enabled": true,
+          "min_year": 2016,
+          "max_year": 2026,
+          "description": "Paper published within specified year range"
+        }
+      },
+      "exclusion_criteria": {
+        "non_peer_reviewed": {
+          "enabled": true,
+          "codes": [
+            "technical_report",
+            "blog",
+            "thesis",
+            "preprint_only"
+          ],
+          "description": "Technical reports, blog posts, unpublished theses, preprints without peer review"
+        },
+        "no_target_language": {
+          "enabled": true,
+          "code": "no_geez_script_language",
+          "description": "Does not mention Amharic, Tigrinya, Ge'ez, or related script"
+        },
+        "no_nlp_focus": {
+          "enabled": true,
+          "codes": [
+            "linguistics_only",
+            "historical",
+            "computational_linguistics_no_tools"
+          ],
+          "description": "Linguistics, history, or computational analysis without NLP tool contribution"
+        },
+        "no_tool_contribution": {
+          "enabled": true,
+          "code": "no_foundational_tool",
+          "description": "Paper mentions Ge'ez-script languages but contributes no foundational NLP tools"
+        },
+        "downstream_only": {
+          "enabled": true,
+          "code": "downstream_application_only",
+          "description": "Applies existing tools to downstream task (MT, sentiment analysis) without foundational contribution",
+          "examples": [
+            "machine translation",
+            "sentiment analysis",
+            "text summarization",
+            "question answering"
+          ]
+        },
+        "duplicate": {
+          "enabled": true,
+          "code": "duplicate_paper",
+          "description": "Same paper already screened (different version, preprint, etc.)"
+        },
+        "out_of_scope": {
+          "enabled": true,
+          "code": "out_of_scope",
+          "description": "Does not fit survey scope"
+        }
+      },
+      "decision_tree": {
+        "step_1": "Is paper peer-reviewed? If NO \u2192 EXCLUDE (non_peer_reviewed)",
+        "step_2": "Does paper mention Amharic, Tigrinya, Ge'ez, Ethiopic, or Fidel? If NO \u2192 EXCLUDE (no_target_language)",
+        "step_3": "Does paper describe foundational NLP tool/dataset/algorithm? If NO \u2192 EXCLUDE (no_nlp_focus)",
+        "step_4": "Is tool development/evaluation central to paper? If NO \u2192 EXCLUDE (downstream_only)",
+        "step_5": "Does paper fit year range (2016-2026)? If NO \u2192 EXCLUDE (out_of_date)",
+        "step_6": "Is this a duplicate of already screened paper? If YES \u2192 EXCLUDE (duplicate)",
+        "final": "If all checks pass \u2192 INCLUDE"
+      }
+    },
+    "coding": {
+      "metadata": {
+        "version": "1.0",
+        "description": "Extraction and coding schema for Ge'ez-Script NLP papers",
+        "created": "2026-09-11"
+      },
+      "dimensions": {
+        "languages": {
+          "description": "Target languages of the paper",
+          "type": "multi_select",
+          "values": [
+            "Amharic",
+            "Tigrinya",
+            "Classical Ge'ez",
+            "Other Ge'ez-script language"
+          ]
+        },
+        "primary_pillar": {
+          "description": "Primary foundational NLP category",
+          "type": "single_select",
+          "values": [
+            "Tokenization & Normalization",
+            "Lexical & Morphological Analysis",
+            "Text Representation & Embeddings",
+            "Sequence Labeling & Structure Extraction",
+            "Unclear"
+          ],
+          "definitions": {
+            "Tokenization & Normalization": "Unicode normalization, character-level processing, word/morpheme segmentation",
+            "Lexical & Morphological Analysis": "Root extraction, morphological decomposition, lemmatization, POS tagging",
+            "Text Representation & Embeddings": "Word embeddings, contextual embeddings, language model pretraining",
+            "Sequence Labeling & Structure Extraction": "NER, chunking, syntactic parsing, relation extraction"
+          }
+        },
+        "secondary_pillars": {
+          "description": "Secondary NLP contributions",
+          "type": "multi_select",
+          "values": [
+            "Tokenization & Normalization",
+            "Lexical & Morphological Analysis",
+            "Text Representation & Embeddings",
+            "Sequence Labeling & Structure Extraction"
+          ]
+        },
+        "tool_type": {
+          "description": "Type of tool/resource contribution",
+          "type": "single_select",
+          "values": [
+            "Library",
+            "Pipeline",
+            "Algorithm",
+            "Dataset",
+            "Multiple types",
+            "Unclear"
+          ]
+        },
+        "morphology_focus": {
+          "description": "Does paper focus on morphological richness?",
+          "type": "boolean"
+        },
+        "morphological_assumption": {
+          "description": "Morphological model employed",
+          "type": "single_select",
+          "values": [
+            "Concatenative",
+            "Templatic (Non-Concatenative)",
+            "Hybrid",
+            "Not stated"
+          ]
+        },
+        "morphological_tool_type": {
+          "description": "Type of morphological tool developed",
+          "type": "single_select",
+          "values": [
+            "None",
+            "Root extractor",
+            "Morphological analyzer",
+            "POS tagger",
+            "Stemmer/Lemmatizer",
+            "Other"
+          ]
+        },
+        "script_specific_design": {
+          "description": "Does paper explicitly address Ge'ez script properties?",
+          "type": "boolean"
+        },
+        "script_properties_addressed": {
+          "description": "Which Ge'ez script properties are handled",
+          "type": "multi_select",
+          "values": [
+            "Unicode normalization",
+            "Fidel-level processing",
+            "Labialization/Palatalization",
+            "Large character inventory",
+            "Other"
+          ]
+        },
+        "transfer_approach": {
+          "description": "Cross-lingual or cross-script transfer",
+          "type": "single_select",
+          "values": [
+            "Monolingual",
+            "Cross-lingual",
+            "Cross-script",
+            "Multiple types"
+          ]
+        },
+        "code_availability": {
+          "description": "Is source code publicly available?",
+          "type": "boolean"
+        },
+        "code_url": {
+          "description": "URL to code repository",
+          "type": "string"
+        },
+        "data_availability": {
+          "description": "Is dataset/corpus publicly available?",
+          "type": "boolean"
+        },
+        "data_url": {
+          "description": "URL to dataset",
+          "type": "string"
+        },
+        "coder_notes": {
+          "description": "Notes explaining coding decisions",
+          "type": "text"
+        }
+      }
+    }
+  },
+  "search": {
+    "semantic_scholar": {
+      "papers_found": 4,
+      "keywords": 23
+    },
+    "acl_anthology": {
+      "papers_found": 0,
+      "keywords": 23
+    },
+    "total_searched": 4
+  },
+  "screening": {
+    "total_screened": 4,
+    "total_included": 4,
+    "total_excluded": 0,
+    "statistics": {
+      "total_papers_screened": 4,
+      "papers_included": 4,
+      "papers_excluded": 0,
+      "inclusion_rate": 1.0,
+      "inclusion_percentage": "100.0%"
+    }
+  },
+  "coding": {
+    "total_coded": 4,
+    "summary": {
+      "total_coded": 4,
+      "languages": [
+        "Other",
+        "Amharic",
+        "Tigrinya",
+        "Classical Ge'ez"
+      ],
+      "pillars": [
+        "Text Representation & Embeddings",
+        "Sequence Labeling & Structure Extraction",
+        "Language Models & Deep Learning"
+      ],
+      "tool_types": [
+        "Algorithm"
+      ],
+      "morphology_papers": 2,
+      "script_specific_papers": 3
+    }
+  },
+  "export": {
+    "csv": "data/pipeline_output/exports/papers.csv",
+    "json": "data/pipeline_output/exports/papers.json",
+    "schema": "data/pipeline_output/exports/schema.json",
+    "statistics": "data/pipeline_output/exports/statistics_report.txt"
+  },
+  "visualization": {
+    "charts": {
+      "languages": "data/pipeline_output/visualizations/chart_language_distribution.png",
+      "pillars": "data/pipeline_output/visualizations/chart_pillar_distribution.png",
+      "tool_types": "data/pipeline_output/visualizations/chart_tool_type_distribution.png",
+      "temporal": "data/pipeline_output/visualizations/chart_temporal_distribution.png",
+      "morphology": "data/pipeline_output/visualizations/chart_morphology_focus.png",
+      "reproducibility": "data/pipeline_output/visualizations/chart_reproducibility.png"
+    },
+    "synthesis_report": "data/pipeline_output/visualizations/synthesis_report.md"
+  },
+  "summary": {
+    "status": "SUCCESS",
+    "timestamp": "2026-09-12T08:25:25.200761",
+    "duration_seconds": 46.274768,
+    "total_searched": 4,
+    "total_screened": 4,
+    "total_coded": 4
+  }
+}

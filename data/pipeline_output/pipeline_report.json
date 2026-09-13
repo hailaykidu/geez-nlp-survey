@@ -306,47 +306,45 @@
   },
   "search": {
     "semantic_scholar": {
-      "papers_found": 4,
+      "papers_found": 2,
       "keywords": 23
     },
     "acl_anthology": {
       "papers_found": 0,
       "keywords": 23
     },
-    "total_searched": 4
+    "total_searched": 2
   },
   "screening": {
-    "total_screened": 4,
-    "total_included": 4,
+    "total_screened": 2,
+    "total_included": 2,
     "total_excluded": 0,
     "statistics": {
-      "total_papers_screened": 4,
-      "papers_included": 4,
+      "total_papers_screened": 2,
+      "papers_included": 2,
       "papers_excluded": 0,
       "inclusion_rate": 1.0,
       "inclusion_percentage": "100.0%"
     }
   },
   "coding": {
-    "total_coded": 4,
+    "total_coded": 2,
     "summary": {
-      "total_coded": 4,
+      "total_coded": 2,
       "languages": [
         "Other",
         "Amharic",
-        "Tigrinya",
-        "Classical Ge'ez"
+        "Tigrinya"
       ],
       "pillars": [
-        "Text Representation & Embeddings",
-        "Sequence Labeling & Structure Extraction",
-        "Language Models & Deep Learning"
+        "Lexical & Morphological Analysis",
+        "Sequence Labeling & Structure Extraction"
       ],
       "tool_types": [
-        "Algorithm"
+        "Framework"
       ],
-      "morphology_papers": 2,
-      "script_specific_papers": 3
+      "morphology_papers": 1,
+      "script_specific_papers": 0
     }
   },
   "export": {
@@ -368,10 +366,10 @@
   },
   "summary": {
     "status": "SUCCESS",
-    "timestamp": "2026-09-12T08:25:25.200761",
-    "duration_seconds": 46.274768,
-    "total_searched": 4,
-    "total_screened": 4,
-    "total_coded": 4
+    "timestamp": "2026-09-12T14:53:57.063400",
+    "duration_seconds": 42.104595,
+    "total_searched": 2,
+    "total_screened": 2,
+    "total_coded": 2
   }
 }

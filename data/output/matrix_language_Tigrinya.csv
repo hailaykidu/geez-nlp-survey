@@ -1,0 +1,8 @@
+Name,Type,Pillar,Languages,Capabilities,Source,Stated_Limitations,Identified_Gaps,URL
+TiALD,Tool,Other,Tigrinya,Not_specified,github,0,1,https://github.com/fgaim/TiALD
+Tigrinya-PLMs,Model,P3,Tigrinya,Not_specified,github,0,1,https://github.com/fgaim/Tigrinya-PLMs
+Language-Translation-Model-for-Underserv,Model,P2,Tigrinya,"morphological_analysis, translation",github,0,2,https://github.com/shristighimire/Language-Translation-Model-for-Underserved-Communities-
+HornMorpho,Tool,P2,"Amharic, Tigrinya","morphological_analysis, ner",github,0,1,https://github.com/fgaim/HornMorpho
+fgaim/tigrinya-abusive-language-detectio,Dataset,Other,Tigrinya,Not_specified,huggingface_dataset,0,1,https://huggingface.co/datasets/fgaim/tigrinya-abusive-language-detection
+TLMD: Tigrinya Language Modeling Dataset,Dataset,P3,Tigrinya,Not_specified,zenodo,0,2,
+MORPHOLOGICAL SEGMENTATION WITH LSTM NEU,Model,P1,Tigrinya,"tokenization, morphological_analysis",zenodo,0,4,

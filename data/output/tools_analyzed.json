@@ -1,0 +1,794 @@
+[
+  {
+    "source": "github",
+    "name": "Amharic-Tokenizer",
+    "type": "Tool",
+    "url": "https://github.com/sefineh-ai/Amharic-Tokenizer",
+    "stars": 100,
+    "language": "Python",
+    "description": "Syllable-aware BPE tokenizer for the Amharic language (\u12a0\u121b\u122d\u129b) \u2013 fast, accurate, trainable.",
+    "year": "2025",
+    "pillar": "P1",
+    "languages": [
+      "Amharic"
+    ],
+    "capabilities": [
+      "tokenization"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)",
+      "Tokenization without normalization; limited preprocessing"
+    ],
+    "maintenance": "Maintained",
+    "discussion": {
+      "strengths": [
+        "Well-maintained by community (100 GitHub stars)"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Rule-based processing: interpretability prioritized over neural approaches"
+      ],
+      "field_significance": "Contributes to ecosystem of specialized Ge'ez-script NLP resources"
+    },
+    "ablation": {
+      "core_components": [
+        "Segmentation/boundary detection algorithm"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Neural embeddings (would enable modern NLP)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "GUI interface (reduces friction but not essential)",
+        "API wrapper (convenience, not core)"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "github",
+    "name": "Amharic-English-Machine-Translation-Corpus",
+    "type": "Dataset",
+    "url": "https://github.com/MarsPanther/Amharic-English-Machine-Translation-Corpus",
+    "stars": 49,
+    "language": "Python",
+    "description": "Amharic English Machine Translation Corpus prepared through website crawelling and custom preprocessing.",
+    "year": "2018",
+    "pillar": "Other",
+    "languages": [
+      "Amharic"
+    ],
+    "capabilities": [
+      "translation"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)"
+    ],
+    "maintenance": "Maintained",
+    "discussion": {
+      "strengths": [
+        "Fills specific technical gap"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Provides critical language infrastructure for Amharic NLP research"
+    },
+    "ablation": {
+      "core_components": [
+        "Annotated language data"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "GUI interface (reduces friction but not essential)",
+        "API wrapper (convenience, not core)"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "github",
+    "name": "crawl-for-parallel-corpora",
+    "type": "Dataset",
+    "url": "https://github.com/MarsPanther/crawl-for-parallel-corpora",
+    "stars": 13,
+    "language": "Python",
+    "description": "simple bs4 based web crawl for a corpus in need of statistical machine translation",
+    "year": "2017",
+    "pillar": "Other",
+    "languages": [
+      "Unspecified"
+    ],
+    "capabilities": [
+      "translation"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)"
+    ],
+    "maintenance": "Maintained",
+    "discussion": {
+      "strengths": [
+        "Fills specific technical gap"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Provides critical language infrastructure for Ge'ez NLP research"
+    },
+    "ablation": {
+      "core_components": [
+        "Annotated language data"
+      ],
+      "missing_components": [
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "GUI interface (reduces friction but not essential)",
+        "API wrapper (convenience, not core)"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "github",
+    "name": "TiALD",
+    "type": "Tool",
+    "url": "https://github.com/fgaim/TiALD",
+    "stars": 10,
+    "language": "Python",
+    "description": "A Multi-task Benchmark for Abusive Language Detection in Tigrinya Social Media",
+    "year": "2025",
+    "pillar": "Other",
+    "languages": [
+      "Tigrinya"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability"
+    ],
+    "maintenance": "Maintained",
+    "discussion": {
+      "strengths": [
+        "Rare Tigrinya support; addresses underrepresented language"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)"
+      ],
+      "field_significance": "Rare contribution to underrepresented languages; addresses critical research gap"
+    },
+    "ablation": {
+      "core_components": [
+        "Core components not clear from documentation"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "GUI interface (reduces friction but not essential)",
+        "API wrapper (convenience, not core)"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "github",
+    "name": "Tigrinya-PLMs",
+    "type": "Model",
+    "url": "https://github.com/fgaim/Tigrinya-PLMs",
+    "stars": 8,
+    "language": "Python",
+    "description": "Monolingual Pre-trained Language Models for Tigrinya",
+    "year": "2021",
+    "pillar": "P3",
+    "languages": [
+      "Tigrinya"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability"
+    ],
+    "maintenance": "Maintained",
+    "discussion": {
+      "strengths": [
+        "Rare Tigrinya support; addresses underrepresented language"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)"
+      ],
+      "field_significance": "Rare contribution to underrepresented languages; addresses critical research gap"
+    },
+    "ablation": {
+      "core_components": [
+        "Core components not clear from documentation"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "GUI interface (reduces friction but not essential)",
+        "API wrapper (convenience, not core)",
+        "Fine-tuning capability (flexibility)"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "github",
+    "name": "Language-Translation-Model-for-Underserved-Communities-",
+    "type": "Model",
+    "url": "https://github.com/shristighimire/Language-Translation-Model-for-Underserved-Communities-",
+    "stars": 1,
+    "language": "Python",
+    "description": "A GPT-3-based translation system for Nepali, Mongolian, and Tigrinya, fine-tuned with RAG to improve accuracy and deployed on AWS SageMaker for scalable, real-time translations.",
+    "year": "2024",
+    "pillar": "P2",
+    "languages": [
+      "Tigrinya"
+    ],
+    "capabilities": [
+      "morphological_analysis",
+      "translation"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Morphology without POS tagging; requires downstream integration"
+    ],
+    "maintenance": "Maintained",
+    "discussion": {
+      "strengths": [
+        "Addresses complex morphological phenomena (rare in Ge'ez context)",
+        "Rare Tigrinya support; addresses underrepresented language"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Rule-based processing: interpretability prioritized over neural approaches"
+      ],
+      "field_significance": "Extends morphological capabilities to underrepresented languages"
+    },
+    "ablation": {
+      "core_components": [
+        "Root extraction/pattern matching (handles templatic morphology)",
+        "Lexicon/database for validation"
+      ],
+      "missing_components": [
+        "POS tagging (would enable syntax analysis)",
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Neural embeddings (would enable modern NLP)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "GUI interface (reduces friction but not essential)",
+        "API wrapper (convenience, not core)",
+        "Fine-tuning capability (flexibility)"
+      ],
+      "design_insight": "Depth-first strategy: deep morphological expertise for Amharic before breadth"
+    }
+  },
+  {
+    "source": "github",
+    "name": "HornMorpho",
+    "type": "Tool",
+    "url": "https://github.com/fgaim/HornMorpho",
+    "stars": 13,
+    "language": "Python",
+    "description": "Morphological analysis and generation of Amharic, Oromo, and Tigrinya",
+    "year": "2016",
+    "pillar": "P2",
+    "languages": [
+      "Amharic",
+      "Tigrinya"
+    ],
+    "capabilities": [
+      "morphological_analysis",
+      "ner"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Morphology without POS tagging; requires downstream integration"
+    ],
+    "maintenance": "Maintained",
+    "discussion": {
+      "strengths": [
+        "Addresses complex morphological phenomena (rare in Ge'ez context)",
+        "Comprehensive Amharic coverage across multiple tasks",
+        "Rare Tigrinya support; addresses underrepresented language"
+      ],
+      "design_tradeoffs": [
+        "Rule-based processing: interpretability prioritized over neural approaches"
+      ],
+      "field_significance": "Establishes morphological baseline for Ge'ez-script languages; enables downstream processing"
+    },
+    "ablation": {
+      "core_components": [
+        "Root extraction/pattern matching (handles templatic morphology)",
+        "Lexicon/database for validation"
+      ],
+      "missing_components": [
+        "POS tagging (would enable syntax analysis)",
+        "Neural embeddings (would enable modern NLP)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "GUI interface (reduces friction but not essential)",
+        "API wrapper (convenience, not core)"
+      ],
+      "design_insight": "Community service: addresses critical gaps in underrepresented languages"
+    }
+  },
+  {
+    "source": "github",
+    "name": "semitic-scattering-law",
+    "type": "Model",
+    "url": "https://github.com/faresrafat3/semitic-scattering-law",
+    "stars": 0,
+    "language": "Python",
+    "description": "Exploratory research on how root-scatter affects neural language model performance in Semitic morphology (Arabic, Hebrew, Amharic).",
+    "year": "2026",
+    "pillar": "P2",
+    "languages": [
+      "Amharic"
+    ],
+    "capabilities": [
+      "morphological_analysis"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)",
+      "Morphology without POS tagging; requires downstream integration"
+    ],
+    "maintenance": "Maintained",
+    "discussion": {
+      "strengths": [
+        "Addresses complex morphological phenomena (rare in Ge'ez context)"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Rule-based processing: interpretability prioritized over neural approaches"
+      ],
+      "field_significance": "Establishes morphological baseline for Ge'ez-script languages; enables downstream processing"
+    },
+    "ablation": {
+      "core_components": [
+        "Root extraction/pattern matching (handles templatic morphology)",
+        "Lexicon/database for validation"
+      ],
+      "missing_components": [
+        "POS tagging (would enable syntax analysis)",
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Neural embeddings (would enable modern NLP)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "GUI interface (reduces friction but not essential)",
+        "API wrapper (convenience, not core)",
+        "Fine-tuning capability (flexibility)"
+      ],
+      "design_insight": "Depth-first strategy: deep morphological expertise for Amharic before breadth"
+    }
+  },
+  {
+    "source": "huggingface_dataset",
+    "name": "fgaim/tigrinya-abusive-language-detection",
+    "type": "Dataset",
+    "url": "https://huggingface.co/datasets/fgaim/tigrinya-abusive-language-detection",
+    "description": "fgaim/tigrinya-abusive-language-detection",
+    "pillar": "Other",
+    "languages": [
+      "Tigrinya"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Rare Tigrinya support; addresses underrepresented language"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Provides critical language infrastructure for Tigrinya NLP research"
+    },
+    "ablation": {
+      "core_components": [
+        "Annotated language data"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "No optional components identified"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "zenodo",
+    "name": "Replicating NLP Approaches for African Languages in Ethiopian Contexts: Challenges and Opportunities",
+    "type": "Resource",
+    "url": "",
+    "description": "Replicating NLP Approaches for African Languages in Ethiopian Contexts: Challenges and Opportunities",
+    "year": "2012",
+    "pillar": "Other",
+    "languages": [
+      "Unspecified"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)",
+      "Research artifact status; production readiness unclear"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Fills specific technical gap"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Contributes to ecosystem of specialized Ge'ez-script NLP resources"
+    },
+    "ablation": {
+      "core_components": [
+        "Core components not clear from documentation"
+      ],
+      "missing_components": [
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "No optional components identified"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "zenodo",
+    "name": "Amharic WSD Dataset: Advancing Word Sense Disambiguation in Amharic",
+    "type": "Dataset",
+    "url": "",
+    "description": "Amharic WSD Dataset: Advancing Word Sense Disambiguation in Amharic",
+    "year": "2024",
+    "pillar": "Other",
+    "languages": [
+      "Amharic"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)",
+      "Research artifact status; production readiness unclear"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Fills specific technical gap"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Provides critical language infrastructure for Amharic NLP research"
+    },
+    "ablation": {
+      "core_components": [
+        "Annotated language data"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "No optional components identified"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "zenodo",
+    "name": "LazarusNLP/indonesian-sentence-embeddings: v0.0.1",
+    "type": "Model",
+    "url": "",
+    "description": "LazarusNLP/indonesian-sentence-embeddings: v0.0.1",
+    "year": "2024",
+    "pillar": "P3",
+    "languages": [
+      "Unspecified"
+    ],
+    "capabilities": [
+      "embeddings"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)",
+      "Embeddings only; no downstream task application",
+      "Research artifact status; production readiness unclear"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Enables neural NLP approaches for low-resource context"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)"
+      ],
+      "field_significance": "Enables transfer learning and modern neural NLP for low-resource Ge'ez-script languages"
+    },
+    "ablation": {
+      "core_components": [
+        "Pre-trained weights or training pipeline"
+      ],
+      "missing_components": [
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "Fine-tuning capability (flexibility)"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "zenodo",
+    "name": "Ethiopia \u2013 Distribution of Mother-Tongues \u2013 a rare 1976 map uncovered",
+    "type": "Resource",
+    "url": "",
+    "description": "Ethiopia \u2013 Distribution of Mother-Tongues \u2013 a rare 1976 map uncovered",
+    "year": "2022",
+    "pillar": "Other",
+    "languages": [
+      "Unspecified"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)",
+      "Research artifact status; production readiness unclear"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Fills specific technical gap"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Contributes to ecosystem of specialized Ge'ez-script NLP resources"
+    },
+    "ablation": {
+      "core_components": [
+        "Core components not clear from documentation"
+      ],
+      "missing_components": [
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "No optional components identified"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "zenodo",
+    "name": "TLMD: Tigrinya Language Modeling Dataset",
+    "type": "Dataset",
+    "url": "",
+    "description": "TLMD: Tigrinya Language Modeling Dataset",
+    "year": "2021",
+    "pillar": "P3",
+    "languages": [
+      "Tigrinya"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Research artifact status; production readiness unclear"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Rare Tigrinya support; addresses underrepresented language"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Provides critical language infrastructure for Tigrinya NLP research"
+    },
+    "ablation": {
+      "core_components": [
+        "Annotated language data"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "No optional components identified"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "zenodo",
+    "name": "MORPHOLOGICAL SEGMENTATION WITH LSTM NEURAL NETWORKS FOR TIGRINYA",
+    "type": "Model",
+    "url": "",
+    "description": "MORPHOLOGICAL SEGMENTATION WITH LSTM NEURAL NETWORKS FOR TIGRINYA",
+    "year": "2019",
+    "pillar": "P1",
+    "languages": [
+      "Tigrinya"
+    ],
+    "capabilities": [
+      "tokenization",
+      "morphological_analysis"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Morphology without POS tagging; requires downstream integration",
+      "Tokenization without normalization; limited preprocessing",
+      "Research artifact status; production readiness unclear"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Addresses complex morphological phenomena (rare in Ge'ez context)",
+        "Rare Tigrinya support; addresses underrepresented language"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Rule-based processing: interpretability prioritized over neural approaches"
+      ],
+      "field_significance": "Extends morphological capabilities to underrepresented languages"
+    },
+    "ablation": {
+      "core_components": [
+        "Root extraction/pattern matching (handles templatic morphology)",
+        "Lexicon/database for validation",
+        "Segmentation/boundary detection algorithm"
+      ],
+      "missing_components": [
+        "POS tagging (would enable syntax analysis)",
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Neural embeddings (would enable modern NLP)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "Fine-tuning capability (flexibility)"
+      ],
+      "design_insight": "Depth-first strategy: deep morphological expertise for Amharic before breadth"
+    }
+  },
+  {
+    "source": "zenodo",
+    "name": "HHD-Ethiopic: A Historical Handwritten Dataset for Ethiopic OCR",
+    "type": "Dataset",
+    "url": "",
+    "description": "HHD-Ethiopic: A Historical Handwritten Dataset for Ethiopic OCR",
+    "year": "2023",
+    "pillar": "Other",
+    "languages": [
+      "Ge'ez"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Research artifact status; production readiness unclear"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Fills specific technical gap"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Provides critical language infrastructure for Ge'ez NLP research"
+    },
+    "ablation": {
+      "core_components": [
+        "Annotated language data"
+      ],
+      "missing_components": [
+        "Cross-lingual transfer (would enable Amharic\u2192Tigrinya/Ge'ez)",
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "No optional components identified"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  },
+  {
+    "source": "zenodo",
+    "name": "raeytype/gurage-font-collection: Modern Gurage Typefaces v1.1.0",
+    "type": "Resource",
+    "url": "",
+    "description": "raeytype/gurage-font-collection: Modern Gurage Typefaces v1.1.0",
+    "year": "2021",
+    "pillar": "Other",
+    "languages": [
+      "Unspecified"
+    ],
+    "capabilities": [
+      "Not_specified"
+    ],
+    "limitations_stated": [],
+    "limitations_survey": [
+      "Single-language or unspecified; no cross-lingual capability",
+      "Tigrinya/Ge'ez not explicitly supported (Amharic-focused)",
+      "Research artifact status; production readiness unclear"
+    ],
+    "maintenance": "Unknown",
+    "discussion": {
+      "strengths": [
+        "Fills specific technical gap"
+      ],
+      "design_tradeoffs": [
+        "Single-language focus: depth over breadth (intentional for Amharic expertise)",
+        "Infrastructure-first: data quality prioritized before tool development"
+      ],
+      "field_significance": "Contributes to ecosystem of specialized Ge'ez-script NLP resources"
+    },
+    "ablation": {
+      "core_components": [
+        "Core components not clear from documentation"
+      ],
+      "missing_components": [
+        "Support for underrepresented languages"
+      ],
+      "optional_components": [
+        "No optional components identified"
+      ],
+      "design_insight": "Single-language focus: prioritizes deep coverage over cross-lingual generalization"
+    }
+  }
+]

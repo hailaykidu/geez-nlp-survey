@@ -1,0 +1,31 @@
+{
+  "total_resources": 69,
+  "multi_source_resources": 1,
+  "by_language": {
+    "Amharic": 63,
+    "Tigrinya": 7,
+    "Classical Ge'ez": 7,
+    "Unknown": 0
+  },
+  "by_contribution_type": {
+    "Dataset": 30,
+    "Linguistic Resource": 6,
+    "Tool/Software": 14,
+    "Pipeline": 14,
+    "Algorithm/Method": 14,
+    "Model": 15,
+    "Benchmark": 4,
+    "Other": 14
+  },
+  "by_pillar": {
+    "P1": 14,
+    "P2": 9,
+    "P3": 10,
+    "P4": 6,
+    "Unclassified": 38
+  },
+  "by_source": {
+    "GitHub": 55,
+    "HuggingFace": 15
+  }
+}

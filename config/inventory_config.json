@@ -1,0 +1,77 @@
+{
+  "target_languages": ["Amharic", "Tigrinya", "Classical Geʾez"],
+
+  "technical_pillars": {
+    "P1": "Tokenization, Normalization & Segmentation",
+    "P2": "Lexical & Morphological Processing",
+    "P3": "Text Representation & Language Modeling",
+    "P4": "Sequence Labeling & Structural Analysis"
+  },
+
+  "contribution_types": [
+    "Dataset",
+    "Linguistic Resource",
+    "Tool/Software",
+    "Pipeline",
+    "Algorithm/Method",
+    "Model",
+    "Benchmark",
+    "Other"
+  ],
+
+  "sources": {
+    "academic": {
+      "enabled": true,
+      "type": "peer-reviewed papers",
+      "venues": ["ACL", "EMNLP", "NAACL", "EACL", "COLING", "LREC", "AACL", "IJCNLP"],
+      "apis": ["dblp", "google_scholar", "acl_anthology"]
+    },
+    "github": {
+      "enabled": true,
+      "type": "code repositories",
+      "api": "github_api"
+    },
+    "pypi": {
+      "enabled": true,
+      "type": "python packages",
+      "api": "pypi_api"
+    },
+    "huggingface": {
+      "enabled": true,
+      "type": "models and datasets",
+      "api": "huggingface_api"
+    },
+    "zenodo": {
+      "enabled": true,
+      "type": "research artifacts",
+      "api": "zenodo_api"
+    },
+    "institutional": {
+      "enabled": true,
+      "type": "institutional repositories",
+      "manual": true
+    },
+    "official_pages": {
+      "enabled": true,
+      "type": "project official pages",
+      "manual": true
+    }
+  },
+
+  "search_terms": {
+    "languages": ["Amharic", "Tigrinya", "Geʾez", "Ge'ez", "Classical Geʾez"],
+    "tools": ["NLP", "tokenizer", "morphology", "parser", "embeddings", "tagger"],
+    "combined": [
+      "Amharic NLP",
+      "Tigrinya NLP",
+      "Geʾez NLP",
+      "Amharic morphology",
+      "Tigrinya tokenizer",
+      "Amharic corpus",
+      "Ge'ez language processing",
+      "Amharic machine learning",
+      "Tigrinya embeddings",
+      "Ethiopic script NLP"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+Name,Type,Pillar,Languages,Capabilities,Source,Stated_Limitations,Identified_Gaps,URL
+Tigrinya-PLMs,Model,P3,Tigrinya,Not_specified,github,0,1,https://github.com/fgaim/Tigrinya-PLMs
+LazarusNLP/indonesian-sentence-embedding,Model,P3,Unspecified,embeddings,zenodo,0,4,
+TLMD: Tigrinya Language Modeling Dataset,Dataset,P3,Tigrinya,Not_specified,zenodo,0,2,
