@@ -68,7 +68,7 @@
 % ============================================================================
 
 \title{\textbf{Foundational NLP Tools for Ge'ez-Script Languages:}\\[8pt]
-\textbf{A Systematic Tool-Centred Analysis of 17 Tools and 70 Papers (2016--2026)}}
+\textbf{A Systematic Tool-Centred Analysis (2016--2026)}}
 
 \author{Hailay Kidu Teklehaymanot\footnote{teklehaymanot@l3s.uni-hannover.de}\\
 \textit{L3S Research Center, Leibniz University Hannover}\\
@@ -85,10 +85,10 @@
 \begin{abstract}
 The Ge'ez script is an ancient alphasyllabary serving as the orthographic foundation for several Semitic and Cushitic languages of the Horn of Africa---principally Classical Ge'ez, Amharic, and Tigrinya---collectively spoken by more than 62 million people. Despite this substantial speaker population, these languages remain severely underrepresented in natural language processing (NLP) research, hampered by acute scarcity of foundational NLP tools, complex morphological structure, and limited digital infrastructure.
 
-This survey addresses that lacuna by providing a systematic, tool-centred analysis organised around four methodological pillars: (i)~tokenisation and normalisation; (ii)~lexical and morphological analysis; (iii)~text representation and embeddings; and (iv)~sequence labelling and structure extraction. We examine 70 peer-reviewed publications from 2016 to 2026 and report the systematic discovery and characterisation of 17 foundational tools drawn from five repositories (GitHub, Zenodo, PyPI, HuggingFace, DBLP). Our analysis reveals a pronounced research asymmetry: Amharic has attracted comparatively greater attention, whereas Tigrinya and Classical Ge'ez remain critically underserved. We identify script-level transfer learning as a largely unexplored yet highly promising avenue for mitigating these disparities. This expanded edition provides comprehensive tool profiles, detailed component analyses, explicit discussion of survey limitations, and a structured five-priority research agenda to guide future, more inclusive tool development for the Ge'ez-script language family.
+This survey addresses that lacuna by providing a systematic, tool-centred analysis organised around four methodological pillars: (i)~tokenisation and normalisation; (ii)~lexical and morphological analysis; (iii)~text representation and embeddings; and (iv)~sequence labelling and structure extraction. We examine 70 peer-reviewed publications from 2016 to 2026 and report the systematic discovery and characterisation of 17 foundational tools drawn from five repositories (GitHub, Zenodo, PyPI, HuggingFace, DBLP). Our analysis reveals a pronounced research asymmetry: Amharic and Tigrinya are comparably served; Classical Ge'ez is the outlier and remains critically underserved. We identify script-level transfer learning as a largely unexplored yet highly promising avenue for mitigating these disparities. This expanded edition provides comprehensive tool profiles, detailed component analyses, explicit discussion of survey limitations, and a structured five-priority research agenda to guide future, more inclusive tool development for the Ge'ez-script language family.
 \end{abstract}
 
-\noindent\textbf{Keywords:} Ge'ez script, low-resource NLP, Amharic, Tigrinya, Classical Ge'ez, foundational tools, systematic review, PRISMA, language technology, morphology, embeddings
+\noindent\textbf{Keywords:} Ge'ez script, low-resource NLP, morphologically rich languages, Tigrinya, Amharic, Classical Ge'ez, systematic review, NLP tools, cross-lingual transfer, foundational tools
 
 \vspace{12pt}
 \hrule
@@ -108,17 +108,17 @@ This underrepresentation reflects both systemic and technical barriers: limited 
 
 This survey fills a critical gap by conducting a systematic, tool-centred analysis of NLP research for Ge'ez-script languages. We organise the analysis around four foundational pillars: (1)~tokenisation and normalisation; (2)~lexical and morphological analysis; (3)~text representation and embeddings; and (4)~sequence labelling and structure extraction.
 
-Our approach combines two complementary methods: (a)~systematic literature review of 70 peer-reviewed papers (2016--2026) from major NLP venues, and (b)~parallel discovery of 17 foundational tools across five repositories. This dual approach reveals both research trends and practical tool landscape.
+Our approach combines two complementary methods: (a)~systematic literature review of 70 peer-reviewed papers (2016--2026) from major NLP venues, and (b)~parallel discovery of 17 foundational tools across five repositories. This dual approach reveals both research trends and practical tool landscape. Four methodological pillars structure the analysis: tokenisation and normalisation, lexical and morphological analysis, text representation and embeddings, and sequence labelling and structure extraction.
 
 \subsection{Key Contributions}
 
 \begin{enumerate}
-    \item Systematic discovery and characterisation of 17 foundational Ge'ez-script NLP tools
-    \item Comprehensive analysis of 70 peer-reviewed papers using PRISMA methodology
-    \item Quantified evidence of research asymmetry: Amharic (59\%), Tigrinya (53\%), Classical Ge'ez (12\%)
-    \item Identification of critical bottleneck: sequence labelling with only 1 tool (6\%)
-    \item Five-priority research agenda grounded in systematic evidence
-    \item Discussion of script-level transfer learning opportunities
+    \item Systematic tool-centred analysis of 17 foundational Ge'ez-script NLP tools across four methodological pillars
+    \item Comprehensive literature review of 70 peer-reviewed papers (2016--2026) using PRISMA methodology
+    \item Quantified evidence of research asymmetry: Amharic and Tigrinya comparably served; Classical Ge'ez critically underserved (12\%)
+    \item Critical bottleneck identification: sequence labelling with only 1 tool (6\% of tools)
+    \item Script-level transfer learning as a largely unexplored opportunity for mitigating disparities
+    \item Five-priority research agenda grounded in systematic evidence for future tool development
 \end{enumerate}
 
 % ============================================================================
