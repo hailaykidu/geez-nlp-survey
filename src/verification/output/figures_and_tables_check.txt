@@ -1,0 +1,38 @@
+Loaded 70 rows from /homes/neumann/teklehaymanot/geez-nlp-survey/data/verified_papers_live_search.csv
+OK:   temporal: 70 papers across 10 years, sums correctly
+OK:   temporal bands: {'2016-2018': 5, '2019-2021': 24, '2022-2024': 27, '2025-2026': 14}
+OK:   literature language coverage: Amh=48 Tir=26 Geez=14 (of 70)
+2026-09-16 16:13:59 - src.visualization.generate_verified_corpus_charts - INFO - Loaded 70 verified papers from /homes/neumann/teklehaymanot/geez-nlp-survey/data/verified_papers_live_search.csv
+2026-09-16 16:13:59 - src.visualization.chart_generator - INFO - Chart Generator initialized (output: /tmp/tmpx0s6snh8)
+2026-09-16 16:14:00 - src.visualization.chart_generator - INFO - Language distribution chart saved: /tmp/tmpx0s6snh8/chart_language_distribution.png
+2026-09-16 16:14:00 - src.visualization.chart_generator - INFO - Pillar distribution chart saved: /tmp/tmpx0s6snh8/chart_pillar_distribution.png
+2026-09-16 16:14:01 - src.visualization.chart_generator - INFO - Tool type distribution chart saved: /tmp/tmpx0s6snh8/chart_tool_type_distribution.png
+2026-09-16 16:14:02 - src.visualization.chart_generator - INFO - Temporal distribution chart saved: /tmp/tmpx0s6snh8/chart_temporal_distribution.png
+OK:   chart_language_distribution.png: matches fresh regeneration from current CSV
+OK:   chart_pillar_distribution.png: matches fresh regeneration from current CSV
+OK:   chart_tool_type_distribution.png: matches fresh regeneration from current CSV
+OK:   chart_temporal_distribution.png: matches fresh regeneration from current CSV
+OK:   chart_language_distribution.png: pixel-identical copy found embedded in manuscript.pdf
+OK:   chart_pillar_distribution.png: pixel-identical copy found embedded in manuscript.pdf
+OK:   chart_tool_type_distribution.png: pixel-identical copy found embedded in manuscript.pdf
+OK:   chart_temporal_distribution.png: pixel-identical copy found embedded in manuscript.pdf
+Table 4 parsed: 29 rows, 27 corpus-traceable, 2 provenance-track
+  Pillars: {'P1': 2, 'P3': 16, 'P4': 3, 'Other': 7, 'P2': 1}
+  Types:   {'Library': 7, 'Model': 6, 'Dataset': 14, 'Linguistic Resource': 1, 'Dataset+Model': 1}
+OK:   manuscript text contains: "29 tools (table total)"
+OK:   manuscript text contains: "table:overview total row = 29"
+OK:   manuscript text contains: "table:overview row exists for P1"
+OK:   manuscript text contains: "P1 row present"
+OK:   manuscript text contains: "table:overview row exists for P2"
+OK:   manuscript text contains: "P2 row present"
+OK:   manuscript text contains: "table:overview row exists for P3"
+OK:   manuscript text contains: "P3 row present"
+OK:   manuscript text contains: "table:overview row exists for P4"
+OK:   manuscript text contains: "P4 row present"
+OK:   table:overview P1=2 matches Table 4's own row count
+OK:   table:overview P2=1 matches Table 4's own row count
+OK:   table:overview P3=16 matches Table 4's own row count
+OK:   table:overview P4=3 matches Table 4's own row count
+OK:   artefact-type breakdown sentence matches Table 4's own Type column: "By type: 14 datasets, 6 trained models, 7 libraries/packages, 1 linguistic resource (treebank), and 1 combined dataset-and-model release."
+
+All checks passed: figures match the CSV, and the compiled PDF embeds the current figures.
