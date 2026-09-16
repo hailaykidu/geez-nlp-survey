@@ -1,26 +1,9 @@
-"""Phase 6: Structured extraction and coding across 5 dimensions.
+"""Coding dimension enums used to classify papers by language, pillar, and tool type."""
 
-Exports: PaperCoder, CodingValidator, and dimension enums for coding papers.
-"""
-
-from src.coder.coder import PaperCoder
-from src.coder.validators import CodingValidator
-from src.coder.dimensions import (
-    Language,
-    Pillar,
-    ToolType,
-    MorphologyAssumption,
-    ScriptProperty,
-    TransferApproach,
-)
+from src.coder.dimensions import Language, Pillar, ToolType
 
 __all__ = [
-    "PaperCoder",
-    "CodingValidator",
     "Language",
     "Pillar",
     "ToolType",
-    "MorphologyAssumption",
-    "ScriptProperty",
-    "TransferApproach",
 ]

@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this repository, its data manifest, or its code, please cite the manuscript below."
+title: "Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis (2016-2026)"
+authors:
+  - family-names: "Teklehaymanot"
+    given-names: "Hailay Kidu"
+    affiliation: "L3S Research Center, Leibniz University Hannover"
+    email: teklehaymanot@l3s.uni-hannover.de
+type: software
+repository-code: "https://github.com/hailaykidu/geez-nlp-survey"
+license: MIT
+date-released: 2026-09-16
+keywords:
+  - Ge'ez script
+  - low-resource NLP
+  - Amharic
+  - Tigrinya
+  - Classical Ge'ez
+  - systematic review
+  - PRISMA 2020
+preferred-citation:
+  type: article
+  title: "Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis (2016-2026)"
+  authors:
+    - family-names: "Teklehaymanot"
+      given-names: "Hailay Kidu"
+      affiliation: "L3S Research Center, Leibniz University Hannover"
+  year: 2026

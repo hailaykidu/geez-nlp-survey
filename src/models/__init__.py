@@ -1,13 +1,7 @@
-"""Data models for papers, coding, and configurations."""
+"""Data model for papers in the verified literature corpus."""
 
-from src.models.paper import Paper, Coding, ScreeningDecision
-from src.models.config import SearchConfig, ScreeningConfig, CodingConfig
+from src.models.paper import Paper
 
 __all__ = [
     "Paper",
-    "Coding",
-    "ScreeningDecision",
-    "SearchConfig",
-    "ScreeningConfig",
-    "CodingConfig",
 ]

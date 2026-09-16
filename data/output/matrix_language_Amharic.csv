@@ -1,6 +1,0 @@
-Name,Type,Pillar,Languages,Capabilities,Source,Stated_Limitations,Identified_Gaps,URL
-Amharic-Tokenizer,Tool,P1,Amharic,tokenization,github,0,3,https://github.com/sefineh-ai/Amharic-Tokenizer
-Amharic-English-Machine-Translation-Corp,Dataset,Other,Amharic,translation,github,0,2,https://github.com/MarsPanther/Amharic-English-Machine-Translation-Corpus
-HornMorpho,Tool,P2,"Amharic, Tigrinya","morphological_analysis, ner",github,0,1,https://github.com/fgaim/HornMorpho
-semitic-scattering-law,Model,P2,Amharic,morphological_analysis,github,0,3,https://github.com/faresrafat3/semitic-scattering-law
-Amharic WSD Dataset: Advancing Word Sens,Dataset,Other,Amharic,Not_specified,zenodo,0,3,

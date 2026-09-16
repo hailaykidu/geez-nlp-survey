@@ -1,0 +1,15 @@
+# LaTeX build artifacts (regenerate via: lualatex -> bibtex -> lualatex -> lualatex)
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/

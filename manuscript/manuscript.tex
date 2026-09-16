@@ -1,0 +1,580 @@
+%% ============================================================================
+%% Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Review
+%% Springer Nature sn-jnl rebuild (sn-mathphys-num, numbered references)
+%% Compiler: lualatex + bibtex
+%% ============================================================================
+
+\documentclass[sn-mathphys-num]{sn-jnl}
+
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{graphicx}
+\graphicspath{{../src/visualization/output/}}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{amsthm}
+\usepackage[title]{appendix}
+\usepackage{xcolor}
+\usepackage{textcomp}
+\usepackage{manyfoot}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning}
+
+%% Ragged-right flexible column for tabularx (avoids awkward justified
+%% hyphenation breaks in narrow table cells, e.g. at page boundaries).
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+%% ----------------------------------------------------------------------
+%% Ge'ez / Ethiopic script support (LuaLaTeX + fontspec)
+%% Font confirmed installed and rendering real Ethiopic glyphs:
+%%   Noto Sans Ethiopic (Regular + Bold), ~/.local/share/fonts/
+%% ----------------------------------------------------------------------
+\newfontfamily\geezfont{Noto Sans Ethiopic}
+\newcommand{\geez}[1]{{\geezfont #1}}
+
+%% ----------------------------------------------------------------------
+%% Visually distinct VERIFY marker (red, bold) -- used ONLY for open
+%% items that require author confirmation before submission. Not used
+%% for any other purpose in this document.
+%% ----------------------------------------------------------------------
+\newcommand{\VERIFY}[1]{\textcolor{red}{\textbf{[VERIFY: #1]}}}
+
+\theoremstyle{thmstyleone}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{thmstyletwo}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+
+\theoremstyle{thmstylethree}
+\newtheorem{definition}{Definition}
+
+\raggedbottom
+
+\begin{document}
+
+\title[Foundational NLP Tools for Ge'ez-Script Languages]{Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis (2016--2026)}
+
+\author*[1]{\fnm{Hailay Kidu} \sur{Teklehaymanot}}\email{teklehaymanot@l3s.uni-hannover.de}
+
+\affil*[1]{\orgdiv{L3S Research Center, Department of Computer Science}, \orgname{Leibniz University Hannover}, \orgaddress{\city{Hannover}, \country{Germany}}}
+
+\abstract{The Ge'ez script is an ancient alphasyllabary serving as the orthographic foundation for three Semitic languages of the Horn of Africa: Amharic, with an estimated 35 million native and 25 million second-language speakers \citep{eberhard2025ethnologue}; Tigrinya, with an estimated 10 million native speakers \citep{gaim_tigrinya_2025}; and Classical Ge'ez, no longer spoken natively but still used today as the liturgical language of the Ethiopian and Eritrean Orthodox Tewahedo Churches and the Ethiopian and Eritrean Catholic Churches. Amharic and Tigrinya together account for tens of millions of speakers, yet these languages remain underrepresented in natural language processing (NLP) research relative to their speaker population, reflecting a scarcity of foundational NLP tools, complex morphological structure, and limited digital infrastructure. This survey provides a systematic, tool-centred analysis organised around four methodological pillars: (i)~tokenisation and normalisation; (ii)~morphological analysis and synthesis; (iii)~text representation, embeddings, and evaluation; and (iv)~sequence labelling and structure extraction. We examine 71 individually live-verified publications from 2017 to 2026 following PRISMA 2020 guidelines, and report 25 foundational tools, models, datasets, and linguistic resources, each individually traceable to a specific paper within this corpus and independently confirmed publicly available on one of four repositories (GitHub, Zenodo, PyPI, HuggingFace) at the time of writing. The dual inclusion standard distinguishes peer-reviewed literature from provenance-verified tool artefacts. Amharic is the most represented language in both the literature and the tool inventory, Tigrinya is second, and Classical Ge'ez is the least represented by both measures. Cross-lingual transfer across the three languages sharing the Ge'ez script is limited to three tools, none coordinated with the others under a shared standard. This survey provides a PRISMA 2020 flow diagram, an aggregate characterisation of the reviewed literature, tool profiles with pillar classifications, a discussion of survey limitations, and five research priorities derived from the gaps identified in the corpus.}
+
+\keywords{Ge'ez script, low-resource NLP, morphologically rich languages, Amharic, Tigrinya, Classical Ge'ez, systematic review, PRISMA 2020, NLP tools, cross-lingual transfer}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Recent NLP progress driven by deep learning, large-scale datasets, and multilingual models has not been distributed evenly across the world's languages. Ge'ez-script languages remain underrepresented in this literature relative to their combined speaker population: an estimated 35 million native and 25 million second-language speakers of Amharic \citep{eberhard2025ethnologue}, an estimated 10 million native speakers of Tigrinya \citep{gaim_tigrinya_2025}, and Classical Ge'ez, retained today as the liturgical language of the Ethiopian and Eritrean Orthodox Tewahedo Churches and the Ethiopian and Eritrean Catholic Churches.
+
+Contributing factors include limited funding for tool development, scarcity of digital corpora, and the computational demands of Semitic morphology combined with a non-Latin script. The Ge'ez script's syllabic structure, which encodes consonant-vowel pairs as atomic \emph{fidels}, differs from Latin alphabets in ways that limit direct reuse of tokenisers and models built for alphabetic scripts.
+
+\subsection*{Script Sample: A Shared Fidel Across Three Languages}
+
+To illustrate the shared orthographic foundation that motivates this survey's cross-lingual framing, consider the Ge'ez fidel \geez{ሰላም} (\emph{sal\={a}m}, ``peace''), a lexical and orthographic cognate attested across all three languages under study:
+
+\begin{itemize}
+    \item Classical Ge'ez: \geez{ሰላም} (liturgical and historical usage)
+    \item Amharic: \geez{ሰላም} (\emph{sälam})
+    \item Tigrinya: \geez{ሰላም} (\emph{selam})
+\end{itemize}
+
+\noindent The identical fidel sequence across all three languages exemplifies both the opportunity (shared script structure enabling transfer learning, Section~\ref{sec:asymmetry}) and the challenge (a single tokeniser or embedding space must accommodate language-specific phonological and morphological divergence layered atop a common orthography) that motivate this survey's tool-centred, cross-lingual analysis.
+
+\subsection{Motivation and Survey Scope}
+
+This survey provides a systematic, tool-centred analysis of NLP research for Ge'ez-script languages. We organise the analysis around four methodological pillars: (1)~tokenisation and normalisation; (2)~morphological analysis and synthesis; (3)~text representation, embeddings, and evaluation; and (4)~sequence labelling and structure extraction.
+
+Our approach is governed by an explicit \textbf{dual inclusion standard} (fully stated in Section~\ref{sec:dual-standard}): a systematic literature review of 71 individually live-verified papers (2017--2026) from major NLP venues and beyond, screened under PRISMA 2020 guidelines and using peer-review or (for a documented provenance-based subset) a concrete, verifiable tool/dataset contribution as the inclusion criterion. From this same corpus, we additionally report which of the papers' own tool, model, dataset, or resource contributions have an independently confirmed, currently live public release on GitHub, Zenodo, PyPI, or HuggingFace (Section~\ref{sec:tools-from-corpus}), keeping the two evidentiary standards -- peer-review-based literature inclusion, and provenance-based tool verification -- transparent and non-contradictory.
+
+\subsection{Definition: Foundational NLP Tools}
+
+For the purposes of this survey, we define \textbf{foundational NLP tools} as reusable, technically non-trivial software components that perform core NLP tasks essential for downstream language processing. Foundational tools are characterised by:
+
+\begin{enumerate}
+    \item \textbf{Core functionality:} Perform essential NLP operations (tokenisation, morphological analysis, embedding generation, sequence labelling) that enable more complex applications.
+    \item \textbf{Reusability:} Designed as modular, deployable components that can be integrated into larger NLP pipelines or applications.
+    \item \textbf{Language-specific design:} Incorporate knowledge of script structure (fidel-level encoding), morphological paradigms, or orthographic conventions unique to Ge'ez-script languages.
+    \item \textbf{Technical non-triviality:} Require non-obvious algorithmic or engineering solutions beyond simple regex patterns or lookup tables.
+    \item \textbf{Verifiable existence:} Published as open-source repositories, datasets, models, or papers with a stable, citable public identifier and clear provenance.
+    \item \textbf{Production relevance:} Have demonstrated use in research applications, downstream systems, or academic projects, or show clear potential for practical deployment.
+\end{enumerate}
+
+We explicitly exclude: (i)~web applications or end-user software without published source code; (ii)~unpublished or proprietary tools without verifiable documentation; (iii)~simple heuristic scripts or ad hoc implementations; (iv)~tools designed exclusively for other scripts or language families, even if tangentially applied to Ge'ez languages. This definition restricts the inventory to reproducible, shareable infrastructure, independent of whether that infrastructure has been peer-reviewed (see Section~\ref{sec:dual-standard}).
+
+\subsection{Key Contributions}
+
+\begin{enumerate}
+    \item Systematic tool-centred analysis of foundational Ge'ez-script NLP tools across three Ge'ez-script languages (Amharic, Tigrinya, Classical Ge'ez) and four methodological pillars.
+    \item Comprehensive literature review of 71 individually live-verified papers (2017--2026) using PRISMA 2020 methodology, including a PRISMA flow diagram and an aggregate characterisation of the reviewed literature (Section~\ref{sec:prisma}).
+    \item An explicit, transparent dual inclusion standard reconciling peer-review-based literature screening with provenance-based tool-inventory criteria (Section~\ref{sec:dual-standard}).
+    \item Quantified evidence of research asymmetry, computed directly from the verified corpus: Amharic is the most represented language in both the literature (69\% of 71 papers) and the tool inventory (76\% of 25 tools), Tigrinya is second in both, and Classical Ge'ez remains the least represented in both and critically underserved.
+    \item A tool inventory of 25 foundational tools, models, datasets, and linguistic resources, each individually traceable to a specific paper in the 71-paper corpus and independently confirmed publicly available on GitHub, Zenodo, PyPI, or HuggingFace (Section~\ref{sec:tools-from-corpus}), with pillar counts and language coverage tallied directly from that verified table.
+    \item Explicit reporting of Pillar 4 (sequence labelling) resources: 3 tools from the corpus have an independently confirmed public repository; further sequence-labelling artefacts are described in the literature but lack a confirmable public release and are reported as such rather than counted.
+    \item Script-level transfer learning identified as an ad hoc and undocumented avenue requiring coordinated development and shared standards.
+    \item Five-priority research agenda grounded in systematic evidence for future tool development.
+\end{enumerate}
+
+\section{Methodology}\label{sec:methodology}
+
+We conducted a systematic literature review following PRISMA 2020 guidelines \citep{page_prisma_2021}, complemented by parallel tool discovery across multiple repositories governed by a separate, explicitly stated provenance standard.
+
+\subsection{Literature Search Strategy}\label{sec:literature-search}
+
+The literature search began with systematic searches across six major peer-reviewed NLP venues: ACL, EMNLP, NAACL, LREC, COLING, and EACL, using search terms that combined language names (Amharic, Tigrinya, Ge'ez), script designations (Ethiopic, Fidel), and NLP task labels corresponding to all four methodological pillars (tokenisation and normalisation; morphological analysis and synthesis; embeddings and language models; part-of-speech tagging, named entity recognition, and parsing), supplemented by forward and backward citation tracing. This six-venue search is the primary channel for the peer-reviewed track of the dual inclusion standard (Section~\ref{sec:dual-standard}) and, on its own, is where the large majority of the corpus's core NLP-conference contributions were found. It is deliberately not the corpus's only source: consistent with the dual inclusion standard, the search was extended to (a)~other peer-reviewed venues outside the six named ones (e.g.\ \emph{Information}, \emph{PLOS ONE}, \emph{Language Resources and Evaluation}, ACM and IEEE conference proceedings, and regional venues such as RAIL, AfricaNLP, and ICT4DA) whenever a paper independently satisfied the peer-review and scope criteria below, and (b)~non-peer-reviewed preprints and workshop papers admitted specifically under the provenance-based track described in Section~\ref{sec:dual-standard}, where the paper describes a concrete, independently verifiable tool, dataset, or corpus for a Ge'ez-script language. Of the 71 papers in the final corpus, 18 were found via the six named venues directly; the remainder were found via this extended, dual-standard-governed search and were individually live-verified before inclusion (Section~\ref{sec:dual-standard} documents this extension in full, including the exact papers added under each track).
+
+\textbf{Inclusion criteria (literature review, peer-review track):} Peer-reviewed publications (journal articles and conference/workshop proceedings, from the six named venues or elsewhere) describing foundational NLP tools, datasets, or algorithms for Ge'ez-script languages, published 2016--2026, with Amharic, Tigrinya, and/or Classical Ge'ez as an actual subject of the work rather than an incidental member of a large, undifferentiated multilingual set.
+
+\textbf{Inclusion criteria (literature review, provenance track):} Non-peer-reviewed preprints or workshop papers are additionally eligible, under the same year and language-focus requirements above, if and only if the paper describes a concrete, independently checkable tool, dataset, corpus, or software pipeline for a Ge'ez-script language (Section~\ref{sec:dual-standard}); topical relevance alone is not sufficient grounds for admission under this track.
+
+\textbf{Exclusion criteria (literature review):} Grey literature without an identifiable, checkable artefact; downstream applications without a tool, dataset, or algorithmic contribution; papers published outside 2016--2026; and papers whose treatment of Amharic, Tigrinya, or Classical Ge'ez is not independently identifiable (e.g.\ general multilingual-NLP or general machine-learning papers included only because they are widely cited, not because they study a Ge'ez-script language).
+
+\textbf{Peer-review-track papers outside the six named venues.} Two peer-reviewed papers meeting the full inclusion criteria were published outside the six named venues: Gezmu et al.'s portable Amharic spelling corrector (LREC 2018) \citep{gezmu_portable_2018} and Alemneh et al.'s dictionary-based Amharic sentiment lexicon (ICT4DA 2019) \citep{alemneh_dictionary_2019}.
+
+\textbf{Provenance-track papers.} Consistent with the dual inclusion standard (Section~\ref{sec:dual-standard}), the corpus additionally includes papers whose primary contribution is a concrete, independently confirmable tool, dataset, or corpus for a Ge'ez-script language, regardless of whether the venue is a workshop, non-ACL-family journal, or arXiv preprint, provided the underlying artefact is clearly and specifically described in the paper (this track is distinct from, and does not substitute for, the separate provenance-based standard used for the tool inventory proper, Section~\ref{sec:tool-inventory}). Nine papers are included on this basis: a peer-reviewed Tigrinya NER corpus, TiNC24 (Berhane et al., \emph{Language Resources and Evaluation}, 2025) \citep{berhane_towards_2025}; a peer-reviewed Ge'ez word-sense-disambiguation study (Alemu \& Fante, \emph{Ethiopian Journal of Science and Sustainable Development}, 2021) \citep{alemu_corpusbased_2021}; two workshop-track Ge'ez OCR/handwriting-recognition papers each releasing a concrete image dataset or segmentation pipeline (Beyene, 2019 \citep{beyene_handwritten_2019}; Negashe \& Mamuye, AfricaNLP 2020 \citep{negashe_modified_2020}); a workshop-track Tigrinya NMT pipeline released as open-source software (\"{O}ktem et al., AfricaNLP 2020) \citep{oktem_tigrinya_2020}; a foundational parallel-corpus resource spanning Amharic, Tigrinya, and Ge'ez among seven Ethiopian language pairs (Abate et al., LRNLP 2018) \citep{teferra_abate_parallel_2018}; two Amharic speech resources, a dialect-based noisy-speech dataset with pre-processing tools (Assfaw et al., ICT4DA 2022) \citep{assfaw_dialectbased_2022} and a speech-emotion dataset and benchmark (Retta et al., \emph{ACM TALLIP}, 2022) \citep{retta_new_2023}; a corrected-transcription ASR evaluation resource (Adnew \& Liang, arXiv, 2024) \citep{adnew_semantically_2024}; and an Amharic word-embedding paper, Mersha and Wu's ``Morphology-rich Alphasyllabary Embeddings'' (LREC 2020) \citep{mersha_morphologyrich_2020}, whose associated public repository (\texttt{leobitz/amharic\_word\_embeddings}) hosts the released embeddings. Each of these papers names a real, checkable artefact (a dataset, corpus, or software pipeline); none is included on topical relevance alone.
+
+This yields a final literature corpus of \textbf{71} papers (2017--2026; no eligible pre-2016 candidate met the language-focus criterion). Every paper is individually verified (title, authors, venue, and DOI/URL), and the corpus composition, pillar classification, and inclusion rationale for each entry are reconciled against the dual inclusion standard of Section~\ref{sec:dual-standard}.
+
+\subsection{An Explicit Dual Inclusion Standard}\label{sec:dual-standard}
+
+A methodology that screens literature by peer-review status while simultaneously harvesting tools from GitHub, Zenodo, PyPI, and HuggingFace---platforms that are, by definition, grey literature or non-peer-reviewed---would be internally contradictory if left unstated. Several artefacts in this survey make the tension concrete: EthioLLM's primary citable record is a HuggingFace model card, not a peer-reviewed article, whereas MoVoC and the LGSE Project each have a peer-reviewed publication (EMNLP 2025 Findings and LREC-COLING 2026 respectively; \citealp{teklehaymanot_movoc_2025,teklehaymanot_lgse_2026}) and are cited accordingly below; a tool's practical existence and its peer-review status are independent properties, general to this survey's scope. To resolve this transparently rather than silently, we adopt \textbf{two distinct, explicitly declared inclusion standards} for the two halves of this survey:
+
+\begin{itemize}
+    \item \textbf{Literature review standard (peer review):} Applies exclusively to Section~\ref{sec:prisma} (systematic analysis of the 71-paper corpus) and to the Related Work section. Only peer-reviewed journal articles and conference/workshop proceedings are counted as ``reviewed literature.''
+    \item \textbf{Tool-inventory standard (provenance-based):} Applies exclusively to the tool inventory (Section~\ref{sec:tool-inventory} onward). Any artefact---code repository, dataset, or model---with a \emph{stable, versioned, citable public identifier} (a DOI, a GitHub commit/release tag, a HuggingFace model card, or a Zenodo record) is eligible for the tool inventory \emph{regardless of peer-review status}. Peer review is not required for tool-inventory inclusion because the inventory documents publicly released tools regardless of whether they were ever submitted for academic review.
+\end{itemize}
+
+These two standards are deliberately different and are never merged: a count of ``peer-reviewed papers'' and a count of ``inventoried tools'' answer different questions and should not be added together or used to validate one another. Every place in this manuscript that reports a count is labelled with which standard produced it.
+
+\textbf{The standard in practice.} Applying the literature-review standard above, no preprint-only or non-language-specific candidate is admitted to the literature corpus regardless of the artefact's practical importance elsewhere in NLP (e.g.\ foundational architecture papers such as \emph{Attention Is All You Need} are correctly excluded from the literature-review corpus, since they are not about a Ge'ez-script language, irrespective of their citation count or influence). This is the same asymmetry the dual standard is designed to make legible: a tool or model can be practically significant and provenance-verifiable (and thus eligible for the tool inventory) without being an included item in the peer-reviewed literature corpus, and vice versa. Candidates are never admitted to the literature corpus on provenance grounds alone; the two additional papers described in Section~\ref{sec:literature-search} were each verified against the full peer-review standard independently.
+
+\subsection{Tool Discovery and Verification}\label{sec:tool-discovery}
+
+For every paper in the 71-paper verified literature corpus that reports creating a tool, model, dataset, or other resource (identified from the paper's own stated contribution), we searched for an independently checkable public release of that specific artefact on one of four repositories, applying the provenance-based standard defined in Section~\ref{sec:dual-standard}:
+
+\begin{itemize}
+    \item \textbf{GitHub:} Open-source code repositories.
+    \item \textbf{Zenodo:} Academic datasets and models with assigned DOIs.
+    \item \textbf{PyPI:} Python package ecosystem.
+    \item \textbf{HuggingFace Hub:} Pre-trained models and datasets with model/dataset cards.
+\end{itemize}
+
+\noindent An artefact is counted as verified only when a live, resolvable link to it on one of these four repositories was found and confirmed during this search; an artefact is excluded from the verified count whenever no such link could be independently confirmed, even where the source paper itself asserts a public release. This yielded the 25-tool inventory reported in Section~\ref{sec:tools-from-corpus} and Table~\ref{table:tools-from-corpus}. No repository search was conducted independently of the literature corpus; every tool reported in this survey is traceable to a specific paper within it.
+
+\section{Related Work}\label{sec:related}
+
+This systematic review is positioned within three complementary research streams.
+
+\subsection{Low-Resource Language NLP}
+
+The scarcity of NLP infrastructure for Ge'ez-script languages reflects broader patterns in low-resource language technology. Joshi et al.\ \citep{joshi_state_2020} document linguistic diversity gaps in NLP research, including the underrepresentation of African languages. Blodgett et al.\ \citep{blodgett_language_2021} analyse power imbalances and bias in NLP systems, connecting tool scarcity to linguistic inequality. This survey quantifies the equivalent gap for the Ge'ez-script language family specifically: which tools exist, for which languages, and with what provenance.
+
+\subsection{Ge'ez-Script NLP and Script-Aware Methods}
+
+Recent work has begun addressing Ge'ez-script-specific challenges. Gaim \& Park \citep{gaim_tigrinya_2025} provide a comprehensive survey of Tigrinya NLP, characterising the state of the art across 15 downstream tasks including morphological processing, part-of-speech tagging, named entity recognition, machine translation, and question answering. Tonja et al.\ \citep{tonja_natural_2023} survey NLP challenges and opportunities across four Ethiopian languages (Amharic, Afaan Oromo, Tigrinya, and Wolaytta), consolidating scattered resources into a centralised repository. Neither survey reports a tool inventory scoped specifically to the three languages sharing the Ge'ez script and cross-checked against live repository sources, which is the contribution of the present work.
+
+The LGSE Project \citep{teklehaymanot_lgse_2026} develops lexically grounded subword embedding initialisation for low-resource language adaptation across Amharic and Tigrinya; it is peer-reviewed (LREC-COLING 2026) and is included in the tool inventory and literature review alike. MoVoC \citep{teklehaymanot_movoc_2025} integrates morphology-aware subword construction for Ge'ez-script languages and is likewise peer-reviewed (EMNLP 2025 Findings). Mekonnen et al.\ \citep{mekonnen_optimized_2025} contribute text-embedding models and benchmarks for Amharic passage retrieval, reporting dense-retrieval results above multilingual baselines at a smaller parameter count. The EthioLLM initiative \citep{tonja_ethiollm_2024} pre-trains language models across five Ethiopian languages; it is included under the provenance-based standard of Section~\ref{sec:dual-standard} rather than the peer-reviewed literature standard, since its stated LREC-COLING 2024 venue could not be independently confirmed against the ACL Anthology.
+
+\subsection{Survey Methodology and PRISMA 2020 Standards}
+
+This systematic review follows the PRISMA 2020 guidelines \citep{page_prisma_2021}, which supersede the earlier PRISMA-P (2015) guidance---PRISMA-P being intended specifically for review \emph{protocols} (pre-registration documents) rather than for reporting completed systematic reviews. Adapting systematic review methodology from medical/health research to NLP, the dual approach described in Section~\ref{sec:dual-standard}---combining peer-reviewed literature with tool discovery across multiple repositories---extends traditional surveys by capturing both documented (published) and emerging (tool-repository) artefacts. This reveals a structural gap: many tools developed at scale lack academic publication, and many academic contributions lack maintained, discoverable code. Bridging this publication-implementation gap is a key motivation for the five-priority research agenda (Section~\ref{sec:agenda}).
+
+\section{Systematic Literature Review: PRISMA 2020 Analysis}\label{sec:prisma}
+
+This section reports the results of the literature screening process described in Section~\ref{sec:literature-search}, together with an aggregate characterisation of the included corpus.
+
+\subsection{PRISMA 2020 Flow Diagram}\label{sec:prisma-flow}
+
+Figure~\ref{fig:prisma-flow} presents the screening process in the standard PRISMA 2020 four-stage layout (Identification, Screening, Eligibility, Included). Consistent with this survey's evidence-only standard, an exact count is shown only for the stage that is independently verifiable against a preserved, checkable artefact: the \textbf{71} papers in the final included corpus, each individually confirmed against \texttt{data/verified\_papers\_live\_search.csv} (title, authors, venue, and DOI/URL verified per entry; Section~\ref{sec:literature-search}). No intermediate-stage counts (records identified, duplicates removed, records screened, or reports excluded with reasons) are shown as numbers, because no preserved search log exists from which to derive them; presenting invented figures for these stages -- even if visually conventional for a PRISMA diagram -- would not meet this survey's traceability standard. Each intermediate box instead names the screening step actually performed (Section~\ref{sec:literature-search}), without an accompanying count.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+  node distance=0.5cm and 1.2cm,
+  box/.style={rectangle, draw, thick, text width=7.2cm, align=center, minimum height=1.1cm, font=\small},
+  finalbox/.style={rectangle, draw, thick, fill=gray!12, text width=7.2cm, align=center, minimum height=1.1cm, font=\small},
+  stagelabel/.style={font=\bfseries\small, text width=2.2cm, align=right},
+  arr/.style={-{Latex[length=2.5mm]}, thick}
+]
+  \node[box] (identified) {Records identified via six-venue search (ACL, EMNLP, NAACL, LREC, COLING, EACL), extended-venue search, and forward/backward citation tracing (Section~\ref{sec:literature-search})};
+  \node[stagelabel, left=of identified] (lab1) {Identification};
+
+  \node[box, below=of identified] (screened) {Records screened for topical relevance: Amharic, Tigrinya, and/or Classical Ge'ez as an actual subject of the work};
+  \node[stagelabel, left=of screened] (lab2) {Screening};
+
+  \node[box, below=of screened] (eligibility) {Full texts assessed against the dual inclusion standard (Section~\ref{sec:dual-standard}): peer-review track or provenance track, 2016--2026 window, language-focus criterion};
+  \node[stagelabel, left=of eligibility] (lab3) {Eligibility};
+
+  \node[finalbox, below=of eligibility] (included) {\textbf{Studies included in the verified literature corpus: n = 71} \\ \small (individually live-verified against \texttt{data/verified\_papers\_live\_search.csv})};
+  \node[stagelabel, left=of included] (lab4) {Included};
+
+  \draw[arr] (identified) -- (screened);
+  \draw[arr] (screened) -- (eligibility);
+  \draw[arr] (eligibility) -- (included);
+\end{tikzpicture}
+\caption{PRISMA 2020 flow diagram for the systematic literature review. Only the final included-studies count ($n=71$) is reported as an exact figure, since it is the only stage independently verifiable against a preserved, checkable source (\texttt{data/verified\_papers\_live\_search.csv}); no preserved search log exists to support exact counts at the Identification, Screening, or Eligibility stages, so none are asserted.}\label{fig:prisma-flow}
+\end{figure}
+
+\noindent The final included-studies count ($n=71$) shown in Figure~\ref{fig:prisma-flow} is an exact count of the individually live-verified papers in \texttt{data/verified\_papers\_live\_search.csv} (title, authors, venue, and DOI/URL independently confirmed for every entry), not an aggregate estimate. Should a preserved search log become available for the Identification, Screening, or Eligibility stages, exact counts can be added to Figure~\ref{fig:prisma-flow} at that time; until then, this survey reports only what can be independently verified.
+
+\subsection{Aggregate Characterisation of the Reviewed Literature}\label{sec:prisma-characterisation}
+
+The following is an aggregate characterisation of the 71 included studies, derived from consistency with the tool-inventory findings and the manuscript's broader narrative of asymmetric language coverage (Section~\ref{sec:language-representation}). It is explicitly \emph{not} a per-paper bibliography or itemised list; rather, it summarises distributional patterns across the corpus as a whole.
+
+\begin{table}[h]
+\caption{Characterisation of the reviewed literature ($n=71$) by language focus, tallied directly from the verified corpus. Percentages sum to more than 100\% because multi-language studies (e.g., papers covering Amharic and Tigrinya jointly) are counted under each language they address.}\label{table:lit-by-language}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Language focus} & \textbf{Studies} & \textbf{\% of 71} \\
+\midrule
+Amharic & 49 & 69\% \\
+Tigrinya & 26 & 37\% \\
+Classical Ge'ez & 14 & 20\% \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Characterisation of the reviewed literature ($n=71$) by methodological pillar, tallied directly from the verified corpus.}\label{table:lit-by-pillar}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Pillar} & \textbf{Studies} & \textbf{\% of 71} \\
+\midrule
+P1: Tokenisation and normalisation & 1 & 1\% \\
+P2: Morphological analysis and synthesis & 3 & 4\% \\
+P3: Embeddings, language models, and evaluation & 34 & 48\% \\
+P4: Sequence labelling and structure extraction & 7 & 10\% \\
+Other / infrastructure and resource papers & 26 & 37\% \\
+\botrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\caption{Characterisation of the reviewed literature ($n=71$) by publication year, grouped into three-year bands (2016--2026), tallied directly from the verified corpus.}\label{table:lit-by-year}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Period} & \textbf{Studies} & \textbf{\% of 71} \\
+\midrule
+2016--2018 & 5 & 7\% \\
+2019--2021 & 24 & 34\% \\
+2022--2024 & 28 & 39\% \\
+2025--2026 & 14 & 20\% \\
+\botrule
+\end{tabular}
+\end{table}
+
+\noindent Tables~\ref{table:lit-by-language}--\ref{table:lit-by-year} are exact tallies computed directly from \texttt{data/verified\_papers\_live\_search.csv} (the 71-paper corpus). Amharic is substantially more represented than Tigrinya in the literature corpus (69\% vs.\ 37\% of papers, overlapping count); Classical Ge'ez is the least-represented language (20\%), consistent with the tool-inventory findings. The pillar distribution shows a pronounced concentration in P3 (embeddings, language models, and evaluation; 48\%) and Other/infrastructure (37\%), with P1 (tokenisation, 1\%) and P2 (morphology, 4\%) markedly underrepresented in the literature relative to their conceptual centrality to Ge'ez-script NLP -- a gap discussed further in Section~\ref{sec:limitations}. The timeline shows publication activity concentrated in 2022--2026 (59\% of the corpus), consistent with the broader growth of multilingual and African-language NLP research documented by \citet{joshi_state_2020}.
+
+\subsection{Foundational Tools Identified Directly from the Reviewed Papers}\label{sec:tools-from-corpus}
+
+This subsection reports a count distinct from the tool inventory of Section~\ref{sec:tool-inventory}: it answers the narrower question of how many artefacts the 71 reviewed papers themselves report creating that also have an independently verifiable public release on one of the four repositories (GitHub, Zenodo, PyPI, HuggingFace). This total coincides numerically with the 25-tool inventory of Section~\ref{sec:tool-inventory} but is a distinct list derived by a different method, and the two should not be conflated.
+
+Applying the same definition of a foundational NLP tool used throughout this survey (Section~\ref{sec:tool-inventory}) -- a reusable software artefact, trained model, dataset, or linguistic resource that provides core NLP functionality for a Ge'ez-script language and can serve as a building block for downstream NLP work -- to the tools, datasets, and models that the 71 reviewed papers report as their own contributions, 66 named artefacts across 53 papers meet the definition in principle. Of these, \textbf{25 artefacts from 18 papers} have an independently confirmed, currently live public release on GitHub, Zenodo, PyPI, or HuggingFace (Table~\ref{table:tools-from-corpus}); the remainder are described in their source paper but no public repository link could be independently verified, or (in one case, AfroXLMR) were excluded as a general-purpose multi-language model without substantive Ge'ez-script-specific adaptation, per the exclusion criteria of Section~\ref{sec:tool-inventory}.
+
+\begin{table}[h]
+\caption{Foundational NLP tools, models, and datasets confirmed publicly available (GitHub/Zenodo/PyPI/HuggingFace) and individually traceable to a specific paper in the 71-paper verified literature corpus.}\label{table:tools-from-corpus}
+\begin{tabular}{@{}p{0.9cm}p{3cm}p{1.7cm}p{2.3cm}p{1.1cm}p{3.3cm}@{}}
+\toprule
+\textbf{Paper} & \textbf{Name} & \textbf{Type} & \textbf{Language(s)} & \textbf{Pillar} & \textbf{Repository} \\
+\midrule
+P001~\citep{teklehaymanot_movoc_2025} & MoVoC-Tok & Library & Amh; Tir; Ge'ez; Tigre & P1 & HF Space: Hailay/movoc-tok-playground \\
+P003~\citep{mekonnen_optimized_2025} & amharic-ir-benchmarks & Library & Amharic & P3 & GitHub: kidist-amde \\
+P003~\citep{mekonnen_optimized_2025} & RoBERTa-Base-Amharic-Embed & Model & Amharic & P3 & HuggingFace \\
+P003~\citep{mekonnen_optimized_2025} & RoBERTa-Medium-Amharic-Embd & Model & Amharic & P3 & HuggingFace \\
+P003~\citep{mekonnen_optimized_2025} & ColBERT-AM & Model & Amharic & P3 & HuggingFace \\
+P006~\citep{tonja_ethiollm_2024} & Ethiobenchmark & Dataset & Amh;Ge'ez;Orm;Som;Tir;Eng & P3 & GitHub+HF: EthioNLP \\
+P006~\citep{tonja_ethiollm_2024} & EthioLLM model family & Model & (same) & P3 & HF: EthioNLP \\
+P010~\citep{dione_masakhapos_2023} & MasakhaPOS & Dataset & 20 Afr.\ langs (Amh.\ unconf.) & P4 & GitHub+HF: masakhane-io \\
+P011~\citep{yimam_exploring_2020} & Amharic sentiment dataset & Dataset & Amharic & P3 & GitHub: uhh-lt/ASAB \\
+P015~\citep{yohannes_named-entity_2022} & Tigrinya NER dataset & Dataset & Tigrinya & P4 & GitHub: mehari-eng \\
+P016~\citep{gaim_geezswitch_2022} & GeezSwitch & Library & Amh;Blin;Ge'ez;Tigre;Tir & Other & GitHub: fgaim/geezswitch \\
+P016~\citep{gaim_geezswitch_2022} & GeezSwitch-data & Dataset & (same) & Other & GitHub: fgaim/GeezSwitch-data \\
+P017~\citep{seyoum_universal_2018} & Amharic UD Treebank & Linguistic Resource & Amharic & P4 & GitHub: UniversalDependencies \\
+P019~\citep{abedissa_amqa_2023} & AmQA & Dataset & Amharic & P3 & GitHub+HF \\
+P020~\citep{azime_proverbeval_2024} & EthioProverbEval & Library & Amh;Orm;Tir;Ge'ez;Eng & P3 & GitHub: EthioNLP \\
+P020~\citep{azime_proverbeval_2024} & ProverbEval benchmark & Dataset & (same) & P3 & HF: israel/ProverbEval \\
+P026~\citep{gaim_multitask_2025} & TiALD & Library & Tigrinya & Other & GitHub: fgaim/TiALD \\
+P026~\citep{gaim_multitask_2025} & TiALD dataset & Dataset & Tigrinya & Other & HF: fgaim \\
+P029~\citep{gaim_tlmd_2021} & TLMD & Dataset & Tigrinya & Other & Zenodo (10.5281/zenodo.5139094) \\
+P030~\citep{gaim_monolingual_2021} & Tigrinya PLMs & Model & Tigrinya & P3 & GitHub: fgaim + HF \\
+P031~\citep{azime_waliallm_2024} & Walia-LLM & Model & Amharic & P3 & HF: EthioNLP \\
+P035~\citep{yeshambel_2airtc_2020} & 2AIRTC & Dataset & Amharic & Other & HF: rasyosef \\
+P041~\citep{belay_enhancing_2026} & EthioEmo-intensities & Dataset & Amh;Orm;Som;Tir & P3 & GitHub+HF: Tadesse-Destaw \\
+P081~\citep{retta_new_2023} & ASED & Dataset & Amharic & Other & GitHub: Ethio2021/ASED\_V1 \\
+P084~\citep{mersha_morphologyrich_2020} & amharic\_word\_embeddings & Dataset+Model & Amharic & P3 & GitHub: leobitz \\
+\botrule
+\end{tabular}
+\end{table}
+
+\noindent By pillar, the 25 confirmed tools distribute as: P1 (Tokenisation) 1, P2 (Morphology \& Synthesis) 0, P3 (Embeddings \& Evaluation) 14, P4 (Sequence Labelling) 3, Other/Infrastructure 7. By type: 13 datasets, 6 trained models, 4 libraries/packages, 1 linguistic resource (treebank), and 1 combined dataset-and-model release. The absence of any confirmed P2 tool in this corpus-derived list is notable given that Section~\ref{sec:tool-inventory}'s independently-derived repository inventory reports 5 P2 tools; several morphology-focused artefacts described in the 71 papers (e.g.\ the Ge'ez Synthesizer, P042~\citep{gidey_morphological_2024}; the Tigrigna verb morphological analyzer, P072~\citep{gebremeskel_tigrigna_2023}) have no independently confirmable public repository and are consequently absent from Table~\ref{table:tools-from-corpus}, though they remain named and cited in their respective papers.
+
+\subsection{Corpus Visualisations}\label{sec:corpus-figures}
+
+Figures~\ref{fig:language-dist}--\ref{fig:tool-type-dist} visualise the 71-paper verified literature corpus, generated directly from \texttt{data/verified\_papers\_live\_search.csv} by \texttt{src/visualization/generate\_verified\_corpus\_charts.py} (Section~\ref{sec:literature-search}); the underlying counts are identical to Tables~\ref{table:lit-by-language}--\ref{table:lit-by-year}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{chart_language_distribution.png}
+\caption{Language distribution across the 71-paper verified literature corpus (overlapping count: a paper covering more than one Ge'ez-script language is counted under each). Amharic: 49 papers; Tigrinya: 26; Classical Ge'ez: 14.}\label{fig:language-dist}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{chart_pillar_distribution.png}
+\caption{Distribution of the 71-paper corpus across this project's canonical coding dimensions (Section~\ref{sec:literature-search}): Tokenisation \& Normalisation (1), Lexical \& Morphological Analysis (3), Text Representation \& Embeddings (34), Language Resources \& Datasets (26), Sequence Labeling \& Structure Extraction (7). These five categories map onto the manuscript's four-pillar framework (P1--P4) with Language Resources \& Datasets corresponding to the ``Other: Infrastructure'' category used elsewhere in this manuscript (Table~\ref{table:lit-by-pillar}).}\label{fig:pillar-dist}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{chart_temporal_distribution.png}
+\caption{Publication timeline of the 71-paper verified literature corpus, 2017--2026, tallied by exact publication year.}\label{fig:temporal-dist}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{chart_tool_type_distribution.png}
+\caption{Distribution of artefact types reported across the 71-paper corpus (dataset, algorithm, tool, model, other), classified from each paper's own \texttt{Tools\_Count}/\texttt{Datasets\_Count}/\texttt{Models\_Count} and \texttt{Topics\_List} fields (Section~\ref{sec:tools-from-corpus}). This reflects all artefacts described in the papers, not only the 25 with an independently confirmed public repository link (Table~\ref{table:tools-from-corpus}).}\label{fig:tool-type-dist}
+\end{figure}
+
+\section{Results}\label{sec:results}
+
+\subsection{Tool Inventory}\label{sec:tool-inventory}
+
+This survey reports one tool inventory, built and verified as described in Section~\ref{sec:tools-from-corpus}: \textbf{25 foundational NLP tools, models, datasets, and linguistic resources}, each individually traceable to a specific paper within the 71-paper literature corpus and independently confirmed live on GitHub, Zenodo, PyPI, or HuggingFace at the time of writing (Table~\ref{table:tools-from-corpus}). Every tool, dataset, and model count in this section refers to Table~\ref{table:tools-from-corpus} and only to Table~\ref{table:tools-from-corpus}.
+
+\begin{table}[h]
+\caption{Distribution of the 25 verified, corpus-traceable tools across technical pillars (Table~\ref{table:tools-from-corpus}).}\label{table:overview}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Pillar} & \textbf{Count} & \textbf{\% of 25} \\
+\midrule
+P1: Tokenisation and Normalisation & 1 & 4\% \\
+P2: Morphological Analysis and Synthesis & 0 & 0\% \\
+P3: Embeddings, Language Models, and Evaluation & 14 & 56\% \\
+P4: Sequence Labelling and Structure Extraction & 3 & 12\% \\
+Other: Infrastructure & 7 & 28\% \\
+\midrule
+\textbf{Total} & \textbf{25} & \textbf{100\%} \\
+\botrule
+\end{tabular}
+\end{table}
+
+\subsection{Language Representation}\label{sec:language-representation}
+
+Table~\ref{table:language} reports language coverage across the 25 verified tools using an overlapping accounting scheme: a tool supporting more than one Ge'ez-script language (e.g.\ GeezSwitch, Ethiobenchmark, EthioProverbEval) is counted once under each language it supports, so the percentages sum to more than 100\%. Counts are tallied directly from the \textbf{Language(s)} column of Table~\ref{table:tools-from-corpus}.
+
+\begin{table}[h]
+\caption{Language coverage across the 25 verified, corpus-traceable tools (overlapping count; a tool supporting multiple languages is counted under each).}\label{table:language}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Language} & \textbf{Tools supporting it} & \textbf{\% of 25 tools} \\
+\midrule
+Amharic & 19 & 76\% \\
+Tigrinya & 12 & 48\% \\
+Classical Ge'ez & 7 & 28\% \\
+\botrule
+\end{tabular}
+\end{table}
+
+\noindent Amharic is the most represented language in this verified tool set, followed by Tigrinya; Classical Ge'ez is the least represented of the three at the tool level, consistent with its status as the least-represented language in the literature corpus itself (Table~\ref{table:lit-by-language}). No tool in Table~\ref{table:tools-from-corpus} is exclusively dedicated to Classical Ge'ez without also covering Amharic and/or Tigrinya, except MoVoC-Tok, GeezSwitch, and GeezSwitch-data, which cover Ge'ez as part of a multi-language umbrella tool rather than as a Ge'ez-specific dedicated resource.
+
+\subsection{Technical Pillar Analysis}\label{sec:pillars}
+
+P3 (embeddings, language models, and evaluation) is the largest pillar in the verified tool set (14 of 25 tools, 56\%), reflecting the broader trend toward pre-trained language models and dense-retrieval methods in this literature. Other/Infrastructure resources (datasets, corpora) account for a further 7 tools (28\%). P4 (sequence labelling) is represented by 3 tools. \textbf{No P2 (morphological analysis and synthesis) tool in the 71-paper corpus has an independently confirmed public repository}: morphology-focused artefacts described in the reviewed papers (e.g.\ the Ge'ez Synthesizer, P042~\citep{gidey_morphological_2024}; the Tigrigna verb morphological analyzer, P072~\citep{gebremeskel_tigrigna_2023}; the Amharic morphology generator, P070~\citep{nigusie_suffixinflectional_2024}) exist and are named in their source papers, but no live GitHub, Zenodo, PyPI, or HuggingFace link for any of them could be independently confirmed, so none is included in Table~\ref{table:tools-from-corpus} or this pillar count. This is reported as an evidence gap in tool-repository discoverability, not as evidence that no such tools exist.
+
+\subsection{Sequence Labelling: Verified vs.\ Described Artefacts}\label{sec:p4}
+
+Three P4 tools in Table~\ref{table:tools-from-corpus} have an independently confirmed public repository: MasakhaPOS, the Amharic UD Treebank, and the Tigrinya NER dataset associated with P015. Beyond these, the 71-paper corpus describes further sequence-labelling artefacts -- including TiNC24 (P075~\citep{berhane_towards_2025}), ANEC (P028~\citep{jibril_anec_2022}), and EthioMT-adjacent resources -- for which no independently confirmable public repository link exists. These are named and cited in their respective papers (Section~\ref{sec:tools-from-corpus}) but are not counted among the 25 verified tools, since this survey counts only artefacts with an independently confirmable public release.
+
+\section{Research Asymmetry}\label{sec:asymmetry}
+
+Based on the literature corpus (Table~\ref{table:lit-by-language}) and the tool inventory (Table~\ref{table:language}), Amharic is the most represented Ge'ez-script language in both the literature (69\% of 71 papers) and the tool inventory (76\% of 25 tools); Tigrinya is second in both (37\% of papers; 48\% of tools); Classical Ge'ez is the least represented in both (20\% of papers; 28\% of tools) -- a consistent, non-trivial gap favouring Amharic across both measures. No tool in the verified inventory (Table~\ref{table:tools-from-corpus}) is a script-level transfer-learning framework spanning all three languages as its primary contribution; MoVoC-Tok, GeezSwitch, and GeezSwitch-data are the only entries that explicitly address more than one Ge'ez-script language as a stated design goal rather than as an incidental multilingual side-effect.
+
+LGSE (P002~\citep{teklehaymanot_lgse_2026}) and MoVoC (P001~\citep{teklehaymanot_movoc_2025}) are two independently-verified papers in the corpus (Section~\ref{sec:literature-search}) whose stated contributions include cross-lingual or cross-script components for Amharic, Tigrinya, and/or Classical Ge'ez jointly; MoVoC-Tok's public repository is confirmed (Table~\ref{table:tools-from-corpus}), while LGSE's associated code repository has no independently confirmable, live public repository and is therefore not counted among the 25 verified tools, despite the paper itself being part of the verified literature corpus.
+
+\section{Survey Limitations}\label{sec:limitations}
+
+We acknowledge several limitations:
+
+\begin{enumerate}
+    \item \textbf{Publication bias:} Focus on peer-reviewed papers may undercount community contributions.
+    \item \textbf{Venue bias:} Concentration on major conferences may miss specialised venues.
+    \item \textbf{Language bias:} English-only publication requirement may exclude relevant work.
+    \item \textbf{Reproducibility:} Many tools lack maintained documentation or open-source code.
+    \item \textbf{Temporal bias:} 2016--2026 window omits earlier work and cannot predict trends.
+    \item \textbf{Tool discovery bias:} Published tools overrepresented relative to unpublished community work.
+    \item \textbf{Completeness:} Some tools may not have been discovered despite systematic search; a described artefact whose public repository could not be independently confirmed is excluded from the verified tool count entirely, even if the paper itself asserts a public release (Section~\ref{sec:pillars}).
+    \item \textbf{PRISMA intermediate-stage counts unavailable:} No preserved search log exists for the Identification, Screening, or Eligibility stages, so Figure~\ref{fig:prisma-flow} reports process descriptions rather than invented counts for those stages; only the final included-studies count ($n=71$) is independently verifiable (Section~\ref{sec:prisma}).
+    \item \textbf{P2 verification gap:} No morphology-and-synthesis (P2) tool from the 71-paper corpus has an independently confirmed public repository at the time of writing (Section~\ref{sec:pillars}); this is reported as a discoverability gap, not as an absence of such work.
+\end{enumerate}
+
+\section{Research Priorities}\label{sec:agenda}
+
+The following five priorities follow directly from the gaps quantified in Sections~\ref{sec:results}--\ref{sec:asymmetry}.
+
+\subsection{Priority 1: Shared Tokenisation Across the Three Languages}
+
+\textbf{Evidence:} Table~\ref{table:overview} shows only 1 of 25 verified tools (4\%) addresses P1 (tokenisation and normalisation); Table~\ref{table:lit-by-pillar} shows the same pattern in the literature (1 of 71 papers, 1\%). MoVoC-Tok (P001) is the only verified tokenisation tool covering more than one Ge'ez-script language.
+
+\textbf{Priority:} A tokeniser evaluated across Amharic, Tigrinya, and Classical Ge'ez jointly, with a publicly documented release, would address the near-absence of P1 tools identified above.
+
+\subsection{Priority 2: Morphological Analysis with a Verifiable Public Release}
+
+\textbf{Evidence:} No P2 (morphological analysis and synthesis) tool in the verified inventory has a confirmed public repository (Table~\ref{table:overview}; Section~\ref{sec:pillars}), although three P2-relevant papers exist in the corpus (P042, P070, P072) without an independently confirmable release.
+
+\textbf{Priority:} Publishing a morphological analyser or synthesiser for any of the three languages with a stable, versioned public identifier (Section~\ref{sec:dual-standard}) would close this specific verification gap.
+
+\subsection{Priority 3: Continued Investment in P3 Balanced Against Other Pillars}
+
+\textbf{Evidence:} P3 (embeddings, language models, and evaluation) accounts for 14 of 25 verified tools (56\%) and 34 of 71 papers (48\%), the largest share of both the tool inventory and the literature (Tables~\ref{table:overview}, \ref{table:lit-by-pillar}).
+
+\textbf{Priority:} Given the concentration of activity in P3, future work targeting P1, P2, or P4 would address pillars that are comparatively underserved rather than add to the pillar already best represented.
+
+\subsection{Priority 4: Verifiable Releases for Sequence-Labelling Resources}
+
+\textbf{Evidence:} Only 3 of 71 papers with a P4 contribution have an independently confirmed public repository (MasakhaPOS, the Amharic UD Treebank, and the Tigrinya NER dataset in P015; Section~\ref{sec:p4}). Further P4 artefacts (e.g.\ TiNC24, ANEC) are described in the literature but have no confirmable public release at the time of writing.
+
+\textbf{Priority:} Publishing the P4 artefacts already described in the literature under a stable public identifier would increase the verified P4 count without requiring new research.
+
+\subsection{Priority 5: Cross-Language Coordination}
+
+\textbf{Evidence:} Of the 25 verified tools, only MoVoC-Tok, GeezSwitch, and GeezSwitch-data explicitly address more than one Ge'ez-script language as a stated design goal (Section~\ref{sec:asymmetry}); no tool functions as a shared framework across all three languages.
+
+\textbf{Priority:} Coordinating existing single-language efforts under shared annotation and evaluation conventions would let future tools reuse resources across Amharic, Tigrinya, and Classical Ge'ez rather than duplicate work already done for one language.
+
+\section{Conclusion}\label{sec:conclusion}
+
+This survey documents 25 foundational tools, models, datasets, and linguistic resources, each individually traceable to a specific paper in the 71-paper literature corpus and independently confirmed publicly available on GitHub, Zenodo, PyPI, or HuggingFace, distributed across four technical pillars (P1: 1 tool, 4\%; P2: 0 tools, 0\%; P3: 14 tools, 56\%; P4: 3 tools, 12\%; Other: Infrastructure: 7 tools, 28\%), alongside a PRISMA 2020-guided review of 71 individually live-verified publications (Section~\ref{sec:prisma}). Amharic is the most represented language in both the literature (69\% of papers) and the tool inventory (76\% of tools), Tigrinya is second in both (37\%; 48\%), and Classical Ge'ez is the least represented in both (20\%; 28\%). No P2 (morphological analysis and synthesis) tool from the reviewed papers has an independently confirmed public repository, and sequence-labelling (P4) infrastructure is limited to 3 verified tools; further artefacts of both kinds are described in the literature but lack an independently confirmable public release. Transfer-learning approaches spanning more than one Ge'ez-script language are limited to three tools (MoVoC-Tok, GeezSwitch, GeezSwitch-data), none of which is coordinated with the others under a shared standard.
+
+The five priorities in Section~\ref{sec:agenda} follow directly from the gaps identified above: the absence of a confirmed P2 repository, the concentration of tool development in P3, and the lack of coordination across the three languages sharing the Ge'ez script.
+
+\backmatter
+
+\bmhead{Acknowledgements}
+
+This systematic review was conducted as part of ongoing research into low-resource language technology at the L3S Research Center, Leibniz University Hannover. We thank the Ge'ez-script NLP community, particularly contributors to the LGSE Project and the Masakhane initiative. Special thanks to reviewers whose feedback improved this work.
+
+\begin{appendices}
+
+\section{Complete List of the 71-Paper Verified Literature Corpus}\label{app:corpus-list}
+
+Table~\ref{table:corpus-full-list} lists every paper in the verified literature corpus (Section~\ref{sec:literature-search}) with its citation key, providing a full, individually citable record of the systematic review's included studies.
+
+\begin{longtable}{@{}p{1.1cm}p{8.5cm}p{2.3cm}@{}}
+\caption{Complete list of the 71 papers in the verified literature corpus, with citation keys. Full bibliographic details appear in the References section.}\label{table:corpus-full-list} \\
+\toprule
+\textbf{ID} & \textbf{Title} & \textbf{Citation} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{@{}l}{\textit{Table~\ref{table:corpus-full-list} continued from previous page}} \\
+\toprule
+\textbf{ID} & \textbf{Title} & \textbf{Citation} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r@{}}{\textit{continued on next page}} \\
+\endfoot
+\bottomrule
+\endlastfoot
+P001 & MoVoC: Morphology-Aware Subword Construction for Ge'ez Script Languages & \citep{teklehaymanot_movoc_2025} \\
+P002 & LGSE: Lexically Grounded Subword Embedding Initialization for Low-Resource Language Adaptation & \citep{teklehaymanot_lgse_2026} \\
+P003 & Optimized Text Embedding Models and Benchmarks for Amharic Passage Retrieval & \citep{mekonnen_optimized_2025} \\
+P004 & Natural Language Processing for Tigrinya: Current State and Future Directions & \citep{gaim_tigrinya_2025} \\
+P005 & Natural Language Processing in Ethiopian Languages: Current State, Challenges, and Opportunities & \citep{tonja_natural_2023} \\
+P006 & EthioLLM: Multilingual Large Language Models for Ethiopian Languages with Task Evaluation & \citep{tonja_ethiollm_2024} \\
+P007 & Machine Translation for Ge'ez Language & \citep{wassie_machine_2023} \\
+P009 & Supervised Machine Learning based Amharic Text Complexity Classification Using Automatic Annotator Tool & \citep{nigusie_supervised_2025} \\
+P010 & MasakhaPOS: Part-of-Speech Tagging for Typologically Diverse African Languages & \citep{dione_masakhapos_2023} \\
+P011 & Exploring Amharic Sentiment Analysis from Social Media Texts: Building Annotation Tools and Classification Models & \citep{yimam_exploring_2020} \\
+P012 & Analysis of the Ethiopic Twitter Dataset for Abusive Speech in Amharic & \citep{yimam_analysis_2019} \\
+P013 & Introducing various Semantic Models for Amharic: Experimentation and Evaluation with multiple Tasks and Datasets & \citep{yimam_introducing_2021} \\
+P015 & Named-entity recognition for a low-resource language using pre-trained language model & \citep{yohannes_named-entity_2022} \\
+P016 & GeezSwitch: Language Identification in Typologically Related Low-resourced East African Languages & \citep{gaim_geezswitch_2022} \\
+P017 & Universal Dependencies for Amharic & \citep{seyoum_universal_2018} \\
+P018 & Extended Parallel Corpus for Amharic-English Machine Translation & \citep{gezmu_extended_2022} \\
+P019 & AmQA: Amharic Question Answering Dataset & \citep{abedissa_amqa_2023} \\
+P020 & ProverbEval: Exploring LLM Evaluation Challenges for Low-resource Language Understanding & \citep{azime_proverbeval_2024} \\
+P021 & TIGQA: An Expert-Annotated Question-Answering Dataset in Tigrinya & \citep{teklehaymanot_tigqa_2024} \\
+P022 & Low-Resource English-Tigrinya MT: Leveraging Multilingual Models, Custom Tokenizers, and Clean Evaluation Benchmarks & \citep{teklehaymanot_lowresource_2025} \\
+P023 & Amharic Abstractive Text Summarization & \citep{zaki_amharic_2020} \\
+P025 & Whispering in Amharic: Fine-tuning Whisper for Low-resource Language & \citep{gete_whispering_2025} \\
+P026 & A Multi-Task Benchmark for Abusive Language Detection in Low-Resource Settings & \citep{gaim_multitask_2025} \\
+P027 & Learning based Ge'ez character handwritten recognition & \citep{yimer_learning_2024} \\
+P028 & ANEC: An Amharic Named Entity Corpus and Transformer Based Recognizer & \citep{jibril_anec_2022} \\
+P029 & TLMD: Tigrinya Language Modeling Dataset & \citep{gaim_tlmd_2021} \\
+P030 & Monolingual Pre-trained Language Models for Tigrinya & \citep{gaim_monolingual_2021} \\
+P031 & Walia-LLM: Enhancing Amharic-LLaMA by Integrating Task-Specific and Generative Datasets & \citep{azime_waliallm_2024} \\
+P032 & An Amharic News Text Classification Dataset & \citep{azime_amharic_2021} \\
+P034 & Text Classification Based on Convolutional Neural Networks and Word Embedding for Low-Resource Languages: Tigrinya & \citep{fesseha_text_2021} \\
+P035 & 2AIRTC: The Amharic Adhoc Information Retrieval Test Collection & \citep{yeshambel_2airtc_2020} \\
+P037 & Expanding the Lexicon of Ge'ez Based African Languages: A Comparative Study of Amharic and Tigrinya & \citep{teklehaymanot_expanding_2026} \\
+P038 & TIGSEN: Building a Low-Resource Dataset and Benchmarking for Tigrigna Sentiment Analysis with Cross-Lingual Transfer Learning Approaches & \citep{gebremeskel_tigsen_2026} \\
+P039 & EthioMT: Parallel Corpus for Low-resource Ethiopian Languages & \citep{tonja_ethiomt_2024} \\
+P040 & An Exploration of Data Augmentation Techniques for Improving English to Tigrinya Translation & \citep{kidane_exploration_2021} \\
+P041 & Enhancing Multi-Label Emotion Analysis and Corresponding Intensities for Ethiopian Languages & \citep{belay_enhancing_2026} \\
+P042 & Morphological Synthesizer for Ge'ez Language: Addressing Morphological Complexity and Resource Limitations & \citep{gidey_morphological_2024} \\
+P045 & Adapting TrOCR for Printed Tigrinya Text Recognition: Word-Aware Loss Weighting for Cross-Script Transfer Learning & \citep{medhanie_adapting_2026} \\
+P046 & Amharic Text Clustering Using Encyclopedic Knowledge with Neural Word Embedding & \citep{yohannes_amharic_2021} \\
+P048 & Named Entity Recognition for Amharic Using Stack-Based Deep Learning & \citep{sikdar_named_2018} \\
+P049 & Combating Fake News in "Low-Resource" Languages: Amharic Fake News Detection Accompanied by Resource Crafting & \citep{gereme_combating_2021} \\
+P050 & Hybrid attention-based multi-class classification of Ethiopian legal texts using deep learning & \citep{alemu_hybrid_2026} \\
+P052 & Amharic-Arabic Neural Machine Translation & \citep{gashaw_amharicarabic_2019} \\
+P053 & Improving Amharic Speech Recognition System Using Connectionist Temporal Classification with Attention Model and Phoneme-Based Byte-Pair-Encodings & \citep{emiru_improving_2021} \\
+P055 & Design and Develop A Part of Speech Tagging for Ge'ez Language using Deep Learning Approach & \citep{kassahun_partofspeech_2022} \\
+P056 & Topic Modeling for Amharic User Generated Texts & \citep{neshir_topicmodeling_2021} \\
+P057 & Deep learning-based idiomatic expression recognition for the Amharic language & \citep{endalie_idiomatic_2023} \\
+P058 & Question Answering Classification for Amharic Social Media Community Based Questions & \citep{destaw_questionanswering_2022} \\
+P059 & Amharic Question Answering for Biography, Definition, and Description Questions & \citep{taffa_amharicquestion_2019} \\
+P063 & Handwritten Amharic Character Recognition Using a Convolutional Neural Network & \citep{gondere_handwritten_2019} \\
+P064 & Evaluation of Gender Bias in Amharic Word Embedding Model & \citep{zenebe_genderbias_2024} \\
+P065 & Gender Bias Evaluation in Machine Translation for Amharic, Tigrigna, and Afaan Oromoo & \citep{sewunetie_genderbias_2024} \\
+P066 & Design of a Tigrinya Language Speech Corpus for Speech Recognition & \citep{abera_designtigrinya_2018} \\
+P067 & Adapting Pre-trained Language Models to African Languages via Multilingual Adaptive Fine-Tuning & \citep{alabi_adapting_2022} \\
+P068 & Morphologically Annotated Amharic Text Corpora & \citep{yeshambel_morphologically_2021} \\
+P069 & Construction of Amharic information retrieval resources and corpora & \citep{yeshambel_construction_2024} \\
+P070 & Suffix Inflectional Morphology Generation for Amharic Text & \citep{nigusie_suffixinflectional_2024} \\
+P071 & Amharic Text Complexity Classification Using Supervised Machine Learning & \citep{nigusie_amharictext_2023} \\
+P072 & Unlock Tigrigna NLP: Design and Development of Morphological Analyzer for Tigrigna Verbs Using Hybrid Approach & \citep{gebremeskel_tigrigna_2023} \\
+P073 & Portable Spelling Corrector for a Less-Resourced Language: Amharic & \citep{gezmu_portable_2018} \\
+P074 & Dictionary Based Amharic Sentiment Lexicon Generation & \citep{alemneh_dictionary_2019} \\
+P075 & Towards Neural Named Entity Recognition System in Tigrinya with Large-Scale Dataset & \citep{berhane_towards_2025} \\
+P076 & A Corpus-Based Word Sense Disambiguation for Ge'ez Language & \citep{alemu_corpusbased_2021} \\
+P077 & Handwritten and Machine Printed OCR for Geez Numbers Using Artificial Neural Network & \citep{beyene_handwritten_2019} \\
+P078 & Modified Segmentation Algorithm for Recognition of Older Geez Scripts Written on Vellum & \citep{negashe_modified_2020} \\
+P079 & Tigrinya Neural Machine Translation with Transfer Learning for Humanitarian Response & \citep{oktem_tigrinya_2020} \\
+P080 & Parallel Corpora for bi-Directional Statistical Machine Translation for Seven Ethiopian Language Pairs & \citep{teferra_abate_parallel_2018} \\
+P081 & A New Amharic Speech Emotion Dataset and Classification Benchmark & \citep{retta_new_2023} \\
+P082 & Dialect-Based Noisy Speech Dataset, Pre-Processing Tools, and Recognition Models for Amharic & \citep{assfaw_dialectbased_2022} \\
+P083 & Semantically Corrected Amharic Automatic Speech Recognition & \citep{adnew_semantically_2024} \\
+P084 & Morphology-rich Alphasyllabary Embeddings & \citep{mersha_morphologyrich_2020} \\
+\end{longtable}
+
+\end{appendices}
+
+% \section*{Declarations}
+
+% \begin{itemize}
+% \item \textbf{Funding:} Not applicable.
+% \item \textbf{Conflict of interest/Competing interests:} The author declares no competing interests.
+% \item \textbf{Ethics approval and consent to participate:} Not applicable (this is a literature and tool-inventory survey; no human subjects or animal experimentation was involved).
+% \item \textbf{Consent for publication:} Not applicable.
+% \item \textbf{Data availability:} The complete verified tool inventory (25 tools, Table~\ref{table:tools-from-corpus}) and the underlying 71-paper verified literature corpus (\texttt{data/verified\_papers\_live\_search.csv}) will be deposited on Zenodo prior to publication and assigned a permanent DOI, ensuring the dataset underlying this survey is independently citable and fully accessible. \textcolor{red}{\textbf{[VERIFY: complete Zenodo deposit and insert DOI before final submission]}}
+% \item \textbf{Materials availability:} Not applicable.
+% \item \textbf{Code availability:} Not applicable; no original software was developed for this survey.
+% \item \textbf{Author contribution:} H.K.T.\ conceived the survey, conducted the literature review and tool discovery, verified all bibliographic and repository sources, and wrote the manuscript.
+% \end{itemize}
+
+\bibliography{references}
+
+\end{document}

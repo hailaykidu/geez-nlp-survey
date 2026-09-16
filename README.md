@@ -1,123 +1,75 @@
-# A Comprehensive Survey of NLP Tools for Ge'ez-Script Languages (2016-2026)
+# Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis
 
-**Systematic review of 16 tools and 70 papers for Amharic, Tigrinya, and Classical Ge'ez**
+Systematic review of NLP research and tools for Ge'ez-script languages (Amharic, Tigrinya, Classical Ge'ez), 2016-2026, following PRISMA 2020 methodology.
 
-## Overview
-
-This repository contains a comprehensive systematic review of NLP tools and research for Ge'ez-script languages using PRISMA methodology. We identify 16 foundational tools across 4 technical pillars and analyze 70 peer-reviewed papers (2016–2026).
-
-## 📄 Primary Deliverable
-
-**`geez_nlp_survey_COMPLETE_REBUILD.pdf`** (10 pages, 197 KB)
-- ✅ **MAIN SUBMISSION FILE** for PanAfriCon AI 2026
-- Authoritative systematic tool-centred analysis
-- Complete methodology, results, and detailed analysis
-- 2 figures, 17-tool inventory with component analysis
-- 5-priority research agenda and recommendations
-- Bibliography with 70 papers and 2 featured citations (LGSE Project, EMNLP 2025)
-
-**Alternative (streamlined):** `geez_nlp_survey_FINAL_ENHANCED.pdf` (5 pages, 138 KB, core content only)
-
-## Quick Links
-
-- **PDF:** `geez_nlp_survey_COMPLETE_REBUILD.pdf` (17 pages, 227 KB - **SUBMIT THIS**)
-- **Source:** `geez_nlp_survey_COMPLETE_REBUILD.tex` (LaTeX, 678 lines)
-- **Papers:** `papers_bibliography.json` (70 papers, JSON format)
-- **Data:** `PAPERS_EXTRACTION_WITH_FULL_TITLES.csv` (70 papers, spreadsheet with full titles)
-
-## Key Findings
-
-**Language Coverage:**
-- Amharic: 9 tools (47%)
-- Tigrinya: 11 tools (58%)
-- Classical Ge'ez: 3 tools (16%) ⚠️ **Improving but underrepresented**
-
-**Technical Pillars:**
-- P1 (Tokenization): 4 tools (MoVoC added)
-- P2 (Morphology): 3 tools
-- P3 (Embeddings/LMs): 6 tools (LGSE, Word Embedding Transfer added)
-- P4 (Sequence Labeling): 1 tool ⚠️ **Critical bottleneck**
-- Other (Infrastructure): 5 tools (TIGQA added)
-
-**Design Patterns:**
-- 63% single-language (improving)
-- 58% rule-based (42% neural growing)
-- 37% multilingual (emerging transfer)
-
-## Five-Priority Research Agenda
-
-1. Unified script-aware tokenization
-2. Cross-lingual morphological transfer
-3. Script-optimized embeddings
-4. Expanded sequence labeling
-5. Community infrastructure
-
-## Files
+## Repository structure
 
 ```
-geez_nlp_survey_COMPLETE_REBUILD.pdf     ✅ Main submission (16 pages, comprehensive)
-geez_nlp_survey_COMPLETE_REBUILD.tex     # LaTeX source (comprehensive)
-geez_nlp_survey_FINAL_ENHANCED.pdf       # Alternative (5 pages, streamlined)
-geez_nlp_survey_FINAL_ENHANCED.tex       # LaTeX source (streamlined)
-papers_bibliography.json                 # 70 papers (JSON)
-PAPERS_EXTRACTION_WITH_FULL_TITLES.csv   # 70 papers (CSV)
-data/                                    # PRISMA pipeline data
+manuscript/     Manuscript source, bibliography, and Springer Nature class/style files
+data/           Verified literature corpus (data manifest)
+src/            Code that generates the manuscript's figures from the data manifest
 ```
 
-## Citation
+Every file below is either compiled directly into the manuscript, read by the figure-generation code, or is one of that code's own dependencies. Nothing in this repository is unused by that path.
 
-```bibtex
-@article{teklehaymanot2026geez,
-  title={A Comprehensive Survey of NLP Tools for Ge'ez-Script Languages (2016-2026)},
-  author={Teklehaymanot, Hailay Kidu},
-  journal={PanAfriCon AI},
-  year={2026}
-}
-```
+| Path | Purpose |
+|---|---|
+| `manuscript/manuscript.tex` | The manuscript (Springer Nature `sn-jnl` class, `sn-mathphys-num` numbered-citation style). |
+| `manuscript/references.bib` | Bibliography for the 71-paper corpus and background citations. Every entry was individually fetched from its own authoritative source (ACL Anthology's `.bib` export, arXiv's citation metadata, or the publisher/DOI's Crossref record); see the file header for the verification method used for each entry. |
+| `manuscript/sn-jnl.cls`, `manuscript/sn-mathphys-num.bst` | Springer Nature class and bibliography-style files required to compile. |
+| `manuscript/sn-*.bst` (other styles) | Alternative Springer Nature citation styles distributed with the class; not used by this manuscript's compile (only `sn-mathphys-num.bst` is invoked), kept for completeness of the class package. |
+| `data/verified_papers_live_search.csv` | The data manifest: one row per paper in the literature corpus (authors, venue, year, DOI/URL, language and pillar coding). This is the source for every count, percentage, and figure in the manuscript. |
+| `src/visualization/generate_verified_corpus_charts.py` | Entry point. Loads the CSV into the `Paper` model, maps each row's language/pillar/tool-type fields onto the `Language`/`Pillar`/`ToolType` enums, and calls `ChartGenerator` to produce the four figures. |
+| `src/visualization/chart_generator.py` | Chart-drawing implementation (matplotlib). Implements only the four chart types cited in the manuscript; see the module docstring for why two chart types from an earlier version of this class were removed rather than kept unused. |
+| `src/visualization/output/*.png` | The four figures cited in the manuscript, as last generated by the command below. |
+| `src/models/paper.py` | The `Paper` dataclass that one CSV row is mapped onto. |
+| `src/coder/dimensions.py` | The `Language`, `Pillar`, and `ToolType` enums, giving the canonical string values used in the manuscript's tables and figures. |
+| `src/utils/logger.py` | Logging setup used by the two scripts above. |
+| `requirements.txt` | The one Python dependency (`matplotlib`) needed to run `generate_verified_corpus_charts.py`. |
 
-## Usage
+## Reproducing the figures
 
-**View the manuscript:**
 ```bash
-open geez_nlp_survey_COMPLETE_REBUILD.pdf
+pip install -r requirements.txt
+python -m src.visualization.generate_verified_corpus_charts
 ```
 
-**Access papers data:**
-```python
-import json
-papers = json.load(open('papers_bibliography.json'))
-print(f"Total papers: {len(papers['papers'])}")
-```
+This reads `data/verified_papers_live_search.csv` and regenerates all four PNGs in `src/visualization/output/`, overwriting the files already committed there. Re-running it should reproduce the committed files exactly, since both the code and the data manifest are fixed inputs.
 
-**Open in spreadsheet:**
-Import `PAPERS_EXTRACTION_WITH_FULL_TITLES.csv` to Excel or Google Sheets
+## Compiling the manuscript
 
-**Compile from source:**
+Requires LuaLaTeX (the document uses `fontspec` to render Ge'ez/Ethiopic script).
+
 ```bash
-pdflatex geez_nlp_survey_COMPLETE_REBUILD.tex
+cd manuscript
+lualatex manuscript.tex
+bibtex manuscript
+lualatex manuscript.tex
+lualatex manuscript.tex
 ```
 
-## Statistics
+Four passes are required: the first pass records citations and labels, `bibtex` resolves them against `references.bib`, and the remaining two passes settle cross-references and the bibliography's page numbers.
 
-| Metric | Value |
-|--------|-------|
-| **Pages** | 10 (research paper) |
-| **File Size** | 197 KB |
-| **Ge'ez-script Tools** | 17 (verified scope) |
-| **Papers Analyzed** | 70 (peer-reviewed) |
-| **Technical Pillars** | 4 (P1, P2, P3, P4) |
-| **Scope** | Amharic, Tigrinya, Classical Ge'ez |
+## Verifying a claim in the manuscript
+
+Every count, percentage, and table in the manuscript's Methodology and Results sections is computed directly from `data/verified_papers_live_search.csv`. To check a specific number:
+
+1. Open the CSV and filter or tally the relevant column (e.g. `Language_Focus` for language coverage, the pillar mapping in `generate_verified_corpus_charts.py`'s `_PILLAR_SHORTHAND` dictionary for pillar counts).
+2. Cross-check the paper's own bibliographic details against `manuscript/references.bib`, which records the primary source used to verify each entry (ACL Anthology, arXiv, or Crossref) in a comment above it.
+3. For the 25-tool inventory (Table 3 of the manuscript), each row's repository claim can be checked by visiting the listed GitHub/Zenodo/PyPI/HuggingFace link directly.
+
+## Scope and current numbers
+
+- **71** individually verified papers (2017-2026), each naming Amharic, Tigrinya, and/or Classical Ge'ez as an actual subject of the work, not an incidental member of a large multilingual set.
+- **25** foundational NLP tools, models, datasets, and linguistic resources, each traceable to a specific paper in the corpus and independently confirmed publicly available on GitHub, Zenodo, PyPI, or HuggingFace.
+- Four methodological pillars: (P1) Tokenisation & Normalisation, (P2) Morphological Analysis & Synthesis, (P3) Text Representation, Embeddings & Evaluation, (P4) Sequence Labelling & Structure Extraction.
+
+## License
+
+Code (`src/`) and the data manifest (`data/`) are released under the MIT License (see `LICENSE`). The manuscript text is subject to the publisher's copyright terms upon acceptance.
 
 ## Author
 
-Hailay Kidu Teklehaymanot  
-L3S Research Center, Leibniz University Hannover  
+Hailay Kidu Teklehaymanot
+L3S Research Center, Leibniz University Hannover
 teklehaymanot@l3s.uni-hannover.de
-
----
-
-**Status:** ✅ Publication-Ready (10-page authoritative research paper)  
-**Submission Target:** PanAfriCon AI 2026  
-**Last Updated:** September 13, 2026  
-**Compile Command:** `pdflatex geez_nlp_survey_COMPLETE_REBUILD.tex`  
-**Based on:** Authoritative abstract with tool-centred analysis, 17 verified tools, 70 papers
