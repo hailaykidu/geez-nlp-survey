@@ -1,0 +1,35 @@
+Tool-inventory link check -- 31 entries (Table 4, manuscript/manuscript.tex) -- generated 2026-09-16T12:19:10.214904+00:00
+====================================================================================================
+P001                     MoVoC-Tok                                  OK (200, via HF API)       sha=636e0f71443e   2026-09-16 12:19 UTC  https://huggingface.co/spaces/Hailay/movoc-tok-playground
+P003                     amharic-ir-benchmarks                      OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/kidist-amde/amharic-ir-benchmarks
+P003                     roberta-amharic-text-embedding-base        OK (200, via HF API)       sha=80a9e25ae00d   2026-09-16 12:19 UTC  https://huggingface.co/rasyosef/roberta-amharic-text-embedding-base
+P003                     roberta-amharic-text-embedding-medium      OK (200, via HF API)       sha=798673f847e8   2026-09-16 12:19 UTC  https://huggingface.co/rasyosef/roberta-amharic-text-embedding-medium
+P003                     ColBERT-Mini (Amharic)                     OK (200, via HF API)       sha=aa5fb416a2c4   2026-09-16 12:19 UTC  https://huggingface.co/rasyosef/ColBERT-Mini
+P006                     Ethiobenchmark task datasets (EthioPOS)    OK (200, via HF API)       sha=90e1d2d94149   2026-09-16 12:19 UTC  https://huggingface.co/datasets/EthioNLP/EthioPOS
+P006                     EthioLLM model family                      OK (200, via HF API)       sha=c9434ca9f4ba   2026-09-16 12:19 UTC  https://huggingface.co/EthioNLP/EthioLLM-l-250K
+P011                     Amharic sentiment dataset                  OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/uhh-lt/ASAB
+P013                     amseg                                      OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/uhh-lt/amharicprocessor
+P015                     Tigrinya NER dataset                       OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/mehari-eng/Tigrinya-NER
+P016                     GeezSwitch                                 OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/fgaim/geezswitch
+P016                     GeezSwitch-data                            OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/fgaim/GeezSwitch-data
+P017                     Amharic UD Treebank                        OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/UniversalDependencies/UD_Amharic-ATT
+P019                     AmQA (GitHub)                              OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/semantic-systems/amharic-qa
+P019                     AmQA (HF)                                  OK (200, via HF API)       sha=47f581cf5adb   2026-09-16 12:19 UTC  https://huggingface.co/datasets/dagim/amharic-qa
+P020                     EthioProverbEval                           OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/EthioNLP/EthioProverbEval
+P020                     ProverbEval benchmark                      OK (200, via HF API)       sha=59e4bf842acc   2026-09-16 12:19 UTC  https://huggingface.co/datasets/israel/ProverbEval
+P026                     TiALD                                      OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/fgaim/TiALD
+P026                     TiALD dataset                              OK (200, via HF API)       sha=d871ea47ffd0   2026-09-16 12:19 UTC  https://huggingface.co/datasets/fgaim/tigrinya-abusive-language-detection
+P029                     TLMD                                       OK (200)                   sha=n/a            2026-09-16 12:19 UTC  https://zenodo.org/records/5139094
+P030                     Tigrinya PLMs (TiBERT)                     OK (200, via HF API)       sha=6fe1195b1e1f   2026-09-16 12:19 UTC  https://huggingface.co/fgaim/tibert-base
+P030                     Tigrinya PLMs (TiRoBERTa)                  OK (200, via HF API)       sha=b3c1d77ff240   2026-09-16 12:19 UTC  https://huggingface.co/fgaim/tiroberta-base
+P030                     Tigrinya PLMs (TiELECTRA)                  OK (200, via HF API)       sha=f822d946d1a4   2026-09-16 12:19 UTC  https://huggingface.co/fgaim/tielectra-small
+P031                     Walia-LLM                                  OK (200, via HF API)       sha=66517db574a8   2026-09-16 12:19 UTC  https://huggingface.co/israel/LLAMA-Walia-II
+P035                     2AIRTC                                     OK (200, via HF API)       sha=0c6f04ec6374   2026-09-16 12:19 UTC  https://huggingface.co/datasets/rasyosef/2AIRTC-Amharic-Adhoc-Information-Retrieval-Test-Collection
+P041                     EthioEmo-intensities (GitHub)              OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/Tadesse-Destaw/EthioEmo
+P041                     EthioEmo-intensities (HF)                  OK (200, via HF API)       sha=b03b659c1720   2026-09-16 12:19 UTC  https://huggingface.co/datasets/Tadesse/EthioEmo-intensities
+P081                     ASED                                       OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/Ethio2021/ASED_V1
+P084                     amharic_word_embeddings                    OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/leobitz/amharic_word_embeddings
+N/A (provenance-track)   HornMorpho                                 OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/hltdi/HornMorpho
+N/A (provenance-track)   MasakhaNER 1.0                             OK (200, API rate-limited) sha=n/a (rate-limited) 2026-09-16 12:19 UTC  https://github.com/masakhane-io/masakhane-ner
+====================================================================================================
+31/31 links resolved successfully.

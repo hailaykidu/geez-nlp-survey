@@ -1,6 +1,6 @@
 """Generate the manuscript's figures from the verified literature corpus.
 
-Loads `data/verified_papers_live_search.csv` (71 individually verified papers
+Loads `data/verified_papers_live_search.csv` (70 individually verified papers
 on Ge'ez-script NLP), maps each row onto this project's `Paper` model and
 coding dimensions (`src.models.paper.Paper`,
 `src.coder.dimensions.Pillar`/`Language`/`ToolType`), and runs `ChartGenerator`
@@ -64,7 +64,7 @@ _SHORTHAND_TO_PILLAR = {
 
 _PILLAR_SHORTHAND = {
     "P001": "P1", "P002": "P3", "P003": "P3", "P004": "Other", "P005": "Other",
-    "P006": "P3", "P007": "P3", "P009": "P3", "P010": "P4", "P011": "P3",
+    "P006": "P3", "P007": "P3", "P009": "P3", "P011": "P3",
     "P012": "P3", "P013": "P3", "P015": "P4", "P016": "Other", "P017": "P4",
     "P018": "Other", "P019": "P3", "P020": "P3", "P021": "P3", "P022": "P3",
     "P023": "P3", "P025": "Other", "P026": "Other", "P027": "Other", "P028": "P4",
@@ -146,9 +146,9 @@ def load_verified_papers(csv_path: Path = CSV_PATH) -> List[Paper]:
 
 def main() -> None:
     papers = load_verified_papers()
-    if len(papers) != 71:
+    if len(papers) != 70:
         logger.warning(
-            f"Expected 71 verified papers, loaded {len(papers)} -- "
+            f"Expected 70 verified papers, loaded {len(papers)} -- "
             "check for rows added to the CSV without a corresponding pillar mapping."
         )
 
