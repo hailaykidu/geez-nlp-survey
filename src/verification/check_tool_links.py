@@ -28,7 +28,6 @@ LOG_PATH = OUTPUT_DIR / "tool_link_check.txt"
 # (Paper, Tool name, canonical URL) for every row in table:tools-from-corpus,
 # including the two provenance-track additions.
 TOOL_LINKS = [
-    ("P001", "MoVoC-Tok", "https://huggingface.co/spaces/Hailay/movoc-tok-playground"),
     ("P003", "amharic-ir-benchmarks", "https://github.com/kidist-amde/amharic-ir-benchmarks"),
     ("P003", "roberta-amharic-text-embedding-base", "https://huggingface.co/rasyosef/roberta-amharic-text-embedding-base"),
     ("P003", "roberta-amharic-text-embedding-medium", "https://huggingface.co/rasyosef/roberta-amharic-text-embedding-medium"),
