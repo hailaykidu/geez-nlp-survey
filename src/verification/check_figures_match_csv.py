@@ -303,7 +303,7 @@ def check_table_derived_sentences() -> None:
 def main() -> None:
     sys.path.insert(0, str(PROJECT_ROOT))
     rows = load_rows()
-    print(f"Loaded {len(rows)} rows from {CSV_PATH}")
+    print(f"Loaded {len(rows)} rows from {CSV_PATH.relative_to(PROJECT_ROOT)}")
     check_temporal(rows)
     check_language(rows)
     check_named_artefact_count()

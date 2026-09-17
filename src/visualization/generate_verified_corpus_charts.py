@@ -140,7 +140,11 @@ def load_verified_papers(csv_path: Path = CSV_PATH) -> List[Paper]:
             )
             papers.append(paper)
 
-    logger.info(f"Loaded {len(papers)} verified papers from {csv_path}")
+    try:
+        logged_path = csv_path.relative_to(PROJECT_ROOT)
+    except ValueError:
+        logged_path = csv_path
+    logger.info(f"Loaded {len(papers)} verified papers from {logged_path}")
     return papers
 
 
