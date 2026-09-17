@@ -87,6 +87,31 @@ def check_language(rows: list[dict]) -> None:
     ok(f"literature language coverage: Amh={amh} Tir={tir} Geez={geez} (of {len(rows)})")
 
 
+def check_named_artefact_count() -> None:
+    """The manuscript's "N artefacts across M papers" claim (Section 4.3) must equal
+    the raw sum of each row's Tools_Count + Datasets_Count + Models_Count fields --
+    this was previously hand-carried across edits and drifted from the CSV."""
+    rows = load_rows()
+    total_artefacts = 0
+    papers_with_artefact = 0
+    for r in rows:
+        n = int(r.get("Tools_Count") or 0) + int(r.get("Datasets_Count") or 0) + int(r.get("Models_Count") or 0)
+        total_artefacts += n
+        if n > 0:
+            papers_with_artefact += 1
+
+    text = MANUSCRIPT_TEX.read_text()
+    needle = f"{total_artefacts} artefacts across {papers_with_artefact} papers"
+    if needle in text:
+        ok(f'manuscript text contains: "{needle}" (matches CSV Tools_Count+Datasets_Count+Models_Count sum)')
+    else:
+        fail(
+            f"manuscript's named-artefact claim does not match the CSV. "
+            f"CSV sum: {total_artefacts} artefacts across {papers_with_artefact} papers. "
+            f"Expected substring not found: {needle!r}"
+        )
+
+
 def regenerate_and_diff_pngs() -> None:
     from src.visualization.generate_verified_corpus_charts import load_verified_papers
     from src.visualization.chart_generator import ChartGenerator
@@ -281,6 +306,7 @@ def main() -> None:
     print(f"Loaded {len(rows)} rows from {CSV_PATH}")
     check_temporal(rows)
     check_language(rows)
+    check_named_artefact_count()
     regenerate_and_diff_pngs()
     check_pdf_embeds_current_pngs()
     check_table_derived_sentences()

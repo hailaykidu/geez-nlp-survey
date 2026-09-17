@@ -102,7 +102,7 @@ def _map_tool_type(row: dict) -> str:
 
 
 def load_verified_papers(csv_path: Path = CSV_PATH) -> List[Paper]:
-    """Load the 71-paper verified corpus into this project's Paper model."""
+    """Load the 70-paper verified corpus into this project's Paper model."""
     papers: List[Paper] = []
     with open(csv_path, newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
