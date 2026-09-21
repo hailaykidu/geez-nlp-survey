@@ -112,6 +112,49 @@ def check_named_artefact_count() -> None:
         )
 
 
+def check_venue_breakdown() -> None:
+    """Section 2.1 states how the 70 corpus papers split across the six named NLP
+    venues vs. elsewhere. These figures were previously asserted by hand and
+    contradicted both the CSV and each other (17+2+10 != 70)."""
+    import re as _re
+
+    rows = load_rows()
+    six = ["ACL", "EMNLP", "NAACL", "LREC", "COLING", "EACL"]
+
+    def is_six(venue: str) -> bool:
+        vu = venue.upper()
+        return any(_re.search(r"\b" + s + r"\b", vu) for s in six)
+
+    six_venue = [r for r in rows if is_six(r["Venue"])]
+    other = [r for r in rows if not is_six(r["Venue"])]
+    preprint_only = [
+        r for r in other
+        if (r.get("Venue_Type", "").strip().lower() == "preprint")
+        or r["Venue"].strip().lower() in ("arxiv", "zenodo")
+    ]
+    other_reviewed = len(other) - len(preprint_only)
+
+    n_six, n_pre, n_rev = len(six_venue), len(preprint_only), other_reviewed
+    if n_six + n_pre + n_rev != len(rows):
+        fail(f"venue breakdown does not sum to corpus size: {n_six}+{n_rev}+{n_pre} != {len(rows)}")
+        return
+
+    text = MANUSCRIPT_TEX.read_text()
+    for value, label in [
+        (f"{n_six} were published at the six named venues", "six-venue count"),
+        (f"{n_rev} appeared at other peer-reviewed or workshop venues", "other-reviewed count"),
+        (f"other {n_pre} are preprint- or repository-only", "preprint-only count"),
+    ]:
+        if value in text:
+            ok(f'venue breakdown: manuscript states "{value}" (matches CSV)')
+        else:
+            fail(
+                f"venue breakdown ({label}) does not match the CSV. "
+                f"CSV gives six-venue={n_six}, other-reviewed={n_rev}, preprint-only={n_pre} "
+                f"(sum {len(rows)}). Expected substring not found: {value!r}"
+            )
+
+
 def regenerate_and_diff_pngs() -> None:
     from src.visualization.generate_verified_corpus_charts import load_verified_papers
     from src.visualization.chart_generator import ChartGenerator
@@ -307,6 +350,7 @@ def main() -> None:
     check_temporal(rows)
     check_language(rows)
     check_named_artefact_count()
+    check_venue_breakdown()
     regenerate_and_diff_pngs()
     check_pdf_embeds_current_pngs()
     check_table_derived_sentences()
