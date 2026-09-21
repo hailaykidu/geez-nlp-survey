@@ -3,12 +3,12 @@ OK:   temporal: 70 papers across 10 years, sums correctly
 OK:   temporal bands: {'2016-2018': 5, '2019-2021': 24, '2022-2024': 27, '2025-2026': 14}
 OK:   literature language coverage: Amh=48 Tir=26 Geez=14 (of 70)
 OK:   manuscript text contains: "75 artefacts across 53 papers" (matches CSV Tools_Count+Datasets_Count+Models_Count sum)
-2026-09-17 19:21:06 - src.visualization.generate_verified_corpus_charts - INFO - Loaded 70 verified papers from data/verified_papers_live_search.csv
-2026-09-17 19:21:06 - src.visualization.chart_generator - INFO - Chart Generator initialized (output: /tmp/tmpq2une1p5)
-2026-09-17 19:21:07 - src.visualization.chart_generator - INFO - Language distribution chart saved: /tmp/tmpq2une1p5/chart_language_distribution.png
-2026-09-17 19:21:08 - src.visualization.chart_generator - INFO - Pillar distribution chart saved: /tmp/tmpq2une1p5/chart_pillar_distribution.png
-2026-09-17 19:21:08 - src.visualization.chart_generator - INFO - Tool type distribution chart saved: /tmp/tmpq2une1p5/chart_tool_type_distribution.png
-2026-09-17 19:21:09 - src.visualization.chart_generator - INFO - Temporal distribution chart saved: /tmp/tmpq2une1p5/chart_temporal_distribution.png
+2026-09-20 21:28:23 - src.visualization.generate_verified_corpus_charts - INFO - Loaded 70 verified papers from data/verified_papers_live_search.csv
+2026-09-20 21:28:23 - src.visualization.chart_generator - INFO - Chart Generator initialized (output: /tmp/tmpezwv9v1o)
+2026-09-20 21:28:23 - src.visualization.chart_generator - INFO - Language distribution chart saved: /tmp/tmpezwv9v1o/chart_language_distribution.png
+2026-09-20 21:28:24 - src.visualization.chart_generator - INFO - Pillar distribution chart saved: /tmp/tmpezwv9v1o/chart_pillar_distribution.png
+2026-09-20 21:28:24 - src.visualization.chart_generator - INFO - Tool type distribution chart saved: /tmp/tmpezwv9v1o/chart_tool_type_distribution.png
+2026-09-20 21:28:25 - src.visualization.chart_generator - INFO - Temporal distribution chart saved: /tmp/tmpezwv9v1o/chart_temporal_distribution.png
 OK:   chart_language_distribution.png: matches fresh regeneration from current CSV
 OK:   chart_pillar_distribution.png: matches fresh regeneration from current CSV
 OK:   chart_tool_type_distribution.png: matches fresh regeneration from current CSV
