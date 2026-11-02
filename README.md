@@ -1,6 +1,8 @@
 # Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis
 
-Systematic review of NLP research and tools for Ge'ez-script languages (Amharic, Tigrinya, Classical Ge'ez), 2016-2026, following PRISMA 2020 methodology.
+Systematic review of NLP research and tools for Ge'ez-script languages (Amharic, Tigrinya, Classical Ge'ez), 2016-2026, guided by PRISMA 2020.
+
+Two versions of the paper are kept here. `manuscript/ccis/` is the camera-ready published in the PanAfriCon AI 2026 proceedings (Springer CCIS). `manuscript/manuscript.tex` is the extended version and serves as its supplement: it contains the full tool inventory with exact repository identifiers (Table 4) and the complete 69-paper corpus list (Appendix A). Both report the same counts.
 
 ## Repository structure
 
@@ -15,7 +17,11 @@ Every file below is either compiled directly into the manuscript, read by the fi
 | Path | Purpose |
 |---|---|
 | `manuscript/manuscript.tex` | The manuscript (Springer Nature `sn-jnl` class, `sn-mathphys-num` numbered-citation style). |
-| `manuscript/references.bib` | Bibliography for the 70-paper corpus and background citations. Every entry was individually fetched from its own authoritative source (ACL Anthology's `.bib` export, arXiv's citation metadata, or the publisher/DOI's Crossref record); see the file header for the verification method used for each entry. |
+| `manuscript/references.bib` | Bibliography for the 69-paper corpus and background citations. Every entry was individually fetched from its own authoritative source (ACL Anthology's `.bib` export, arXiv's citation metadata, or the publisher/DOI's Crossref record); see the file header for the verification method used for each entry. |
+| `manuscript/ccis/main.tex` | The camera-ready version (Springer LLNCS template v2.25, `splncs04` style). Compile with LuaLaTeX, which the Ge'ez-script sample requires. It uses `manuscript/references.bib`. |
+| `manuscript/ccis/llncs.cls`, `splncs04.bst`, `NotoSansEthiopic-Regular.ttf` | Springer class and style files, and the bundled Ge'ez-script font (SIL Open Font License 1.1). |
+| `manuscript/ccis/make_submission.sh` | Builds the self-contained Springer source package (`submission/`, `submission112.zip`) and compiles it from scratch inside the package. |
+| `data/tool_inventory_addenda.csv` | Releases that meet the tool-inventory standard but appeared after its 21 September 2026 verification date; recorded here and not counted in the manuscript. |
 | `manuscript/sn-jnl.cls`, `manuscript/sn-mathphys-num.bst` | Springer Nature class and bibliography-style files required to compile. |
 | `manuscript/sn-*.bst` (other styles) | Alternative Springer Nature citation styles distributed with the class; not used by this manuscript's compile (only `sn-mathphys-num.bst` is invoked), kept for completeness of the class package. |
 | `data/verified_papers_live_search.csv` | The data manifest: one row per paper in the literature corpus (authors, venue, year, DOI/URL, language and pillar coding). This is the source for every count, percentage, and figure in the manuscript. |
@@ -56,11 +62,12 @@ Every count, percentage, and table in the manuscript's Methodology and Results s
 
 1. Open the CSV and filter or tally the relevant column (e.g. `Language_Focus` for language coverage, the pillar mapping in `generate_verified_corpus_charts.py`'s `_PILLAR_SHORTHAND` dictionary for pillar counts).
 2. Cross-check the paper's own bibliographic details against `manuscript/references.bib`, which records the primary source used to verify each entry (ACL Anthology, arXiv, or Crossref) in a comment above it.
-3. For the 28-tool inventory (Table 4 of the manuscript), each row's repository claim can be checked by visiting the listed GitHub/Zenodo/PyPI/HuggingFace link directly. 26 entries are traceable to a specific corpus paper; 2 (HornMorpho, MasakhaNER 1.0) are provenance-track additions whose originating papers are outside the 70-paper corpus.
+3. For the 28-tool inventory (Table 4 of the manuscript), each row's repository claim can be checked by visiting the listed GitHub/Zenodo/PyPI/HuggingFace link directly. 26 entries are traceable to a specific corpus paper; 2 (HornMorpho, MasakhaNER 1.0) are provenance-track additions whose originating papers are outside the 69-paper corpus.
+4. The inventory is frozen at its verification date, 21 September 2026. Releases that meet the same standard but appeared after that date are recorded in `data/tool_inventory_addenda.csv`; they are not counted in the manuscript's tables.
 
 ## Scope and current numbers
 
-- **70** individually verified papers (2017-2026), each naming Amharic, Tigrinya, and/or Classical Ge'ez as an actual subject of the work, not an incidental member of a large multilingual set.
+- **69** individually verified papers (2017-2026), each naming Amharic, Tigrinya, and/or Classical Ge'ez as an actual subject of the work, not an incidental member of a large multilingual set.
 - **28** foundational NLP tools, models, datasets, and linguistic resources independently confirmed publicly available on GitHub, Zenodo, PyPI, or HuggingFace: 26 traceable to a specific paper in the corpus, plus 2 provenance-track additions (HornMorpho, MasakhaNER 1.0) whose originating papers fall outside the corpus.
 - Four methodological pillars: (P1) Tokenisation & Normalisation, (P2) Morphological Analysis & Synthesis, (P3) Text Representation, Embeddings & Evaluation, (P4) Sequence Labelling & Structure Extraction.
 
