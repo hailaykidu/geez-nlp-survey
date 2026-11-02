@@ -1,0 +1,9 @@
+% Renders the Ge'ez word for the script sample as a vector graphic, so the
+% paper itself compiles with pdfLaTeX as the LLNCS template expects.
+% Build once with: lualatex geez_salam.tex
+\documentclass[border=0pt]{standalone}
+\usepackage{fontspec}
+\newfontfamily\geezfont{NotoSansEthiopic-Regular.ttf}
+\begin{document}
+{\geezfont ሰላም}
+\end{document}

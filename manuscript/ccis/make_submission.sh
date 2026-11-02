@@ -9,7 +9,7 @@ OUT=submission
 rm -rf "$OUT" submission112.zip
 mkdir "$OUT"
 
-cp llncs.cls splncs04.bst NotoSansEthiopic-Regular.ttf "$OUT"/
+cp llncs.cls splncs04.bst geez_salam.pdf "$OUT"/
 cp ../references.bib "$OUT"/main.bib
 sed 's#\\bibliography{../references}#\\bibliography{main}#' main.tex > "$OUT"/main.tex
 grep -q '\\bibliography{main}' "$OUT"/main.tex
@@ -17,8 +17,8 @@ grep -q '\\bibliography{main}' "$OUT"/main.tex
 cat > "$OUT"/README.txt <<'EOF'
 Submission 112, PanAfriCon AI 2026 (Springer CCIS), camera-ready sources.
 
-Compile with LuaLaTeX (required for the Ge'ez-script sample):
-  lualatex main && bibtex main && lualatex main && lualatex main
+Compile with pdfLaTeX, as in the LLNCS template (T1 fonts, newtx Times):
+  pdflatex main && bibtex main && pdflatex main && pdflatex main
 
 Files:
   main.tex                      paper source (LLNCS template v2.25)
@@ -26,16 +26,18 @@ Files:
   main.pdf                      final PDF, built from these files
   DescriptionTexts.txt          alternative text for Fig. 1 (written by llncs.cls)
   llncs.cls, splncs04.bst       Springer class and bibliography style
-  NotoSansEthiopic-Regular.ttf  Ge'ez-script font (SIL Open Font License 1.1)
+  geez_salam.pdf                the Ge'ez word in Sect. 1 as a vector graphic
 
 Corresponding author: Hailay Kidu Teklehaymanot (teklehaymanot@l3s.de)
 EOF
 
 cd "$OUT"
-lualatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+# PDFLATEX can be overridden, e.g. to add a font map on systems without newtx registered
+PDFLATEX=${PDFLATEX:-pdflatex}
+$PDFLATEX -interaction=nonstopmode -halt-on-error main.tex >/dev/null
 bibtex main >/dev/null
-lualatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
-lualatex -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+$PDFLATEX -interaction=nonstopmode -halt-on-error main.tex >/dev/null
+$PDFLATEX -interaction=nonstopmode -halt-on-error main.tex >/dev/null
 rm -f main.aux main.blg main.log main.out
 cd ..
 

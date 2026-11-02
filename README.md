@@ -18,8 +18,9 @@ Every file below is either compiled directly into the manuscript, read by the fi
 |---|---|
 | `manuscript/manuscript.tex` | The manuscript (Springer Nature `sn-jnl` class, `sn-mathphys-num` numbered-citation style). |
 | `manuscript/references.bib` | Bibliography for the 69-paper corpus and background citations. Every entry was individually fetched from its own authoritative source (ACL Anthology's `.bib` export, arXiv's citation metadata, or the publisher/DOI's Crossref record); see the file header for the verification method used for each entry. |
-| `manuscript/ccis/main.tex` | The camera-ready version (Springer LLNCS template v2.25, `splncs04` style). Compile with LuaLaTeX, which the Ge'ez-script sample requires. It uses `manuscript/references.bib`. |
-| `manuscript/ccis/llncs.cls`, `splncs04.bst`, `NotoSansEthiopic-Regular.ttf` | Springer class and style files, and the bundled Ge'ez-script font (SIL Open Font License 1.1). |
+| `manuscript/ccis/main.tex` | The camera-ready version (Springer LLNCS template v2.25, `splncs04` style). Compiles with pdfLaTeX exactly as the template sets up (T1 fonts, `newtx` Times). It uses `manuscript/references.bib`. |
+| `manuscript/ccis/llncs.cls`, `splncs04.bst` | Springer class and style files, identical to the organisers' LLNCS template. |
+| `manuscript/ccis/geez_salam.pdf` | The Ge'ez word in Sect. 1 as a vector graphic, so the paper needs no special font. It is rebuilt from `geez_salam.tex` with LuaLaTeX and the bundled `NotoSansEthiopic-Regular.ttf` (SIL Open Font License 1.1). |
 | `manuscript/ccis/make_submission.sh` | Builds the self-contained Springer source package (`submission/`, `submission112.zip`) and compiles it from scratch inside the package. |
 | `data/tool_inventory_addenda.csv` | Releases that meet the tool-inventory standard but appeared after its 21 September 2026 verification date; recorded here and not counted in the manuscript. |
 | `manuscript/sn-jnl.cls`, `manuscript/sn-mathphys-num.bst` | Springer Nature class and bibliography-style files required to compile. |
