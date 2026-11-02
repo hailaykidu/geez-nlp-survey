@@ -80,4 +80,4 @@ Code (`src/`) and the data manifest (`data/`) are released under the MIT License
 
 Hailay Kidu Teklehaymanot
 L3S Research Center, Leibniz University Hannover
-teklehaymanot@l3s.uni-hannover.de
+teklehaymanot@l3s.de
