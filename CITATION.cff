@@ -1,11 +1,26 @@
 cff-version: 1.2.0
 message: "If you use this repository, its data manifest, or its code, please cite the manuscript below."
-title: "Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis (2016-2026)"
+title: "Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis"
 authors:
   - family-names: "Teklehaymanot"
     given-names: "Hailay Kidu"
-    affiliation: "L3S Research Center, Leibniz University Hannover"
+    affiliation: "L3S Research Center, Leibniz University Hannover; University of Zurich"
     email: teklehaymanot@l3s.uni-hannover.de
+  - family-names: "Mesfun"
+    given-names: "Gebreagziher Gebrelibanos"
+    affiliation: "Adigrat University"
+  - family-names: "Gebremichael"
+    given-names: "Tsegaye Semere"
+    affiliation: "National Tsing Hua University"
+  - family-names: "Gebremariam"
+    given-names: "Gebrearegawi"
+    affiliation: "Axum University"
+  - family-names: "Tegegnie"
+    given-names: "Alemu Kumilachew"
+    affiliation: "Bahir Dar University"
+  - family-names: "Grütter"
+    given-names: "Nesina"
+    affiliation: "University of Zurich"
 type: software
 repository-code: "https://github.com/hailaykidu/geez-nlp-survey"
 license: MIT
@@ -19,10 +34,30 @@ keywords:
   - systematic review
   - PRISMA 2020
 preferred-citation:
-  type: article
-  title: "Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis (2016-2026)"
+  type: conference-paper
+  collection-title: "PanAfriCon AI 2026, Communications in Computer and Information Science"
+  conference:
+    name: "PanAfriCon AI 2026"
+  publisher:
+    name: "Springer"
+  title: "Foundational NLP Tools for Ge'ez-Script Languages: A Systematic Tool-Centred Analysis"
   authors:
     - family-names: "Teklehaymanot"
       given-names: "Hailay Kidu"
-      affiliation: "L3S Research Center, Leibniz University Hannover"
+      affiliation: "L3S Research Center, Leibniz University Hannover; University of Zurich"
+    - family-names: "Mesfun"
+      given-names: "Gebreagziher Gebrelibanos"
+      affiliation: "Adigrat University"
+    - family-names: "Gebremichael"
+      given-names: "Tsegaye Semere"
+      affiliation: "National Tsing Hua University"
+    - family-names: "Gebremariam"
+      given-names: "Gebrearegawi"
+      affiliation: "Axum University"
+    - family-names: "Tegegnie"
+      given-names: "Alemu Kumilachew"
+      affiliation: "Bahir Dar University"
+    - family-names: "Grütter"
+      given-names: "Nesina"
+      affiliation: "University of Zurich"
   year: 2026

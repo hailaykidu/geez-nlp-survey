@@ -76,8 +76,13 @@ Every count, percentage, and table in the manuscript's Methodology and Results s
 
 Code (`src/`) and the data manifest (`data/`) are released under the MIT License (see `LICENSE`). The manuscript text is subject to the publisher's copyright terms upon acceptance.
 
-## Author
+## Authors
 
-Hailay Kidu Teklehaymanot
-L3S Research Center, Leibniz University Hannover
-teklehaymanot@l3s.de
+- Hailay Kidu Teklehaymanot, L3S Research Center, Leibniz University Hannover, and University of Zurich (corresponding author)
+- Gebreagziher Gebrelibanos Mesfun, Adigrat University
+- Tsegaye Semere Gebremichael, National Tsing Hua University
+- Gebrearegawi Gebremariam, Axum University
+- Alemu Kumilachew Tegegnie, Bahir Dar University
+- Nesina Grütter, University of Zurich
+
+Contact: teklehaymanot@l3s.de
