@@ -79,7 +79,7 @@ The search targeted six peer-reviewed NLP venues (ACL, EMNLP, NAACL, LREC, COLIN
 
 \subsubsection{Corpus Composition.} Of the 69 papers, 18 appeared at the six named venues and 35 at other peer-reviewed or workshop venues; 16 were admitted under the provenance track. Seven of these describe a released artefact~\cite{abedissa_amqa_2023,gete_whispering_2025,gaim_tlmd_2021,azime_amharic_2021,teklehaymanot_expanding_2026,medhanie_adapting_2026,beyene_handwritten_2019}. Five have since appeared in peer-reviewed venues and are cited in their published form~\cite{teklehaymanot_lowresource_2025,yimer_learning_2024,gashaw_amharicarabic_2019,gondere_handwritten_2019,adnew_semantically_2024}. Two were recorded on this track conservatively, although they had already been peer-reviewed~\cite{yimam_introducing_2021,kidane_exploration_2021}. The remaining two, a survey of Tigrinya NLP~\cite{gaim_tigrinya_2025} and a study of Ge'ez machine translation~\cite{wassie_machine_2023}, describe no released artefact and so do not strictly meet the track's criterion. They are retained as two of the very few studies of these languages and contribute to no tool count. The full list is in the public repository.
 
-\subsubsection{Data Extraction and Coding.} All extracted data and category assignments (language, pillar, artefact type) were independently reviewed by all co-authors, and disagreements were resolved by discussion. Formal double-coding with an inter-rater agreement statistic was not performed; this is noted as a limitation (Sect.~\ref{sec:limitations}).
+\subsubsection{Data Extraction and Coding.} Each paper is assigned to the pillar of its primary contribution, and its language field lists every language that contribution covers, including both sides of each translation pair. All extracted data and category assignments (language, pillar, artefact type) were independently reviewed by all co-authors, and disagreements were resolved by discussion. Formal double-coding with an inter-rater agreement statistic was not performed; this is noted as a limitation (Sect.~\ref{sec:limitations}).
 
 \begin{figure}[t]
 \centering
@@ -127,7 +127,7 @@ Joshi et al.~\cite{joshi_state_2020} document the underrepresentation of most of
 %% ======================================================================
 \section{The Reviewed Literature}\label{sec:literature}
 
-Table~\ref{tab:literature} characterises the 69 papers, tallied directly from the corpus file. Amharic dominates (68\%), Tigrinya follows (38\%), and Classical Ge'ez is least represented (20\%). By pillar, P3 accounts for nearly half of the corpus (48\%) and infrastructure and resource papers for a further 38\%, while P1 (1\%) and P2 (4\%) are markedly underrepresented relative to their importance for Ge'ez-script morphology. Publication activity is concentrated in 2022--2026 (59\%).
+Table~\ref{tab:literature} characterises the 69 papers, tallied directly from the corpus file. Amharic dominates (70\%), Tigrinya follows (39\%), and Classical Ge'ez is least represented (19\%). By pillar, P3 accounts for nearly half of the corpus (48\%) and infrastructure and resource papers for a further 38\%, while P1 (1\%) and P2 (4\%) are markedly underrepresented relative to their importance for Ge'ez-script morphology. Publication activity is concentrated in 2022--2026 (59\%).
 
 \begin{table}[t]
 \centering
@@ -137,16 +137,16 @@ Table~\ref{tab:literature} characterises the 69 papers, tallied directly from th
 \toprule
 \textbf{Language} & \textbf{n} & \textbf{\%} & \textbf{Pillar} & \textbf{n} & \textbf{\%} & \textbf{Period} & \textbf{n} & \textbf{\%}\\
 \midrule
-Amharic & 47 & 68 & P1 Tokenisation & 1 & 1 & 2016--2018 & 5 & 7\\
-Tigrinya & 26 & 38 & P2 Morphology & 3 & 4 & 2019--2021 & 23 & 33\\
-Classical Ge'ez & 14 & 20 & P3 Embeddings/eval. & 33 & 48 & 2022--2024 & 27 & 39\\
+Amharic & 48 & 70 & P1 Tokenisation & 1 & 1 & 2016--2018 & 5 & 7\\
+Tigrinya & 27 & 39 & P2 Morphology & 3 & 4 & 2019--2021 & 23 & 33\\
+Classical Ge'ez & 13 & 19 & P3 Embeddings/eval. & 33 & 48 & 2022--2024 & 27 & 39\\
  & & & P4 Seq.\ labelling & 6 & 9 & 2025--2026 & 14 & 20\\
  & & & Other/infrastructure & 26 & 38 & & & \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Application papers are included only through their artefact or algorithmic contribution (Sect.~\ref{sec:literature-search}): for example, fake-news datasets~\cite{gereme_combating_2021}, speech and speech-emotion corpora~\cite{abera_designtigrinya_2018,retta_new_2023,assfaw_dialectbased_2022}, OCR datasets and pipelines~\cite{beyene_handwritten_2019,negashe_modified_2020}, and bias-evaluation studies, which fall under P3~\cite{zenebe_genderbias_2024,sewunetie_genderbias_2024}. Large multilingual works in which a Ge'ez-script language is one of many (e.g.\ AfroXLMR~\cite{alabi_adapting_2022}, MasakhaPOS~\cite{dione_masakhapos_2023}) are excluded under the language-focus criterion.
+Application papers are included only through their artefact or algorithmic contribution (Sect.~\ref{sec:literature-search}): for example, fake-news datasets~\cite{gereme_combating_2021}, speech and speech-emotion corpora~\cite{abera_designtigrinya_2018,retta_new_2023,assfaw_dialectbased_2022}, OCR datasets and pipelines~\cite{beyene_handwritten_2019,negashe_modified_2020}, and bias-evaluation studies, which fall under P3~\cite{zenebe_genderbias_2024,sewunetie_genderbias_2024}. Large multilingual works in which a Ge'ez-script language is only an incidental member (e.g.\ MasakhaPOS~\cite{dione_masakhapos_2023}) are excluded under the language-focus criterion; AfroXLMR~\cite{alabi_adapting_2022} is included because it treats Amharic's Ge'ez script explicitly in its vocabulary reduction and analysis.
 
 %% ======================================================================
 \section{The Tool Inventory}\label{sec:inventory}
@@ -216,14 +216,14 @@ Total & 28 & 100 & & & \\
 %% ======================================================================
 \section{Research Asymmetry}\label{sec:asymmetry}
 
-Amharic is the most represented language in both the literature (68\% of 69 papers) and the inventory (79\% of 28 tools); Tigrinya is second (38\%; 50\%); and Classical Ge'ez is least represented (20\%; 21\%). Eight tools cover more than one of the three languages: EthioPOS, the EthioLLM model family, GeezSwitch, GeezSwitch-data, EthioProverbEval, and the ProverbEval benchmark cover all three, and EthioEmo-intensities and HornMorpho cover Amharic and Tigrinya. Most are multilingual resources for Ethiopian languages in general, and only GeezSwitch and GeezSwitch-data are designed around the script itself. None is a script-level transfer framework, and they follow no shared annotation or evaluation conventions. LGSE~\cite{teklehaymanot_lgse_2026} and MoVoC~\cite{teklehaymanot_movoc_2025} propose cross-lingual components for these languages, but neither had a confirmable release of its reported artefact at the verification date.\footnote{A release matching MoVoC's corrected version (ACL Anthology revision~2, 21 October 2026) has since appeared and is recorded in the repository's inventory addenda.}
+Amharic is the most represented language in both the literature (70\% of 69 papers) and the inventory (79\% of 28 tools); Tigrinya is second (39\%; 50\%); and Classical Ge'ez is least represented (19\%; 21\%). Eight tools cover more than one of the three languages: EthioPOS, the EthioLLM model family, GeezSwitch, GeezSwitch-data, EthioProverbEval, and the ProverbEval benchmark cover all three, and EthioEmo-intensities and HornMorpho cover Amharic and Tigrinya. Most are multilingual resources for Ethiopian languages in general, and only GeezSwitch and GeezSwitch-data are designed around the script itself. None is a script-level transfer framework, and they follow no shared annotation or evaluation conventions. LGSE~\cite{teklehaymanot_lgse_2026} and MoVoC~\cite{teklehaymanot_movoc_2025} propose cross-lingual components for these languages, but neither had a confirmable release of its reported artefact at the verification date.\footnote{A release matching MoVoC's corrected version (ACL Anthology revision~2, 21 October 2026) has since appeared and is recorded in the repository's inventory addenda.}
 
 %% ======================================================================
 \section{Limitations}\label{sec:limitations}
 
 \subsubsection{Search.} No query-level log was preserved, so counts before full-text assessment are not reported (Fig.~\ref{fig:prisma-flow}). The search favours published and NLP-venue work, and English-language publications. Some in-scope work was not captured, including Tigrinya part-of-speech tagging on the Nagaoka Tigrinya Corpus~\cite{tedla_tigrinya_2016}, LSTM-based Tigrinya morphological segmentation~\cite{tedla_morphological_2018}, and deep-learning part-of-speech tagging for Tigrinya and Tigre~\cite{kapociute_northern_2020}. These fall in P2 and P4; adding them would leave P1 and P2 the least-represented pillars.
 
-\subsubsection{Coding.} Formal double-coding with an inter-rater agreement statistic was not performed (Sect.~\ref{sec:literature-search}).
+\subsubsection{Coding.} Formal double-coding with an inter-rater agreement statistic was not performed (Sect.~\ref{sec:literature-search}), and each paper has a single primary pillar; an agreement statistic and weighted multi-pillar coding are left to future work.
 
 \subsubsection{Inventory.} The inventory is corpus-first and frozen at its verification date; an artefact whose public release could not be confirmed is not counted, even when its paper asserts one.
 

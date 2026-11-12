@@ -254,7 +254,7 @@ def check_pdf_embeds_current_pngs() -> None:
 
 def parse_tool_inventory_table() -> list[list[str]]:
     text = MANUSCRIPT_TEX.read_text()
-    start = text.find(r"\begin{tabular}{@{}p{0.9cm}")
+    start = text.find(r"\begin{tabular}", text.find(r"\label{table:tools-from-corpus}"))
     end = text.find(r"\end{tabular}", start)
     body = text[start:end]
     rows = []
